@@ -1,0 +1,47 @@
+<h2 id="desc" class="list">VSSo: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This section presents some examples of usage of VSSo, serialized in turtle.</span>
+
+A vehicle is an instance of a <code>vsso:Vehicle</code>. It has a certain number of <code>vsso:attributes</code> such as <code>vsso:brand</code>, <code>vsso:model</code>, <code>vsso:vin</code> and <code>vsso:year</code>. A vehicle might produce signal that we have access to. In this example, the signal <code>&lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/signal/temperatureOutside></code>.
+<figure><img src="static/doc-web-ex1.png" style="display:block; margin-left:auto; margin-right:auto; width:50%;" width="500"></figure>
+<figure><figurecaption>Example of VSSo Vehicle</figurecaption>
+<pre><code>
+&lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/branch/Vehicle&gt; a vsso:Vehicle,
+        geo:Feature,
+        sosa:FeatureOfInterest ;
+    vsso:brand "BMW"^^xsd:string ;
+    vsso:hasSignal &lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/signal/temperatureOutside&gt; ;
+    vsso:model "X5"^^xsd:string ;
+    vsso:vin "1GTR1UEC6EZ289970"^^xsd:string ;
+    vsso:year "2015"^^xsd:int .
+&lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/signal/temperatureOutside&gt; a vsso:AmbientAirTemperature.
+</code></pre></figure>
+
+The same vehicle might be composed of several branches, which have also signals and attributes. In this case, we define the engine instance as a part of our <code>vsso:Vehicle</code> instance, with the following signals and attributes: the <code>&lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/signal/temperatureOilEngine&gt;</code> signal, the <code>vsso:displacement</code>, <code>vsso:engineConfiguration</code>, <code>vsso:fuelType</code>, <code>vsso:maxPower</code> and <code>vsso:maxTorque</code> attributes.
+<figure><img src="static/doc-web-ex2.png" style="display:block; margin-left:auto; margin-right:auto; width:50%;"></figure>
+<figure><figurecaption>Example of VSSo Engine branch</figurecaption>
+<pre><code>
+&lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/branch/Engine&gt; a vsso:Engine ;
+	vsso:partOf &lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/branch/Vehicle&gt; ;
+    vsso:displacement "1570cm3"^^cdt:volume ;
+    vsso:engineConfiguration "straight"^^xsd:string ;
+    vsso:fuelType "diesel"^^xsd:string ;
+    vsso:hasSignal &lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/signal/temperatureOilEngine&gt; ;
+    vsso:maxPower "600 kW"^^cdt:power ;
+    vsso:maxTorque "280 NM"^^cdt:ucum .
+&lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/signal/temperatureOilEngine&gt; a vsso:EngineOilTemperature.
+</code></pre></figure>
+
+Any signal can produce an observation. In the following example, the observation is about the signal <code>&lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/signal/temperatureEngine&gt;</code>, measured by the sensor <code>&lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/sensor/thermometerEngine&gt;</code>, and has a result of 38 degree Celcius.
+<figure><img src="static/doc-web-ex3.png" style="display:block; margin-left:auto; margin-right:auto; width:50%;" width="500"></figure>
+<figure><figurecaption>Example of a sosa:Observation of a VSSo signal</figurecaption>
+<pre><code>
+:Observation a sosa:Observation ;
+    geo:lat "-74"^^xsd:long ;
+    geo:long "117"^^xsd:long ;
+    sosa:hasFeatureOfInterest &lt;http://automotive.eurecom.fr/branch/Vehicle&gt; ;
+    sosa:hasSimpleResult "38 Cel"^^cdt:temperature ;
+    sosa:madeBySensor &lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/sensor/thermometerEngine&gt; ;
+    sosa:observedProperty &lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/signal/temperatureOilEngine&gt; ;
+    sosa:phenomenonTime "2018-11-16 15:50:27"^^xsd:dateTime .
+</code></pre></figure>
