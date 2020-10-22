@@ -20,7 +20,9 @@ vsso: rdf:type owl:Ontology ;
   dct:license <http://creativecommons.org/licenses/by/4.0/> ;
   dct:modified "2020-06-23"^^xsd:date ;
   dct:created "2018-01-10"^^xsd:date ;
-  dct:creator Benjamin Klotz, Raphael Troncy, Daniel Wilms ;
+  dct:creator "Benjamin Klotz"^^xsd:string ;
+  dct:creator "Raphael Troncy"^^xsd:string ;
+  dct:creator <https://www.linkedin.com/in/danielwilms> ;
   owl:versionInfo """v1.0 23/06/2020"""@en ;
   vann:preferredNamespacePrefix "vsso" .
 
