@@ -4012,7 +4012,7 @@ vsso:PidsA a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.PidsA : PID 00 - Bit array of the supported pids 01 to 20"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:DiagnosticSystem.
+        owl:allValuesFrom vsso:DiagnosticSystem
     ];
     rdfs:subClassOf [
     a owl:Restriction;
@@ -4026,7 +4026,7 @@ vsso:FreezeDTC a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.FreezeDTC : PID 02 - DTC that triggered the freeze frame"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:DiagnosticSystem.
+        owl:allValuesFrom vsso:DiagnosticSystem
     ];
     rdfs:subClassOf [
     a owl:Restriction;
@@ -4040,7 +4040,7 @@ vsso:FuelStatus a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.FuelStatus : PID 03 - Fuel status"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:DiagnosticSystem.
+        owl:allValuesFrom vsso:DiagnosticSystem
     ];
     rdfs:subClassOf [
     a owl:Restriction;
@@ -4054,7 +4054,7 @@ vsso:EngineLoad a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.EngineLoad : PID 04 - Engine load in percent - 0 = no load, 100 = full load"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:DiagnosticSystem.
+        owl:allValuesFrom vsso:DiagnosticSystem
     ];
     rdfs:subClassOf [
     a owl:Restriction;
@@ -4068,7 +4068,7 @@ vsso:CoolantTemperature a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.CoolantTemperature : PID 05 - Coolant temperature"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:CoolantTemperatureSensor.
+        owl:allValuesFrom vsso:CoolantTemperatureSensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
@@ -4082,7 +4082,7 @@ vsso:ShortTermFuelTrim a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.ShortTermFuelTrim1 : PID 06/08 - Short Term (immediate) Fuel Trim - Bank 1 - negative percent leaner, positive percent richer"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:O2Sensor.
+        owl:allValuesFrom vsso:O2Sensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
@@ -4096,12 +4096,12 @@ vsso:LongTermFuelTrim a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.LongTermFuelTrim1 : PID 07/09 - Long Term (learned) Fuel Trim - Bank 1 - negative percent leaner, positive percent richer"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:O2Sensor.
+        owl:allValuesFrom vsso:O2Sensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 vsso:FuelPressure a rdfs:Class, owl:Class;
@@ -4110,12 +4110,12 @@ vsso:FuelPressure a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.FuelPressure : PID 0A - Fuel pressure"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:FuelPressureSensor.
+        owl:allValuesFrom vsso:FuelPressureSensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:PressureOrStressUnit.
+    owl:allValuesFrom qudt:PressureOrStressUnit
   ].
 
 vsso:TimingAdvance a rdfs:Class, owl:Class;
@@ -4124,12 +4124,12 @@ vsso:TimingAdvance a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.TimingAdvance : PID 0E - Time advance (angle)"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:DiagnosticSystem.
+        owl:allValuesFrom vsso:DiagnosticSystem
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:AngleUnit.
+    owl:allValuesFrom qudt:AngleUnit
   ].
 
 vsso:IntakeTemperature a rdfs:Class, owl:Class;
@@ -4138,12 +4138,12 @@ vsso:IntakeTemperature a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.IntakeTemp : PID 0F - Intake temperature"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:Intake-AirTemperatureSensor.
+        owl:allValuesFrom vsso:Intake-AirTemperatureSensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:TemperatureUnit.
+    owl:allValuesFrom qudt:TemperatureUnit
   ].
 
 vsso:ThrottlePosition a rdfs:Class, owl:Class;
@@ -4152,12 +4152,12 @@ vsso:ThrottlePosition a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.ThrottlePosition : PID 11 - Throttle position - 0 = closed throttle, 100 = open throttle"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:ThrottlePositionSensor.
+        owl:allValuesFrom vsso:ThrottlePositionSensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 vsso:AirStatus a rdfs:Class, owl:Class;
@@ -4166,16 +4166,16 @@ vsso:AirStatus a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.AirStatus : PID 12 - Secondary air status"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:DiagnosticSystem.
+        owl:allValuesFrom vsso:DiagnosticSystem
     ];
     rdfs:subClassOf [
         owl:onProperty sosa:isActuatedBy;
-        owl:allValuesFrom vsso:DiagnosticSystem.
+        owl:allValuesFrom vsso:DiagnosticSystem
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 vsso:O2Voltage a rdfs:Class, owl:Class;
@@ -4184,12 +4184,12 @@ vsso:O2Voltage a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.O2.BankX.SensorY.Voltage : PID 14->1B - Sensor voltage"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:O2Sensor.
+        owl:allValuesFrom vsso:O2Sensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:EnergyPerElectricChargeUnit.
+    owl:allValuesFrom qudt:EnergyPerElectricChargeUnit
   ].
 
 vsso:AuxInputStatus a rdfs:Class, owl:Class;
@@ -4198,16 +4198,16 @@ vsso:AuxInputStatus a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.AuxInputStatus : PID 1E - Auxiliary input status (power take off)"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:DiagnosticSystem.
+        owl:allValuesFrom vsso:DiagnosticSystem
     ];
     rdfs:subClassOf [
         owl:onProperty sosa:isActuatedBy;
-        owl:allValuesFrom vsso:DiagnosticSystem.
+        owl:allValuesFrom vsso:DiagnosticSystem
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 vsso:RunTime a rdfs:Class, owl:Class;
@@ -4216,12 +4216,12 @@ vsso:RunTime a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.RunTime : PID 1F - Engine run time"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:Timer;
+        owl:allValuesFrom vsso:Timer
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:TimeUnit.
+    owl:allValuesFrom qudt:TimeUnit
   ].
 
 vsso:PidsB a rdfs:Class, owl:Class;
@@ -4230,7 +4230,7 @@ vsso:PidsB a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.PidsB : PID 20 - Bit array of the supported pids 21 to 40"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:DiagnosticSystem.
+        owl:allValuesFrom vsso:DiagnosticSystem
     ];
     rdfs:subClassOf [
     a owl:Restriction;
@@ -4244,12 +4244,12 @@ vsso:DistanceWithMIL a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.DistanceWithMIL : PID 21 - Distance traveled with MIL on"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:Odometer.
+        owl:allValuesFrom vsso:Odometer
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:LengthUnit.
+    owl:allValuesFrom qudt:LengthUnit
   ].
 
 vsso:FuelRailPressureVac a rdfs:Class, owl:Class;
@@ -4258,12 +4258,12 @@ vsso:FuelRailPressureVac a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.FuelRailPressureVac : PID 22 - Fuel rail pressure relative to vacuum"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:FuelRailPressureSensor.
+        owl:allValuesFrom vsso:FuelRailPressureSensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:PressureOrStressUnit.
+    owl:allValuesFrom qudt:PressureOrStressUnit
   ].
 
 vsso:FuelRailPressureDirect a rdfs:Class, owl:Class;
@@ -4272,12 +4272,12 @@ vsso:FuelRailPressureDirect a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.FuelRailPressureDirect : PID 23 - Fuel rail pressure direct inject"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:FuelRailPressureSensor.
+        owl:allValuesFrom vsso:FuelRailPressureSensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:PressureOrStressUnit.
+    owl:allValuesFrom qudt:PressureOrStressUnit
   ].
 
 vsso:O2WRVoltage a rdfs:Class, owl:Class;
@@ -4286,12 +4286,12 @@ vsso:O2WRVoltage a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.O2WR.SensorX.Voltage : PID 24->2B - Lambda voltage for wide range/band oxygen sensor X"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:O2Sensor.
+        owl:allValuesFrom vsso:O2Sensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:EnergyPerElectricChargeUnit.
+    owl:allValuesFrom qudt:EnergyPerElectricChargeUnit
   ].
 
 vsso:CommandedEGR a rdfs:Class, owl:Class;
@@ -4300,12 +4300,12 @@ vsso:CommandedEGR a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.CommandedEGR : PID 2C - Commanded exhaust gas recirculation (EGR)"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:EGRSystemMonitor.
+        owl:allValuesFrom vsso:EGRSystemMonitor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 vsso:EGRError a rdfs:Class, owl:Class;
@@ -4314,12 +4314,12 @@ vsso:EGRError a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.EGRError : PID 2D - Exhaust gas recirculation (EGR) error"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:EGRSystemMonitor.
+        owl:allValuesFrom vsso:EGRSystemMonitor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 vsso:CommandedEVAP a rdfs:Class, owl:Class;
@@ -4328,16 +4328,16 @@ vsso:CommandedEVAP a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.CommandedEVAP : PID 2E - Commanded evaporative purge (EVAP) valve"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:EVAPSystem.
+        owl:allValuesFrom vsso:EVAPSystem
     ];
     rdfs:subClassOf [
         owl:onProperty sosa:isActuatedBy;
-        owl:allValuesFrom vsso:EVAPSystem.
+        owl:allValuesFrom vsso:EVAPSystem
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 vsso:WarmupsSinceDTCClear a rdfs:Class, owl:Class;
@@ -4346,12 +4346,12 @@ vsso:WarmupsSinceDTCClear a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.WarmupsSinceDTCClear : PID 30 - Number of warm-ups since codes cleared"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:DiagnosticSystem.
+        owl:allValuesFrom vsso:DiagnosticSystem
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 vsso:DistanceSinceDTCClear a rdfs:Class, owl:Class;
@@ -4360,12 +4360,12 @@ vsso:DistanceSinceDTCClear a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.DistanceSinceDTCClear : PID 31 - Distance traveled since codes cleared"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:DiagnosticSystem.
+        owl:allValuesFrom vsso:DiagnosticSystem
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:LengthUnit.
+    owl:allValuesFrom qudt:LengthUnit
   ].
 
 vsso:EVAPVaporPressure a rdfs:Class, owl:Class;
@@ -4374,12 +4374,12 @@ vsso:EVAPVaporPressure a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.EVAPVaporPressure : PID 32 - Evaporative purge (EVAP) system pressure"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:EVAPSystem.
+        owl:allValuesFrom vsso:EVAPSystem
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:PressureOrStressUnit.
+    owl:allValuesFrom qudt:PressureOrStressUnit
   ].
 
 vsso:BarometricPressure a rdfs:Class, owl:Class;
@@ -4388,12 +4388,12 @@ vsso:BarometricPressure a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.BarometricPressure : PID 33 - Barometric pressure"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:Barometer.
+        owl:allValuesFrom vsso:Barometer
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:PressureOrStressUnit.
+    owl:allValuesFrom qudt:PressureOrStressUnit
   ].
 
 vsso:O2Current a rdfs:Class, owl:Class;
@@ -4402,12 +4402,12 @@ vsso:O2Current a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.O2WR.Sensor1.Current : PID 34-3B - Lambda current for wide range/band oxygen sensor 1"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:O2Sensor.
+        owl:allValuesFrom vsso:O2Sensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:ElectricCurrentUnit.
+    owl:allValuesFrom qudt:ElectricCurrentUnit
   ].
 
 vsso:CatalystTemperature a rdfs:Class, owl:Class;
@@ -4416,12 +4416,12 @@ vsso:CatalystTemperature a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.Catalyst.BankX.TemperatureY : PID 3C->3F - Catalyst temperature from bank X, sensor Y"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:CatalystTemperatureSensor.
+        owl:allValuesFrom vsso:CatalystTemperatureSensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:TemperatureUnit.
+    owl:allValuesFrom qudt:TemperatureUnit
   ].
 
 vsso:PidsC a rdfs:Class, owl:Class;
@@ -4430,7 +4430,7 @@ vsso:PidsC a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.PidsC : PID 40 - Bit array of the supported pids 41 to 60"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:DiagnosticSystem.
+        owl:allValuesFrom vsso:DiagnosticSystem
     ];
     rdfs:subClassOf [
     a owl:Restriction;
@@ -4444,12 +4444,12 @@ vsso:ControlModuleVoltage a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.ControlModuleVoltage : PID 42 - Control module voltage"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:VoltageSensor.
+        owl:allValuesFrom vsso:VoltageSensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:EnergyPerElectricChargeUnit.
+    owl:allValuesFrom qudt:EnergyPerElectricChargeUnit
   ].
 
 vsso:AbsoluteLoad a rdfs:Class, owl:Class;
@@ -4458,12 +4458,12 @@ vsso:AbsoluteLoad a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.AbsoluteLoad : PID 43 - Absolute load value"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:DiagnosticSystem.
+        owl:allValuesFrom vsso:DiagnosticSystem
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 vsso:CommandedEquivalenceRatio a rdfs:Class, owl:Class;
@@ -4472,12 +4472,12 @@ vsso:CommandedEquivalenceRatio a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.CommandedEquivalenceRatio : PID 44 - Commanded equivalence ratio"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:DiagnosticSystem.
+        owl:allValuesFrom vsso:DiagnosticSystem
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 vsso:RelativeThrottlePosition a rdfs:Class, owl:Class;
@@ -4486,12 +4486,12 @@ vsso:RelativeThrottlePosition a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.RelativeThrottlePosition : PID 45 - Relative throttle position"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:ThrottlePositionSensor.
+        owl:allValuesFrom vsso:ThrottlePositionSensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 vsso:ThrottlePositionB-C a rdfs:Class, owl:Class;
@@ -4505,7 +4505,7 @@ vsso:ThrottlePositionB-C a rdfs:Class, owl:Class;
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 vsso:AcceleratorPositionD-E-F a rdfs:Class, owl:Class;
@@ -4514,12 +4514,12 @@ vsso:AcceleratorPositionD-E-F a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.AcceleratorPositionD/E/F : PID 49/4A/4B - Accelerator pedal position D/E/F"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:PedalPositionSensor.
+        owl:allValuesFrom vsso:PedalPositionSensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 vsso:ThrottleActuation a rdfs:Class, owl:Class;
@@ -4528,16 +4528,16 @@ vsso:ThrottleActuation a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.ThrottleActuator : PID 4C - Commanded throttle actuator"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:ThrottlePositionSensor.
+        owl:allValuesFrom vsso:ThrottlePositionSensor
     ];
     rdfs:subClassOf [
         owl:onProperty sosa:isActuatedBy;
-        owl:allValuesFrom vsso:ThrottleActuator.
+        owl:allValuesFrom vsso:ThrottleActuator
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 vsso:RunTimeMIL a rdfs:Class, owl:Class;
@@ -4546,12 +4546,12 @@ vsso:RunTimeMIL a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.RunTimeMIL : PID 4D - Run time with MIL on"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:Timer.
+        owl:allValuesFrom vsso:Timer
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:TimeUnit.
+    owl:allValuesFrom qudt:TimeUnit
   ].
 
 vsso:TimeSinceDTCCleared a rdfs:Class, owl:Class;
@@ -4560,12 +4560,12 @@ vsso:TimeSinceDTCCleared a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.TimeSinceDTCCleared : PID 4E - Time since trouble codes cleared"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:Timer.
+        owl:allValuesFrom vsso:Timer
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:TimeUnit.
+    owl:allValuesFrom qudt:TimeUnit
   ].
 
 vsso:MaxMAF a rdfs:Class, owl:Class;
@@ -4574,12 +4574,12 @@ vsso:MaxMAF a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.MaxMAF : PID 50 - Maximum flow for mass air flow sensor"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:MAFSensor.
+        owl:allValuesFrom vsso:MAFSensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:MassPerTimeUnit.
+    owl:allValuesFrom qudt:MassPerTimeUnit
   ].
 
 vsso:FuelType a rdfs:Class, owl:Class;
@@ -4588,12 +4588,12 @@ vsso:FuelType a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.FuelType : PID 51 - Fuel type"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:DiagnosticSystem.
+        owl:allValuesFrom vsso:DiagnosticSystem
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 vsso:EthanolPercent a rdfs:Class, owl:Class;
@@ -4602,12 +4602,12 @@ vsso:EthanolPercent a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.EthanolPercent : PID 52 - Percentage of ethanol in the fuel"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:FluidSensor.
+        owl:allValuesFrom vsso:FluidSensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 vsso:EVAPVaporPressureAbsolute a rdfs:Class, owl:Class;
@@ -4621,7 +4621,7 @@ vsso:EVAPVaporPressureAbsolute a rdfs:Class, owl:Class;
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:PressureOrStressUnit.
+    owl:allValuesFrom qudt:PressureOrStressUnit
   ].
 
 vsso:EVAPVaporPressureAlternate a rdfs:Class, owl:Class;
@@ -4630,12 +4630,12 @@ vsso:EVAPVaporPressureAlternate a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.EVAPVaporPressureAlternate : PID 54 - Alternate evaporative purge (EVAP) system pressure"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:EVAPSystem.
+        owl:allValuesFrom vsso:EVAPSystem
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:PressureOrStressUnit.
+    owl:allValuesFrom qudt:PressureOrStressUnit
   ].
 
 vsso:ShortTermO2Trim a rdfs:Class, owl:Class;
@@ -4644,12 +4644,12 @@ vsso:ShortTermO2Trim a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.ShortTermO2Trim : PID 55/57 - Short term secondary O2 trim"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:DiagnosticSystem.
+        owl:allValuesFrom vsso:DiagnosticSystem
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 vsso:LongTermO2Trim a rdfs:Class, owl:Class;
@@ -4658,12 +4658,12 @@ vsso:LongTermO2Trim a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.LongTermO2Trim : PID 56/58 - Long term secondary O2 trim"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:DiagnosticSystem.
+        owl:allValuesFrom vsso:DiagnosticSystem
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 vsso:FuelRailPressureAbsolute a rdfs:Class, owl:Class;
@@ -4672,12 +4672,12 @@ vsso:FuelRailPressureAbsolute a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.FuelRailPressureAbsolute : PID 59 - Absolute fuel rail pressure"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:FuelRailPressureSensor.
+        owl:allValuesFrom vsso:FuelRailPressureSensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:PressureOrStressUnit.
+    owl:allValuesFrom qudt:PressureOrStressUnit
   ].
 
 vsso:RelativeAcceleratorPosition a rdfs:Class, owl:Class;
@@ -4686,12 +4686,12 @@ vsso:RelativeAcceleratorPosition a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.RelativeAcceleratorPosition : PID 5A - Relative accelerator pedal position"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:PedalPositionSensor.
+        owl:allValuesFrom vsso:PedalPositionSensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 vsso:HybridBatteryRemaining a rdfs:Class, owl:Class;
@@ -4700,12 +4700,12 @@ vsso:HybridBatteryRemaining a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.HybridBatteryRemaining : PID 5B - Remaining life of hybrid battery"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:BatterySensor.
+        owl:allValuesFrom vsso:BatterySensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 vsso:FuelInjectionTiming a rdfs:Class, owl:Class;
@@ -4714,12 +4714,12 @@ vsso:FuelInjectionTiming a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.FuelInjectionTiming : PID 5D - Fuel injection timing"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:CrankshaftPositionSensor.
+        owl:allValuesFrom vsso:CrankshaftPositionSensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:AngleUnit.
+    owl:allValuesFrom qudt:AngleUnit
   ].
 
 vsso:FuelRate a rdfs:Class, owl:Class;
@@ -4728,12 +4728,12 @@ vsso:FuelRate a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.FuelRate : PID 5E - Engine fuel rate"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:FlowSensor.
+        owl:allValuesFrom vsso:FlowSensor
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:VolumePerTimeUnit.
+    owl:allValuesFrom qudt:VolumePerTimeUnit
   ].
 
 vsso:DTCCount a rdfs:Class, owl:Class;
@@ -4742,12 +4742,12 @@ vsso:DTCCount a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.Status.DTCCount : Number of Diagnostic Trouble Codes (DTC)"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:DiagnosticSystem.
+        owl:allValuesFrom vsso:DiagnosticSystem
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 vsso:MIL a rdfs:Class, owl:Class;
@@ -4756,12 +4756,12 @@ vsso:MIL a rdfs:Class, owl:Class;
     rdfs:comment "Signal.OBD.Status.MIL : Malfunction Indicator Light (MIL) False = Off, True = On"@en;
     rdfs:subClassOf [
         owl:onProperty sosa:isObservedBy;
-        owl:allValuesFrom vsso:DiagnosticSystem.
+        owl:allValuesFrom vsso:DiagnosticSystem
     ];
     rdfs:subClassOf [
     a owl:Restriction;
     owl:onProperty qudt:unit;
-    owl:allValuesFrom qudt:DimensionlessUnit.
+    owl:allValuesFrom qudt:DimensionlessUnit
   ].
 
 
