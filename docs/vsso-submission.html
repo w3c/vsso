@@ -152,7 +152,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 some invalid/deprecated css and not sure we need since W3C respec style should be used
 -->
 <link rel="stylesheet" href="resources/primer.css" media="screen">    
-<link rel="stylesheet" href="resources/rec.css" media="screen">    
+<!-- <link rel="stylesheet" href="resources/rec.css" media="screen"> -->
 <link rel="stylesheet" href="resources/extra.css" media="screen">    
 <link rel="stylesheet" href="resources/owl.css" media="screen">
 <style>
@@ -225,7 +225,7 @@ some invalid/deprecated css and not sure we need since W3C respec style should b
 <h2 id="overv" class="list">VSSo: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This ontology has the following classes and properties.</span>
-<h4>Classes</h4>
+<h4 id="h4classes">Classes</h4>
 <ul class="hlist">
    <li>
       <a href="#ABS" title="http://automotive.eurecom.fr/vsso#ABS">ABS</a>
@@ -1715,7 +1715,7 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#VehicleYaw" title="http://automotive.eurecom.fr/vsso#VehicleYaw">Yaw</a>
    </li>
-</ul><h4>Object Properties</h4><ul class="hlist">
+</ul><h4 id="h4objectproperties">Object Properties</h4><ul class="hlist">
    <li>
       <a href="#attribute" title="http://automotive.eurecom.fr/vsso#attribute">Attribute</a>
    </li>
@@ -1926,7 +1926,7 @@ This ontology has the following classes and properties.</span>
          <span>Year</span>
       </a>
    </li>
-</ul><h4>Data Properties</h4><ul class="hlist">
+</ul><h4 id="h4dataproperties">Data Properties</h4><ul class="hlist">
    <li>
       <a href="#bodyType" title="http://automotive.eurecom.fr/vsso#bodyType">
          <span>BodyType</span>
@@ -2019,8 +2019,7 @@ This ontology has the following classes and properties.</span>
 This section presents some examples of usage of VSSo, serialized in turtle.</span>
 
 A vehicle is an instance of a <code>vsso:Vehicle</code>. It has a certain number of <code>vsso:attributes</code> such as <code>vsso:brand</code>, <code>vsso:model</code>, <code>vsso:vin</code> and <code>vsso:year</code>. A vehicle might produce signal that we have access to. In this example, the signal <code>&lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/signal/temperatureOutside></code>.
-<figure><img src="static/doc-web-ex1.png" style="display:block; margin-left:auto; margin-right:auto;"></figure>
-<figure><figurecaption>Example of VSSo Vehicle</figurecaption>
+<figure><img src="static/doc-web-ex1.png" alt="Example of VSSo Vehicle" style="display:block; margin-left:auto; margin-right:auto;"></figure><figurecaption>Example of VSSo Vehicle</figurecaption>
 <pre><code>
 &lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/branch/Vehicle&gt; a vsso:Vehicle,
         geo:Feature,
@@ -2034,8 +2033,8 @@ A vehicle is an instance of a <code>vsso:Vehicle</code>. It has a certain number
 </code></pre></figure>
 
 The same vehicle might be composed of several branches, which have also signals and attributes. In this case, we define the engine instance as a part of our <code>vsso:Vehicle</code> instance, with the following signals and attributes: the <code>&lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/signal/temperatureOilEngine&gt;</code> signal, the <code>vsso:displacement</code>, <code>vsso:engineConfiguration</code>, <code>vsso:fuelType</code>, <code>vsso:maxPower</code> and <code>vsso:maxTorque</code> attributes.
-<figure><img src="static/doc-web-ex2.png" style="display:block; margin-left:auto; margin-right:auto;"></figure>
-<figure><figurecaption>Example of VSSo Engine branch</figurecaption>
+<figure><img src="static/doc-web-ex2.png" alt="Example of VSSo Engine branch" style="display:block; margin-left:auto; margin-right:auto;"></figure>
+<figurecaption>Example of VSSo Engine branch</figurecaption>
 <pre><code>
 &lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/branch/Engine&gt; a vsso:Engine ;
 	vsso:partOf &lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/branch/Vehicle&gt; ;
@@ -2049,8 +2048,8 @@ The same vehicle might be composed of several branches, which have also signals 
 </code></pre></figure>
 
 Any signal can produce an observation. In the following example, the observation is about the signal <code>&lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/signal/temperatureEngine&gt;</code>, measured by the sensor <code>&lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/sensor/thermometerEngine&gt;</code>, and has a result of 38 degree Celcius.
-<figure><img src="static/doc-web-ex3.png" style="display:block; margin-left:auto; margin-right:auto;"></figure>
-<figure><figurecaption>Example of a sosa:Observation of a VSSo signal</figurecaption>
+<figure><img src="static/doc-web-ex3.png" alt="Example of a sosa:Observation of a VSSo signal" style="display:block; margin-left:auto; margin-right:auto;"></figure>
+<figurecaption>Example of a sosa:Observation of a VSSo signal</figurecaption>
 <pre><code>
 :Observation a sosa:Observation ;
     geo:lat "-74"^^xsd:long ;
@@ -19495,12 +19494,12 @@ Add your references here. It is recommended to have them as a list.</span>
 
                 <dd><a href=""http://www.opengeospatial.org/standards/geosparql"><cite>GeoSPARQL" - A Geographic Query Language for RDF Data</cite></a>. Matthew Perry; John Herring.10 September 2012. URL: <a href=""http://www.opengeospatial.org/standards/geosparql">http://www.opengeospatial.org/standards/geosparql</a>
 -->
- 
+<dl>
 <dt id="bib-OWL-Time">[OWL-Time]</dt>
-<dd><a href="https://www.w3.org/TR/owl-time/"><cite>Time" Ontology in OWL</cite></a>. Simon Cox; Chris Little. W3C. 19 October 2017. W3C Recommendation. URL: <a href=https://www.w3.org/TR/owl-time/">https://www.w3.org/TR/owl-time/"</a></dd>
+<dd><a href="https://www.w3.org/TR/owl-time/"><cite>Time Ontology in OWL</cite></a>. Simon Cox; Chris Little. W3C. 19 October 2017. W3C Recommendation. URL: <a href=https://www.w3.org/TR/owl-time/">https://www.w3.org/TR/owl-time/"</a></dd>
 
 <dt id="bib-QUDT">[QUDT]</dt>
-<dd><a id=”bib-QUDT” href="http://www.qudt.org/"><cite>QUDT" - Quantities, Units, Dimensions and Data Types Ontologies</cite></a>. Ralph Hodgson; Paul J. Keller; Jack Hodges; Jack Spivak.18 March 2014. URL: <a href="http://www.qudt.org/">http://www.qudt.org/</a></dd>
+<dd><a id=”bib-QUDT” href="http://www.qudt.org/"><cite>QUDT - Quantities, Units, Dimensions and Data Types Ontologies</cite></a>. Ralph Hodgson; Paul J. Keller; Jack Hodges; Jack Spivak.18 March 2014. URL: <a href="http://www.qudt.org/">http://www.qudt.org/</a></dd>
 
 <dt id="bib-SOSA">[SOSA]</dt>
 <dd><a href="https://www.w3.org/TR/vocab-ssn/"><cite>Semantic Sensor Network Ontology</cite></a>. Krzysztof Janowicz and Simon Cox and Kerry Taylor and Danh Le Phuoc and Maxime Lefranccois and Armin Haller.08 December 2017. URL: <a href="https://www.w3.org/TR/vocab-ssn/">https://www.w3.org/TR/vocab-ssn/</a></dd>
@@ -19516,7 +19515,7 @@ Add your references here. It is recommended to have them as a list.</span>
 
 <dt id="#bib-Signal-Processing">[WOT-ARCHITECTURE<!--_hyper: 174696483;-->]</dt>
 <dd><a href="https://books.google.de/books?id=QBT7nP7zTLgC&pg=PA1&redir_esc=y#v=onepage&q&f=false"><cite>Introductory signal processing (Vol. 6)</cite></a>. Priemer, R. World Scientific Publishing Company. 1990.<!--_hyper:" 174696483;--></dd>
-
+</dl>
 <!--http://motools.sourceforge.net/event/event.html
 
 http://w3id.org/lindt/custom_datatypes
@@ -19528,8 +19527,6 @@ https://github.com/GENIVI/vehicle_signal_specification/
 <h2 id="ack" class="list">Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>
 The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
-</div>
-
 </div>
 
 
