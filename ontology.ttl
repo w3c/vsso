@@ -4005,7 +4005,7 @@ vsso:BatteryTemperature a rdfs:Class, owl:Class;
   ].
 
 
-#: OBD signals
+#OBD signals
 vsso:PidsA a rdfs:Class, owl:Class;
     rdfs:subClassOf vsso:ObservableSignal;
     rdfs:label "PidsA"@en;
