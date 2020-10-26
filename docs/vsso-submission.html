@@ -262,7 +262,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 	    
 </div>
 
-<div id="toc"><h2>Table of contents</h2><ul><li>1. <a href="#overv">VSSo: Overview </a></li><li>2. <a href="#desc">VSSo: Description </a></li><li>3. <a href="#crossreference">Inventory of VSSo classes, object properties and datatype properties </a></li><ul><li>3.1. <a href="#classes-headline">Classes</a></li><li>3.2. <a href="#properties">Object Properties</a></li><li>3.3. <a href="#dataproperties-headline">Datatype Properties</a></li></ul><li>4. <a href="#ref">References </a></li><li>5. <a href="#ack">Acknowledgements </a></li></ul></div>     <div id="overview"><h2 id="overv" class="list">VSSo: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div id="toc"><h2>Table of contents</h2><ul><li>1. <a href="#overv">VSSo: Overview </a></li><li>2. <a href="#desc">VSSo: Description </a></li><li>3. <a href="#crossreference">Inventory of VSSo classes, object properties and datatype properties </a></li></ul><ul><li>3.1. <a href="#classes-headline">Classes</a></li><li>3.2. <a href="#properties">Object Properties</a></li><li>3.3. <a href="#dataproperties-headline">Datatype Properties</a></li></ul><li>4. <a href="#ref">References </a></li><li>5. <a href="#ack">Acknowledgements </a></li></ul></div>     <div id="overview"><h2 id="overv" class="list">VSSo: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>This ontology has the following classes and properties.</p>
 
 <h4 id="classes-0">Classes<a class="self-link" aria-label="§" href="#overview"></a></h4>
@@ -1839,8 +1839,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 
 A vehicle is an instance of a <code>vsso:Vehicle</code>. It has a certain number of <code>vsso:attributes</code> such as <code>vsso:brand</code>, <code>vsso:model</code>, <code>vsso:vin</code> and <code>vsso:year</code>. A vehicle might produce signal that we have access to. In this example, the signal <code>&lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/signal/temperatureOutside&gt;</code>.
-<figure class="respec-offending-element" title="Found a `<figure>` without a `<figcaption>`" id="respec-offender-found-a-figure-without-a-figcaption"><img src="static/doc-web-ex1.png" style="display:block; margin-left:auto; margin-right:auto; width:50%;" width="500"></figure>
-<figure class="respec-offending-element" title="Found a `<figure>` without a `<figcaption>`" id="respec-offender-found-a-figure-without-a-figcaption-0"><figurecaption>Example of VSSo Vehicle</figurecaption>
+<figure class="respec-offending-element" title="example climate control ontology fragment"><img
+src="static/doc-web-ex1.png" alt="example climate control ontology fragment" style="display:block; margin-left:auto; margin-right:auto; width:50%;" width="500"></figure>
+<figurecaption>Example of VSSo Vehicle</figurecaption>
 <pre><code aria-busy="false" class="hljs javascript">
 &lt;http:<span class="hljs-comment">//automotive.eurecom.fr/1GTR1UEC6EZ289970/branch/Vehicle&gt; a vsso:Vehicle,</span>
         geo:Feature,
@@ -1854,8 +1855,10 @@ A vehicle is an instance of a <code>vsso:Vehicle</code>. It has a certain number
 </code></pre></figure>
 
 The same vehicle might be composed of several branches, which have also signals and attributes. In this case, we define the engine instance as a part of our <code>vsso:Vehicle</code> instance, with the following signals and attributes: the <code>&lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/signal/temperatureOilEngine&gt;</code> signal, the <code>vsso:displacement</code>, <code>vsso:engineConfiguration</code>, <code>vsso:fuelType</code>, <code>vsso:maxPower</code> and <code>vsso:maxTorque</code> attributes.
-<figure class="respec-offending-element" title="Found a `<figure>` without a `<figcaption>`" id="respec-offender-found-a-figure-without-a-figcaption-1"><img src="static/doc-web-ex2.png" style="display:block; margin-left:auto; margin-right:auto; width:50%;"></figure>
-<figure class="respec-offending-element" title="Found a `<figure>` without a `<figcaption>`" id="respec-offender-found-a-figure-without-a-figcaption-2"><figurecaption>Example of VSSo Engine branch</figurecaption>
+<figure class="respec-offending-element" title="Example of VSSo Engine branch"
+id="web-ex2-img"><img
+src="static/doc-web-ex2.png" alt="Example of VSSo Engine branch" style="display:block; margin-left:auto; margin-right:auto; width:50%;"></figure>
+<figurecaption>Example of VSSo Engine branch</figurecaption>
 <pre><code aria-busy="false" class="hljs javascript">
 &lt;http:<span class="hljs-comment">//automotive.eurecom.fr/1GTR1UEC6EZ289970/branch/Engine&gt; a vsso:Engine ;</span>
 	vsso:partOf &lt;http:<span class="hljs-comment">//automotive.eurecom.fr/1GTR1UEC6EZ289970/branch/Vehicle&gt; ;</span>
@@ -1869,8 +1872,8 @@ The same vehicle might be composed of several branches, which have also signals 
 </code></pre></figure>
 
 Any signal can produce an observation. In the following example, the observation is about the signal <code>&lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/signal/temperatureEngine&gt;</code>, measured by the sensor <code>&lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/sensor/thermometerEngine&gt;</code>, and has a result of 38 degree Celcius.
-<figure class="respec-offending-element" title="Found a `<figure>` without a `<figcaption>`" id="respec-offender-found-a-figure-without-a-figcaption-3"><img src="static/doc-web-ex3.png" style="display:block; margin-left:auto; margin-right:auto; width:50%;" width="500"></figure>
-<figure class="respec-offending-element" title="Found a `<figure>` without a `<figcaption>`" id="respec-offender-found-a-figure-without-a-figcaption-4"><figurecaption>Example of a sosa:Observation of a VSSo signal</figurecaption>
+<figure class="respec-offending-element" title="Example of a sosa:Observation of a VSSo signal" id="web-ex3-img"><img src="static/doc-web-ex3.png" style="display:block; margin-left:auto; margin-right:auto; width:50%;" width="500"></figure>
+<figurecaption>Example of a sosa:Observation of a VSSo signal</figurecaption>
 <pre><code aria-busy="false" class="hljs javascript">
 :Observation a sosa:Observation ;
     geo:lat <span class="hljs-string">"-74"</span>^^xsd:long ;
