@@ -145,7 +145,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     }
   ],
   "github": "https://github.com/w3c/vsso/",
-  "overrideCopyright": "<p class='copyright'>Copyright © 2020 <a href='http://www.eurecom.fr/'></a> The VSSo ontology is licensed under the <a href='http://creativecommons.org/licenses/by/4.0/'>CC 4.0 License.</a></p>",
   "publishISODate": "2020-10-26T00:00:00.000Z",
   "generatedSubtitle": "Member Submission 26 October 2020"
 }</script>
@@ -153,7 +152,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 some invalid/deprecated css and not sure we need since W3C respec style should be used
 -->
 <link rel="stylesheet" href="resources/primer.css" media="screen">    
-<link rel="stylesheet" href="resources/rec.css" media="screen">    
+<!-- <link rel="stylesheet" href="resources/rec.css" media="screen"> -->
 <link rel="stylesheet" href="resources/extra.css" media="screen">    
 <link rel="stylesheet" href="resources/owl.css" media="screen">
 <style>
@@ -167,7 +166,7 @@ some invalid/deprecated css and not sure we need since W3C respec style should b
 <body class="h-entry informative"><div class="head">
     <p><a class="logo" href="https://www.w3.org/"><img alt="W3C" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72" height="48"></a><a href="https://www.w3.org/Submission/"><img src="https://www.w3.org/Icons/member_subm" alt="W3C Member Submission" width="211" height="48"></a></p>
      <h1 id="title" class="title">VSSo</h1>
-    <h2>
+    <h2 id="member-submission">
       W3C Member Submission
       <time class="dt-published" datetime="2020-10-26">26 October 2020</time>
     </h2>
@@ -197,7 +196,7 @@ some invalid/deprecated css and not sure we need since W3C respec style should b
   </dd><dd>
     <a href="https://github.com/w3c/vsso/pulls/">Pull requests</a>
   </dd>
-<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" width="106" height="20"></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" width="110" height="20"></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" width="108" height="20"></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" width="78" height="20"></a> </span></dd><dt>License: </dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" width="192" height="20"></a></dd>
+<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" width="106" height="20"></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" width="110" height="20"></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" width="108" height="20"></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" width="78" height="20"></a> </span></dd>
     </dl>
     <p class="copyright">Copyright © 2020 Institut Mines-Télécom. This document is available under the <a href="https://www.w3.org/Consortium/Legal/copyright-documents">W3C Document License</a>. See the <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">W3C Intellectual Rights Notice and Legal Disclaimers</a> for additional information.</p>
 <hr>
@@ -221,12 +220,12 @@ some invalid/deprecated css and not sure we need since W3C respec style should b
             3.3 of the W3C Patent Policy</a>. Please consult the complete <a href="https://www.w3.org/Submission">list of acknowledged W3C Member Submissions</a>.</p>
 	    
 </div>
-<div id="toc"><h2>Table of contents</h2><ul><li>1. <a href="#overv">VSSo: Overview </a></li><li>2. <a href="#desc">VSSo: Description </a></li><li>3. <a href="#crossreference">Inventory of VSSo classes, object properties and datatype properties </a></li><ul><li>3.1. <a href="#classes-headline">Classes</a></li><li>3.2. <a href="#properties">Object Properties</a></li><li>3.3. <a href="#dataproperties-headline">Datatype Properties</a></li></ul><li>4. <a href="#ref">References </a></li><li>5. <a href="#ack">Acknowledgements </a></li></ul></div>
+<div><nav id="toc"><h2 id="toch2">Table of contents</h2><ol class="toc"><li><span class="secno">1.</span> <a href="#overv">VSSo: Overview </a></li><li><span class="secno">2.</span> <a href="#desc">VSSo: Description </a></li><li><span class="secno">3.</span> <a href="#crossreference">Inventory of VSSo classes, object properties and datatype properties </a></li><li><span class="secno">3.1.</span> <a href="#classes-headline">Classes</a></li><li><span class="secno">3.2.</span> <a href="#properties">Object Properties</a></li><li><span class="secno">3.3.</span> <a href="#dataproperties-headline">Datatype Properties</a></li><li><span class="secno">4.</span> <a href="#ref">References </a></li><li><span class="secno">5.</span> <a href="#ack">Acknowledgements </a></li></ol></nav></div>
 
 <h2 id="overv" class="list">VSSo: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This ontology has the following classes and properties.</span>
-<h4>Classes</h4>
+<h4 id="h4classes">Classes</h4>
 <ul class="hlist">
    <li>
       <a href="#ABS" title="http://automotive.eurecom.fr/vsso#ABS">ABS</a>
@@ -1716,7 +1715,7 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#VehicleYaw" title="http://automotive.eurecom.fr/vsso#VehicleYaw">Yaw</a>
    </li>
-</ul><h4>Object Properties</h4><ul class="hlist">
+</ul><h4 id="h4objectproperties">Object Properties</h4><ul class="hlist">
    <li>
       <a href="#attribute" title="http://automotive.eurecom.fr/vsso#attribute">Attribute</a>
    </li>
@@ -1927,7 +1926,7 @@ This ontology has the following classes and properties.</span>
          <span>Year</span>
       </a>
    </li>
-</ul><h4>Data Properties</h4><ul class="hlist">
+</ul><h4 id="h4dataproperties">Data Properties</h4><ul class="hlist">
    <li>
       <a href="#bodyType" title="http://automotive.eurecom.fr/vsso#bodyType">
          <span>BodyType</span>
@@ -2020,8 +2019,7 @@ This ontology has the following classes and properties.</span>
 This section presents some examples of usage of VSSo, serialized in turtle.</span>
 
 A vehicle is an instance of a <code>vsso:Vehicle</code>. It has a certain number of <code>vsso:attributes</code> such as <code>vsso:brand</code>, <code>vsso:model</code>, <code>vsso:vin</code> and <code>vsso:year</code>. A vehicle might produce signal that we have access to. In this example, the signal <code>&lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/signal/temperatureOutside></code>.
-<figure><img src="static/doc-web-ex1.png" style="display:block; margin-left:auto; margin-right:auto;"></figure>
-<figure><figurecaption>Example of VSSo Vehicle</figurecaption>
+<figure><img src="static/doc-web-ex1.png" alt="Example of VSSo Vehicle" style="display:block; margin-left:auto; margin-right:auto;"/><figcaption>Example of VSSo Vehicle</figcaption></figure>
 <pre><code>
 &lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/branch/Vehicle&gt; a vsso:Vehicle,
         geo:Feature,
@@ -2032,11 +2030,11 @@ A vehicle is an instance of a <code>vsso:Vehicle</code>. It has a certain number
     vsso:vin "1GTR1UEC6EZ289970"^^xsd:string ;
     vsso:year "2015"^^xsd:int .
 &lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/signal/temperatureOutside&gt; a vsso:AmbientAirTemperature.
-</code></pre></figure>
+</code></pre>
 
 The same vehicle might be composed of several branches, which have also signals and attributes. In this case, we define the engine instance as a part of our <code>vsso:Vehicle</code> instance, with the following signals and attributes: the <code>&lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/signal/temperatureOilEngine&gt;</code> signal, the <code>vsso:displacement</code>, <code>vsso:engineConfiguration</code>, <code>vsso:fuelType</code>, <code>vsso:maxPower</code> and <code>vsso:maxTorque</code> attributes.
-<figure><img src="static/doc-web-ex2.png" style="display:block; margin-left:auto; margin-right:auto;"></figure>
-<figure><figurecaption>Example of VSSo Engine branch</figurecaption>
+<figure><img src="static/doc-web-ex2.png" alt="Example of VSSo Engine branch" style="display:block; margin-left:auto; margin-right:auto;"/>
+<figcaption>Example of VSSo Engine branch</figcaption></figure>
 <pre><code>
 &lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/branch/Engine&gt; a vsso:Engine ;
 	vsso:partOf &lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/branch/Vehicle&gt; ;
@@ -2047,11 +2045,11 @@ The same vehicle might be composed of several branches, which have also signals 
     vsso:maxPower "600 kW"^^cdt:power ;
     vsso:maxTorque "280 NM"^^cdt:ucum .
 &lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/signal/temperatureOilEngine&gt; a vsso:EngineOilTemperature.
-</code></pre></figure>
+</code></pre>
 
 Any signal can produce an observation. In the following example, the observation is about the signal <code>&lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/signal/temperatureEngine&gt;</code>, measured by the sensor <code>&lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/sensor/thermometerEngine&gt;</code>, and has a result of 38 degree Celcius.
-<figure><img src="static/doc-web-ex3.png" style="display:block; margin-left:auto; margin-right:auto;"></figure>
-<figure><figurecaption>Example of a sosa:Observation of a VSSo signal</figurecaption>
+<figure><img src="static/doc-web-ex3.png" alt="Example of a sosa:Observation of a VSSo signal" style="display:block; margin-left:auto; margin-right:auto;"/>
+<figcaption>Example of a sosa:Observation of a VSSo signal</figcaption></figure>
 <pre><code>
 :Observation a sosa:Observation ;
     geo:lat "-74"^^xsd:long ;
@@ -2061,7 +2059,7 @@ Any signal can produce an observation. In the following example, the observation
     sosa:madeBySensor &lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/sensor/thermometerEngine&gt; ;
     sosa:observedProperty &lt;http://automotive.eurecom.fr/1GTR1UEC6EZ289970/signal/temperatureOilEngine&gt; ;
     sosa:phenomenonTime "2018-11-16 15:50:27"^^xsd:dateTime .
-</code></pre></figure>
+</code></pre>
 
 <h2 id="crossreference" class="list">Inventory of VSSo classes, object properties and datatype properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by VSSo.
@@ -16798,7 +16796,7 @@ This section provides details for each class and property defined by VSSo.
          </a>
       </li>
       <li>
-         <a href="#acrissCode" title="http://automotive.eurecom.fr/vsso#acrissCode">
+         <a href="#acrissCodeObj" title="http://automotive.eurecom.fr/vsso#acrissCode">
             <span>ACRISSCode</span>
          </a>
       </li>
@@ -17114,7 +17112,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="acrissCode">
+   <div class="entity" id="acrissCodeObj">
       <h3>ACRISSCode<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -17221,7 +17219,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="bodyType">
+   <div class="entity" id="bodyTypeObj">
       <h3>BodyType<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -17247,7 +17245,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="brand">
+   <div class="entity" id="brandObj">
       <h3>Brand<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -17354,7 +17352,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="axleCount">
+   <div class="entity" id="axleCountObj">
       <h3>Count<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -17380,7 +17378,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="doorCount">
+   <div class="entity" id="doorCountObj">
       <h3>Count<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -17435,7 +17433,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="displacement">
+   <div class="entity" id="displacementObj">
       <h3>Displacement<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -17461,7 +17459,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="driverPostion">
+   <div class="entity" id="driverPostionObj">
       <h3>DriverPostion<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -17565,7 +17563,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="gearCount">
+   <div class="entity" id="gearCountObj">
       <h3>GearCount<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -17695,7 +17693,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="knownVehicleDamages">
+   <div class="entity" id="knownVehicleDamagesObj">
       <h3>KnownVehicleDamages<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -17808,7 +17806,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="meetsEmissionStandard">
+   <div class="entity" id="meetsEmissionStandardObj">
       <h3>meets Emision Standard<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -17834,7 +17832,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="model">
+   <div class="entity" id="modelObj">
       <h3>Model<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -17860,7 +17858,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="modelDate">
+   <div class="entity" id="modelDateObj">
       <h3>Modeldate<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -17961,7 +17959,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="productionDate">
+   <div class="entity" id="productionDateObj">
       <h3>ProductionDate<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -17987,7 +17985,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="purchaseDate">
+   <div class="entity" id="purchaseDateObj">
       <h3>PurchaseDate<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -18068,7 +18066,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="row1PosCount">
+   <div class="entity" id="row1PosCountObj">
       <h3>Row1PosCount<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -18094,7 +18092,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="row2PosCount">
+   <div class="entity" id="row2PosCountObj">
       <h3>Row1PosCount<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -18120,7 +18118,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="row3PosCount">
+   <div class="entity" id="row3PosCountObj">
       <h3>Row1PosCount<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -18146,7 +18144,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="row4PosCount">
+   <div class="entity" id="row4PosCountObj">
       <h3>Row4PosCount<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -18172,7 +18170,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="row5PosCount">
+   <div class="entity" id="row5PosCountObj">
       <h3>Row4PosCount<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -18198,7 +18196,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="rowCount">
+   <div class="entity" id="rowCountObj">
       <h3>RowCount<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -18395,7 +18393,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="vehicleConfiguration">
+   <div class="entity" id="vehicleConfigurationObj">
       <h3>VehicleConfiguration<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -18421,7 +18419,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="vehicleInteriorColor">
+   <div class="entity" id="vehicleInteriorColorObj">
       <h3>VehicleInteriorColor<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -18447,7 +18445,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="vehicleInteriorType">
+   <div class="entity" id="vehicleInteriorTypeObj">
       <h3>VehicleInteriorType<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -18473,7 +18471,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="vehicleSeatingCapacity">
+   <div class="entity" id="vehicleSeatingCapacityObj">
       <h3>VehicleSeatingCapacity<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -18499,7 +18497,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="vehicleSpecialUsage">
+   <div class="entity" id="vehicleSpecialUsageObj">
       <h3>VehicleSpecialUsage<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -18525,7 +18523,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="vin">
+   <div class="entity" id="vinObj">
       <h3>VIN<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -18580,7 +18578,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="wheelCount">
+   <div class="entity" id="wheelCountObj">
       <h3>WheelCount<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -18693,7 +18691,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="wmi">
+   <div class="entity" id="wmiObj">
       <h3>WMI<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -18719,7 +18717,7 @@ This section provides details for each class and property defined by VSSo.
          </dl>
       </div>
    </div>
-   <div class="entity" id="year">
+   <div class="entity" id="yearObj">
       <h3>Year<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -18909,7 +18907,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#acrissCode">object property</a>
+               <a href="#acrissCodeObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -18929,7 +18927,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#bodyType">object property</a>
+               <a href="#bodyTypeObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -18949,7 +18947,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#brand">object property</a>
+               <a href="#brandObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -18969,7 +18967,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#axleCount">object property</a>
+               <a href="#axleCountObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -18989,7 +18987,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#doorCount">object property</a>
+               <a href="#doorCountObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19010,7 +19008,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#displacement">object property</a>
+               <a href="#displacementObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19030,7 +19028,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#driverPostion">object property</a>
+               <a href="#driverPostionObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19050,7 +19048,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#gearCount">object property</a>
+               <a href="#gearCountObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19070,7 +19068,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#knownVehicleDamages">object property</a>
+               <a href="#knownVehicleDamagesObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19090,7 +19088,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#meetsEmissionStandard">object property</a>
+               <a href="#meetsEmissionStandardObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19110,7 +19108,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#model">object property</a>
+               <a href="#modelObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19130,7 +19128,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#modelDate">object property</a>
+               <a href="#modelDateObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19150,7 +19148,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#productionDate">object property</a>
+               <a href="#productionDateObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19170,7 +19168,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#purchaseDate">object property</a>
+               <a href="#purchaseDateObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19190,7 +19188,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#row1PosCount">object property</a>
+               <a href="#row1PosCountObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19210,7 +19208,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#row2PosCount">object property</a>
+               <a href="#row2PosCountObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19230,7 +19228,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#row3PosCount">object property</a>
+               <a href="#row3PosCountObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19250,7 +19248,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#row4PosCount">object property</a>
+               <a href="#row4PosCountObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19270,7 +19268,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#row5PosCount">object property</a>
+               <a href="#row5PosCountObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19290,7 +19288,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#rowCount">object property</a>
+               <a href="#rowCountObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19310,7 +19308,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#vehicleConfiguration">object property</a>
+               <a href="#vehicleConfigurationObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19330,7 +19328,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#vehicleInteriorColor">object property</a>
+               <a href="#vehicleInteriorColorObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19350,7 +19348,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#vehicleInteriorType">object property</a>
+               <a href="#vehicleInteriorTypeObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19370,7 +19368,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#vehicleSeatingCapacity">object property</a>
+               <a href="#vehicleSeatingCapacityObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19390,7 +19388,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#vehicleSpecialUsage">object property</a>
+               <a href="#vehicleSpecialUsageObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19410,7 +19408,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#vin">object property</a>
+               <a href="#vinObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19430,7 +19428,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#wheelCount">object property</a>
+               <a href="#wheelCountObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19450,7 +19448,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#wmi">object property</a>
+               <a href="#wmiObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19470,7 +19468,7 @@ This section provides details for each class and property defined by VSSo.
             </dd>
             <dt>is also defined as</dt>
             <dd>
-               <a href="#year">object property</a>
+               <a href="#yearObj">object property</a>
             </dd>
          </dl>
       </div>
@@ -19496,12 +19494,12 @@ Add your references here. It is recommended to have them as a list.</span>
 
                 <dd><a href=""http://www.opengeospatial.org/standards/geosparql"><cite>GeoSPARQL" - A Geographic Query Language for RDF Data</cite></a>. Matthew Perry; John Herring.10 September 2012. URL: <a href=""http://www.opengeospatial.org/standards/geosparql">http://www.opengeospatial.org/standards/geosparql</a>
 -->
- 
+<dl>
 <dt id="bib-OWL-Time">[OWL-Time]</dt>
-<dd><a href="https://www.w3.org/TR/owl-time/"><cite>Time" Ontology in OWL</cite></a>. Simon Cox; Chris Little. W3C. 19 October 2017. W3C Recommendation. URL: <a href=https://www.w3.org/TR/owl-time/">https://www.w3.org/TR/owl-time/"</a></dd>
+<dd><a href="https://www.w3.org/TR/owl-time/"><cite>Time Ontology in OWL</cite></a>. Simon Cox; Chris Little. W3C. 19 October 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/owl-time/">https://www.w3.org/TR/owl-time/</a></dd>
 
 <dt id="bib-QUDT">[QUDT]</dt>
-<dd><a id=”bib-QUDT” href="http://www.qudt.org/"><cite>QUDT" - Quantities, Units, Dimensions and Data Types Ontologies</cite></a>. Ralph Hodgson; Paul J. Keller; Jack Hodges; Jack Spivak.18 March 2014. URL: <a href="http://www.qudt.org/">http://www.qudt.org/</a></dd>
+<dd><a id=”bib-QUDT” href="http://www.qudt.org/"><cite>QUDT - Quantities, Units, Dimensions and Data Types Ontologies</cite></a>. Ralph Hodgson; Paul J. Keller; Jack Hodges; Jack Spivak.18 March 2014. URL: <a href="http://www.qudt.org/">http://www.qudt.org/</a></dd>
 
 <dt id="bib-SOSA">[SOSA]</dt>
 <dd><a href="https://www.w3.org/TR/vocab-ssn/"><cite>Semantic Sensor Network Ontology</cite></a>. Krzysztof Janowicz and Simon Cox and Kerry Taylor and Danh Le Phuoc and Maxime Lefranccois and Armin Haller.08 December 2017. URL: <a href="https://www.w3.org/TR/vocab-ssn/">https://www.w3.org/TR/vocab-ssn/</a></dd>
@@ -19517,7 +19515,7 @@ Add your references here. It is recommended to have them as a list.</span>
 
 <dt id="#bib-Signal-Processing">[WOT-ARCHITECTURE<!--_hyper: 174696483;-->]</dt>
 <dd><a href="https://books.google.de/books?id=QBT7nP7zTLgC&pg=PA1&redir_esc=y#v=onepage&q&f=false"><cite>Introductory signal processing (Vol. 6)</cite></a>. Priemer, R. World Scientific Publishing Company. 1990.<!--_hyper:" 174696483;--></dd>
-
+</dl>
 <!--http://motools.sourceforge.net/event/event.html
 
 http://w3id.org/lindt/custom_datatypes
@@ -19529,8 +19527,6 @@ https://github.com/GENIVI/vehicle_signal_specification/
 <h2 id="ack" class="list">Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>
 The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
-</div>
-
 </div>
 
 
@@ -19647,5 +19643,5 @@ function hidePanel(panel) {
 
 
 
-
+<p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to top">↑</abbr></a></p>
 <script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
