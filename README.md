@@ -1,6 +1,8 @@
 # VSSo: the Vehicle Signal Specification Ontology
 
-This repository contains the research project carried out around the development, extension and usage of VSSo. VSSo is an ontology created from the [GENIVI's Vehicle Signal Specification](https://github.com/GENIVI/vehicle_signal_specification/). It also relies on the [SOSA patterns for observations and actuations](https://www.w3.org/TR/vocab-ssn/).
+This repository contains the standards work being carried out around the development, extension and usage of VSSo. VSSo is an ontology created from the [GENIVI's Vehicle Signal Specification](https://github.com/GENIVI/vehicle_signal_specification/). It also relies on the [SOSA patterns for observations and actuations](https://www.w3.org/TR/vocab-ssn/).
+
+VSSo began as a research project by EURECOM and BMW, EURECOM's parent organization Institut Mines-Télécom brought it to W3C for standardization consideration by making a [Member Submission](https://www.w3.org/Submission/2020/SUBM-vsso-20201026/) [comment](https://www.w3.org/Submission/2020/02/Comment/) 
 
 More precisely, the VSSo ontology is available in [Turtle](vsso.ttl) and corresponds to the [release 1.0 of VSS](https://github.com/GENIVI/vehicle_signal_specification/releases/tag/v1.0)
 
