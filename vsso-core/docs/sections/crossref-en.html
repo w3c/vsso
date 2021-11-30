@@ -1,0 +1,496 @@
+<h2 id="crossreference" class="list">Cross reference for VSSo Core: Vehicle Signal Specification Core Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by VSSo Core: Vehicle Signal Specification Core Ontology.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#ActuatableVehicleProperty"
+            title="https://github.com/w3c/vsso#ActuatableVehicleProperty">ActuatableVehicleProperty</a>
+      </li>
+      <li>
+         <a href="#DynamicVehicleProperty"
+            title="https://github.com/w3c/vsso#DynamicVehicleProperty">DynamicVehicleProperty</a>
+      </li>
+      <li>
+         <a href="#ObservableVehicleProperty"
+            title="https://github.com/w3c/vsso#ObservableVehicleProperty">ObservableVehicleProperty</a>
+      </li>
+      <li>
+         <a href="#PositionInVehicle" title="https://github.com/w3c/vsso#PositionInVehicle">PositionInVehicle</a>
+      </li>
+      <li>
+         <a href="#StaticVehicleProperty"
+            title="https://github.com/w3c/vsso#StaticVehicleProperty">StaticVehicleProperty</a>
+      </li>
+      <li>
+         <a href="#Vehicle" title="https://github.com/w3c/vsso#Vehicle">Vehicle</a>
+      </li>
+      <li>
+         <a href="#VehicleComponent" title="https://github.com/w3c/vsso#VehicleComponent">VehicleComponent</a>
+      </li>
+      <li>
+         <a href="#VehicleProperty" title="https://github.com/w3c/vsso#VehicleProperty">VehicleProperty</a>
+      </li>
+   </ul>
+   <div class="entity" id="ActuatableVehicleProperty">
+      <h3>ActuatableVehicleProperty<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://github.com/w3c/vsso#ActuatableVehicleProperty</p>
+      <div class="comment">
+         <span class="markdown">_ActuatableVehicleProperty_ - Follows the definition of an [actuator](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/) in
+VSS. It is a [DynamicVehicleProperty](#https://github.com/w3c/vsso#DynamicVehicleProperty), which can be changed.
+Refers to [sosa:ActuableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAActuatableProperty)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DynamicVehicleProperty"
+               title="https://github.com/w3c/vsso#DynamicVehicleProperty">DynamicVehicleProperty</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DynamicVehicleProperty">
+      <h3>DynamicVehicleProperty<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://github.com/w3c/vsso#DynamicVehicleProperty</p>
+      <div class="comment">
+         <span class="markdown">_DynamicVehicleProperty_ - In contrast to a [StaticVehicleProperty](#https://github.com/w3c/vsso#StaticVehicleProperty),
+this property is expected to change frequently, even within a vehicle lifecycle. Examples are the vehicle `speed`, `location`, etc.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#VehicleProperty" title="https://github.com/w3c/vsso#VehicleProperty">VehicleProperty</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#ActuatableVehicleProperty"
+               title="https://github.com/w3c/vsso#ActuatableVehicleProperty">ActuatableVehicleProperty</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ObservableVehicleProperty"
+               title="https://github.com/w3c/vsso#ObservableVehicleProperty">ObservableVehicleProperty</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasDynamicVehicleProperty"
+               title="https://github.com/w3c/vsso#hasDynamicVehicleProperty">hasDynamicVehicleProperty</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ObservableVehicleProperty">
+      <h3>ObservableVehicleProperty<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://github.com/w3c/vsso#ObservableVehicleProperty</p>
+      <div class="comment">
+         <span class="markdown">_ObservableVehicleProperty_ - Follows the definition of an [actuator](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/) in
+VSS. It is a [DynamicVehicleProperty](#https://github.com/w3c/vsso#DynamicVehicleProperty), which can be observed but _not_ changed.
+Refers to [sosa:ObservableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DynamicVehicleProperty"
+               title="https://github.com/w3c/vsso#DynamicVehicleProperty">DynamicVehicleProperty</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PositionInVehicle">
+      <h3>PositionInVehicle<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://github.com/w3c/vsso#PositionInVehicle</p>
+      <div class="comment">
+         <span class="markdown">_PositionInVehicle_ - Frequently VehicleProperties and VehicleComponents will appear in several different
+areas in the vehicle. Typicle examples are windows, seats, etc. This concepts shall be used to define the different position of the vehicle.
+They can be named with the positionName property.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#positionName" title="https://github.com/w3c/vsso#positionName">positionName</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="StaticVehicleProperty">
+      <h3>StaticVehicleProperty<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://github.com/w3c/vsso#StaticVehicleProperty</p>
+      <div class="comment">
+         <span class="markdown">_StaticVehicleProperty_ - Follows the definition of an [attribute](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/attributes/) in
+VSS. `StaticVehicleProperty` is meant to stay stable at least over the duration of a vehicle lifecycle.
+If you expect more frequent updates, please consider [DynamicVehicleProperty](#https://github.com/w3c/vsso#DynamicVehicleProperty)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#VehicleProperty" title="https://github.com/w3c/vsso#VehicleProperty">VehicleProperty</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasStaticVehicleProperty"
+               title="https://github.com/w3c/vsso#hasStaticVehicleProperty">hasStaticVehicleProperty</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Vehicle">
+      <h3>Vehicle<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://github.com/w3c/vsso#Vehicle</p>
+      <div class="comment">
+         <span class="markdown">_Vehicle_ - Core concept of the ontology. Collects [VehicleComponents](#https://github.com/w3c/vsso#VehicleComponent)
+and [VehicleProperties](#https://github.com/w3c/vsso#VehicleProperty) belonging to a vehicle</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#partOfVehicle" title="https://github.com/w3c/vsso#partOfVehicle">partOfVehicle</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VehicleComponent">
+      <h3>VehicleComponent<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://github.com/w3c/vsso#VehicleComponent</p>
+      <div class="comment">
+         <span class="markdown">_VehicleComponent_ - First of all a sorting element for [VehicleProperties](#https://github.com/w3c/vsso#VehicleProperty), following on the definition of a
+[branch](https://covesa.github.io/vehicle_signal_specification/rule_set/branches/). It is encouraged to use the concept for actual parts modeled as
+`VehicleComponent.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#partOfVehicle" title="https://github.com/w3c/vsso#partOfVehicle">partOfVehicle</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#partOf" title="https://github.com/w3c/vsso#partOf">partOfVehicleComponent</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#belongsToVehicleComponent"
+               title="https://github.com/w3c/vsso#belongsToVehicleComponent">belongsToVehicleComponent</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#partOf" title="https://github.com/w3c/vsso#partOf">partOfVehicleComponent</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VehicleProperty">
+      <h3>VehicleProperty<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://github.com/w3c/vsso#VehicleProperty</p>
+      <div class="comment">
+         <span class="markdown">_VehicleProperty_ - Central concept for defining a vehicle, either through a VehicleComponent structure
+or connected directly to the vehicle. Every VehicleProperty shall be instantiated with a [vehiclePropertyValue](#https://github.com/w3c/vsso#vehiclePropertyValue).
+It is good practice to set the time when the value was updated through [valueUpdatedAt](#https://github.com/w3c/vsso#valueUpdatedAt)
+The VehicleProperty follows the concept of a [ssn:Property](https://www.w3.org/TR/vocab-ssn/#SSNProperty)</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#DynamicVehicleProperty"
+               title="https://github.com/w3c/vsso#DynamicVehicleProperty">DynamicVehicleProperty</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#StaticVehicleProperty"
+               title="https://github.com/w3c/vsso#StaticVehicleProperty">StaticVehicleProperty</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#belongsToVehicleComponent"
+               title="https://github.com/w3c/vsso#belongsToVehicleComponent">belongsToVehicleComponent</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#propertyValueUpdatedAt"
+               title="https://github.com/w3c/vsso#propertyValueUpdatedAt">propertyValueUpdatedAt</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#vehiclePropertyValue" title="https://github.com/w3c/vsso#vehiclePropertyValue">vehiclePropertyValue</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#belongsToVehicleComponent"
+            title="https://github.com/w3c/vsso#belongsToVehicleComponent">belongsToVehicleComponent</a>
+      </li>
+      <li>
+         <a href="#hasDynamicVehicleProperty"
+            title="https://github.com/w3c/vsso#hasDynamicVehicleProperty">hasDynamicVehicleProperty</a>
+      </li>
+      <li>
+         <a href="#hasStaticVehicleProperty"
+            title="https://github.com/w3c/vsso#hasStaticVehicleProperty">hasStaticVehicleProperty</a>
+      </li>
+      <li>
+         <a href="#partOfVehicle" title="https://github.com/w3c/vsso#partOfVehicle">partOfVehicle</a>
+      </li>
+      <li>
+         <a href="#partOf" title="https://github.com/w3c/vsso#partOf">partOfVehicleComponent</a>
+      </li>
+      <li>
+         <a href="#appearsIn" title="https://github.com/w3c/vsso#appearsIn">postionedAt</a>
+      </li>
+   </ul>
+   <div class="entity" id="belongsToVehicleComponent">
+      <h3>belongsToVehicleComponent<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://github.com/w3c/vsso#belongsToVehicleComponent</p>
+      <div class="comment">
+         <span class="markdown">_belongsToVehicleComponent_ - The property defines for VehicleProperties to which VehicleComponent they belong.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#VehicleProperty" title="https://github.com/w3c/vsso#VehicleProperty">VehicleProperty</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#VehicleComponent" title="https://github.com/w3c/vsso#VehicleComponent">VehicleComponent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDynamicVehicleProperty">
+      <h3>hasDynamicVehicleProperty<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://github.com/w3c/vsso#hasDynamicVehicleProperty</p>
+      <div class="comment">
+         <span class="markdown">_hasDynamicVehicleProperty_ - This property connects an instance of a Vehicle or VehicleComponent to a 
+DynamicVehicleComponent.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#DynamicVehicleProperty"
+                  title="https://github.com/w3c/vsso#DynamicVehicleProperty">DynamicVehicleProperty</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasStaticVehicleProperty">
+      <h3>hasStaticVehicleProperty<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://github.com/w3c/vsso#hasStaticVehicleProperty</p>
+      <div class="comment">
+         <span class="markdown">_hasStaticVehicleProperty_ - This property connects an instance of a Vehicle or VehicleComponent to a 
+StaticVehicleComponent.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#StaticVehicleProperty"
+                  title="https://github.com/w3c/vsso#StaticVehicleProperty">StaticVehicleProperty</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="partOfVehicle">
+      <h3>partOfVehicle<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://github.com/w3c/vsso#partOfVehicle</p>
+      <div class="comment">
+         <span class="markdown">_partOfVehicle_ - This properties conncects VehicleComponents instances with an instance of a Vehicle.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#VehicleComponent" title="https://github.com/w3c/vsso#VehicleComponent">VehicleComponent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Vehicle" title="https://github.com/w3c/vsso#Vehicle">Vehicle</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="partOf">
+      <h3>partOfVehicleComponent<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://github.com/w3c/vsso#partOf</p>
+      <div class="comment">
+         <span class="markdown">_partOfVehicleComponent_ - This property is used to built a partOf hierarchy of VehicleComponents instances.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#VehicleComponent" title="https://github.com/w3c/vsso#VehicleComponent">VehicleComponent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#VehicleComponent" title="https://github.com/w3c/vsso#VehicleComponent">VehicleComponent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="appearsIn">
+      <h3>postionedAt<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://github.com/w3c/vsso#appearsIn</p>
+      <div class="comment">
+         <span class="markdown">_appearsIn_ - This property connects a VehicleProperty or VehicleComponent in the VehicleArea it appears in.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://github.com/w3c/vsso#AreaInVehicle"
+                  target="_blank"
+                  title="https://github.com/w3c/vsso#AreaInVehicle">area in vehicle</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#positionName" title="https://github.com/w3c/vsso#positionName">positionName</a>
+      </li>
+      <li>
+         <a href="#propertyValueUpdatedAt"
+            title="https://github.com/w3c/vsso#propertyValueUpdatedAt">propertyValueUpdatedAt</a>
+      </li>
+      <li>
+         <a href="#vehiclePropertyValue" title="https://github.com/w3c/vsso#vehiclePropertyValue">vehiclePropertyValue</a>
+      </li>
+   </ul>
+   <div class="entity" id="positionName">
+      <h3>positionName<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://github.com/w3c/vsso#positionName</p>
+      <div class="comment">
+         <span class="markdown">_positionName_ - DataProperty in order to name the VehicleArea.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#PositionInVehicle" title="https://github.com/w3c/vsso#PositionInVehicle">PositionInVehicle</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="propertyValueUpdatedAt">
+      <h3>propertyValueUpdatedAt<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://github.com/w3c/vsso#propertyValueUpdatedAt</p>
+      <div class="comment">
+         <span class="markdown">_propertyValueUpdatedAt_ - A timestamp representing the time of the last update of a vehiclePropertyValue</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#VehicleProperty" title="https://github.com/w3c/vsso#VehicleProperty">VehicleProperty</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="vehiclePropertyValue">
+      <h3>vehiclePropertyValue<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://github.com/w3c/vsso#vehiclePropertyValue</p>
+      <div class="comment">
+         <span class="markdown">_vehiclePropertyValue_ - Assigns a value to a VehicleProperty.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#VehicleProperty" title="https://github.com/w3c/vsso#VehicleProperty">VehicleProperty</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
