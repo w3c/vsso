@@ -17,6 +17,7 @@ vsso-core: rdf:type owl:Ontology ;
   dct:creator "Raphael Troncy"^^xsd:string ;
   dct:creator "Daniel Wilms";
   dct:contributor "Daniel Alvarez-Coello"^^xsd:string ;
+  dct:contributor "Felix Loesch"^^xsd:string ;
   owl:versionInfo """v2.0-develop"""@en ;
   rdfs:seeAlso "https://github.com/COVESA/vehicle_signal_specification";
   vann:preferredNamespacePrefix "vsso-core" .
@@ -77,7 +78,7 @@ this property is expected to change frequently, even within a vehicle lifecycle.
 vsso-core:PositionInVehicle a owl:Class;
     rdfs:label "PositionInVehicle"@en ;
     rdfs:comment "_PositionInVehicle_ - Frequently VehicleProperties and VehicleComponents will appear in several different
-areas in the vehicle. Typicle examples are windows, seats, etc. This concepts shall be used to define the different position of the vehicle.
+positions in the vehicle. Typicle examples are windows, seats, etc. This concepts shall be used to define the different position of the vehicle.
 They can be named with the positionName property."@en .
 
 
@@ -112,16 +113,16 @@ vsso-core:partOfVehicle a owl:ObjectProperty ;
     rdfs:comment "_partOfVehicle_ - This properties conncects VehicleComponents instances with an instance of a Vehicle."@en .
 
 
-vsso-core:appearsIn a owl:ObjectProperty ;
+vsso-core:postionedAt a owl:ObjectProperty ;
     rdfs:label "postionedAt"@en ;
-    rdfs:range vsso-core:AreaInVehicle ;
-    rdfs:comment "_appearsIn_ - This property connects a VehicleProperty or VehicleComponent in the VehicleArea it appears in." @en .
+    rdfs:range vsso-core:PositionInVehicle ;
+    rdfs:comment "_postionedAt_ - This property connects a VehicleProperty or VehicleComponent in the PositionInVehicle it appears in." @en .
 
 vsso-core:positionName a owl:DatatypeProperty ;
     rdfs:label "positionName"@en ;
     rdfs:domain vsso-core:PositionInVehicle ;
     rdfs:range xsd:string ;
-    rdfs:comment "_positionName_ - DataProperty in order to name the VehicleArea."@en .
+    rdfs:comment "_positionName_ - DataProperty in order to name the PositionInVehicle."@en .
 
 vsso-core:vehiclePropertyValue a owl:DatatypeProperty ;
     rdfs:label "vehiclePropertyValue"@en ;

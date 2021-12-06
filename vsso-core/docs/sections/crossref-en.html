@@ -116,7 +116,7 @@ Refers to [sosa:ObservableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAObserva
          <strong>IRI:</strong> https://github.com/w3c/vsso#PositionInVehicle</p>
       <div class="comment">
          <span class="markdown">_PositionInVehicle_ - Frequently VehicleProperties and VehicleComponents will appear in several different
-areas in the vehicle. Typicle examples are windows, seats, etc. This concepts shall be used to define the different position of the vehicle.
+positions in the vehicle. Typicle examples are windows, seats, etc. This concepts shall be used to define the different position of the vehicle.
 They can be named with the positionName property.</span>
       </div>
       <dl class="description">
@@ -124,6 +124,11 @@ They can be named with the positionName property.</span>
          <dd>
             <a href="#positionName" title="https://github.com/w3c/vsso#positionName">positionName</a>
             <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#postionedAt" title="https://github.com/w3c/vsso#postionedAt">postionedAt</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -255,7 +260,7 @@ The VehicleProperty follows the concept of a [ssn:Property](https://www.w3.org/T
          <a href="#partOf" title="https://github.com/w3c/vsso#partOf">partOfVehicleComponent</a>
       </li>
       <li>
-         <a href="#appearsIn" title="https://github.com/w3c/vsso#appearsIn">postionedAt</a>
+         <a href="#postionedAt" title="https://github.com/w3c/vsso#postionedAt">postionedAt</a>
       </li>
    </ul>
    <div class="entity" id="belongsToVehicleComponent">
@@ -377,23 +382,21 @@ StaticVehicleComponent.</span>
          </dl>
       </div>
    </div>
-   <div class="entity" id="appearsIn">
+   <div class="entity" id="postionedAt">
       <h3>postionedAt<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://github.com/w3c/vsso#appearsIn</p>
+         <strong>IRI:</strong> https://github.com/w3c/vsso#postionedAt</p>
       <div class="comment">
-         <span class="markdown">_appearsIn_ - This property connects a VehicleProperty or VehicleComponent in the VehicleArea it appears in.</span>
+         <span class="markdown">_postionedAt_ - This property connects a VehicleProperty or VehicleComponent in the PositionInVehicle it appears in.</span>
       </div>
       <div class="description">
          <dl>
             <dt>has range</dt>
             <dd>
-               <a href="https://github.com/w3c/vsso#AreaInVehicle"
-                  target="_blank"
-                  title="https://github.com/w3c/vsso#AreaInVehicle">area in vehicle</a>
+               <a href="#PositionInVehicle" title="https://github.com/w3c/vsso#PositionInVehicle">PositionInVehicle</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -421,7 +424,7 @@ StaticVehicleComponent.</span>
       <p>
          <strong>IRI:</strong> https://github.com/w3c/vsso#positionName</p>
       <div class="comment">
-         <span class="markdown">_positionName_ - DataProperty in order to name the VehicleArea.</span>
+         <span class="markdown">_positionName_ - DataProperty in order to name the PositionInVehicle.</span>
       </div>
       <div class="description">
          <dl>

@@ -8,7 +8,8 @@
 
 <https://github.com/w3c/vsso#> rdf:type owl:Ontology ;
                                 <http://purl.org/dc/elements/1.1/description> "This ontology describes the car's attributes, branches and signals defined in the Vehicle Signal Specification." ;
-                                <http://purl.org/dc/terms/contributor> "Daniel Alvarez-Coello" ;
+                                <http://purl.org/dc/terms/contributor> "Daniel Alvarez-Coello" ,
+                                                                       "Felix Loesch" ;
                                 <http://purl.org/dc/terms/creator> "Benjamin Klotz" ,
                                                                    "Daniel Wilms" ,
                                                                    "Raphael Troncy" ;
@@ -55,13 +56,6 @@
 #    Object Properties
 #################################################################
 
-###  https://github.com/w3c/vsso#appearsIn
-:appearsIn rdf:type owl:ObjectProperty ;
-           rdfs:range :AreaInVehicle ;
-           rdfs:comment "_appearsIn_ - This property connects a VehicleProperty or VehicleComponent in the VehicleArea it appears in."@en ;
-           rdfs:label "postionedAt"@en .
-
-
 ###  https://github.com/w3c/vsso#belongsToVehicleComponent
 :belongsToVehicleComponent rdf:type owl:ObjectProperty ;
                            rdfs:domain :VehicleProperty ;
@@ -102,6 +96,13 @@ StaticVehicleComponent."""@en ;
                rdfs:label "partOfVehicle"@en .
 
 
+###  https://github.com/w3c/vsso#postionedAt
+:postionedAt rdf:type owl:ObjectProperty ;
+             rdfs:range :PositionInVehicle ;
+             rdfs:comment "_postionedAt_ - This property connects a VehicleProperty or VehicleComponent in the PositionInVehicle it appears in."@en ;
+             rdfs:label "postionedAt"@en .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -110,7 +111,7 @@ StaticVehicleComponent."""@en ;
 :positionName rdf:type owl:DatatypeProperty ;
               rdfs:domain :PositionInVehicle ;
               rdfs:range xsd:string ;
-              rdfs:comment "_positionName_ - DataProperty in order to name the VehicleArea."@en ;
+              rdfs:comment "_positionName_ - DataProperty in order to name the PositionInVehicle."@en ;
               rdfs:label "positionName"@en .
 
 
@@ -144,10 +145,6 @@ Refers to [sosa:ActuableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAActuatabl
                                         "ttps://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/" .
 
 
-###  https://github.com/w3c/vsso#AreaInVehicle
-:AreaInVehicle rdf:type owl:Class .
-
-
 ###  https://github.com/w3c/vsso#DynamicVehicleProperty
 :DynamicVehicleProperty rdf:type owl:Class ;
                         rdfs:subClassOf :VehicleProperty ;
@@ -170,7 +167,7 @@ Refers to [sosa:ObservableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAObserva
 ###  https://github.com/w3c/vsso#PositionInVehicle
 :PositionInVehicle rdf:type owl:Class ;
                    rdfs:comment """_PositionInVehicle_ - Frequently VehicleProperties and VehicleComponents will appear in several different
-areas in the vehicle. Typicle examples are windows, seats, etc. This concepts shall be used to define the different position of the vehicle.
+positions in the vehicle. Typicle examples are windows, seats, etc. This concepts shall be used to define the different position of the vehicle.
 They can be named with the positionName property."""@en ;
                    rdfs:label "PositionInVehicle"@en .
 

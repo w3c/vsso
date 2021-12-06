@@ -27,6 +27,8 @@
   } ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Daniel Alvarez-Coello"
+  }, {
+    "@value" : "Felix Loesch"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Benjamin Klotz"
@@ -74,9 +76,6 @@
     "@id" : "https://github.com/w3c/vsso#DynamicVehicleProperty"
   } ]
 }, {
-  "@id" : "https://github.com/w3c/vsso#AreaInVehicle",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
   "@id" : "https://github.com/w3c/vsso#DynamicVehicleProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -114,7 +113,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "_PositionInVehicle_ - Frequently VehicleProperties and VehicleComponents will appear in several different\nareas in the vehicle. Typicle examples are windows, seats, etc. This concepts shall be used to define the different position of the vehicle.\nThey can be named with the positionName property."
+    "@value" : "_PositionInVehicle_ - Frequently VehicleProperties and VehicleComponents will appear in several different\npositions in the vehicle. Typicle examples are windows, seats, etc. This concepts shall be used to define the different position of the vehicle.\nThey can be named with the positionName property."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -175,20 +174,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@value" : "https://www.w3.org/TR/vocab-ssn/#SSNProperty"
-  } ]
-}, {
-  "@id" : "https://github.com/w3c/vsso#appearsIn",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "_appearsIn_ - This property connects a VehicleProperty or VehicleComponent in the VehicleArea it appears in."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "postionedAt"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://github.com/w3c/vsso#AreaInVehicle"
   } ]
 }, {
   "@id" : "https://github.com/w3c/vsso#belongsToVehicleComponent",
@@ -274,7 +259,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "_positionName_ - DataProperty in order to name the VehicleArea."
+    "@value" : "_positionName_ - DataProperty in order to name the PositionInVehicle."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://github.com/w3c/vsso#PositionInVehicle"
@@ -285,6 +270,20 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://github.com/w3c/vsso#postionedAt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "_postionedAt_ - This property connects a VehicleProperty or VehicleComponent in the PositionInVehicle it appears in."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "postionedAt"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://github.com/w3c/vsso#PositionInVehicle"
   } ]
 }, {
   "@id" : "https://github.com/w3c/vsso#propertyValueUpdatedAt",

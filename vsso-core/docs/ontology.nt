@@ -1,6 +1,7 @@
 <https://github.com/w3c/vsso#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://github.com/w3c/vsso#> <http://purl.org/dc/elements/1.1/description> "This ontology describes the car's attributes, branches and signals defined in the Vehicle Signal Specification." .
 <https://github.com/w3c/vsso#> <http://purl.org/dc/terms/contributor> "Daniel Alvarez-Coello" .
+<https://github.com/w3c/vsso#> <http://purl.org/dc/terms/contributor> "Felix Loesch" .
 <https://github.com/w3c/vsso#> <http://purl.org/dc/terms/creator> "Benjamin Klotz" .
 <https://github.com/w3c/vsso#> <http://purl.org/dc/terms/creator> "Daniel Wilms" .
 <https://github.com/w3c/vsso#> <http://purl.org/dc/terms/creator> "Raphael Troncy" .
@@ -49,13 +50,6 @@
 # #################################################################
 # 
 # 
-# https://github.com/w3c/vsso#appearsIn
-<https://github.com/w3c/vsso#appearsIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://github.com/w3c/vsso#appearsIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/w3c/vsso#AreaInVehicle> .
-<https://github.com/w3c/vsso#AreaInVehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://github.com/w3c/vsso#appearsIn> <http://www.w3.org/2000/01/rdf-schema#comment> "_appearsIn_ - This property connects a VehicleProperty or VehicleComponent in the VehicleArea it appears in."@en .
-<https://github.com/w3c/vsso#appearsIn> <http://www.w3.org/2000/01/rdf-schema#label> "postionedAt"@en .
-# 
 # https://github.com/w3c/vsso#belongsToVehicleComponent
 <https://github.com/w3c/vsso#belongsToVehicleComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://github.com/w3c/vsso#belongsToVehicleComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/w3c/vsso#VehicleProperty> .
@@ -89,6 +83,12 @@
 <https://github.com/w3c/vsso#partOfVehicle> <http://www.w3.org/2000/01/rdf-schema#comment> "_partOfVehicle_ - This properties conncects VehicleComponents instances with an instance of a Vehicle."@en .
 <https://github.com/w3c/vsso#partOfVehicle> <http://www.w3.org/2000/01/rdf-schema#label> "partOfVehicle"@en .
 # 
+# https://github.com/w3c/vsso#postionedAt
+<https://github.com/w3c/vsso#postionedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://github.com/w3c/vsso#postionedAt> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/w3c/vsso#PositionInVehicle> .
+<https://github.com/w3c/vsso#postionedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "_postionedAt_ - This property connects a VehicleProperty or VehicleComponent in the PositionInVehicle it appears in."@en .
+<https://github.com/w3c/vsso#postionedAt> <http://www.w3.org/2000/01/rdf-schema#label> "postionedAt"@en .
+# 
 # 
 # 
 # #################################################################
@@ -102,7 +102,7 @@
 <https://github.com/w3c/vsso#positionName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://github.com/w3c/vsso#positionName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/w3c/vsso#PositionInVehicle> .
 <https://github.com/w3c/vsso#positionName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://github.com/w3c/vsso#positionName> <http://www.w3.org/2000/01/rdf-schema#comment> "_positionName_ - DataProperty in order to name the VehicleArea."@en .
+<https://github.com/w3c/vsso#positionName> <http://www.w3.org/2000/01/rdf-schema#comment> "_positionName_ - DataProperty in order to name the PositionInVehicle."@en .
 <https://github.com/w3c/vsso#positionName> <http://www.w3.org/2000/01/rdf-schema#label> "positionName"@en .
 # 
 # https://github.com/w3c/vsso#propertyValueUpdatedAt
@@ -135,8 +135,6 @@
 <https://github.com/w3c/vsso#ActuatableVehicleProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.w3.org/TR/vocab-ssn/#SOSAActuatableProperty" .
 <https://github.com/w3c/vsso#ActuatableVehicleProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ttps://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/" .
 # 
-# https://github.com/w3c/vsso#AreaInVehicle
-# 
 # https://github.com/w3c/vsso#DynamicVehicleProperty
 <https://github.com/w3c/vsso#DynamicVehicleProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://github.com/w3c/vsso#DynamicVehicleProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://github.com/w3c/vsso#VehicleProperty> .
@@ -153,7 +151,7 @@
 # 
 # https://github.com/w3c/vsso#PositionInVehicle
 <https://github.com/w3c/vsso#PositionInVehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://github.com/w3c/vsso#PositionInVehicle> <http://www.w3.org/2000/01/rdf-schema#comment> "_PositionInVehicle_ - Frequently VehicleProperties and VehicleComponents will appear in several different\nareas in the vehicle. Typicle examples are windows, seats, etc. This concepts shall be used to define the different position of the vehicle.\nThey can be named with the positionName property."@en .
+<https://github.com/w3c/vsso#PositionInVehicle> <http://www.w3.org/2000/01/rdf-schema#comment> "_PositionInVehicle_ - Frequently VehicleProperties and VehicleComponents will appear in several different\npositions in the vehicle. Typicle examples are windows, seats, etc. This concepts shall be used to define the different position of the vehicle.\nThey can be named with the positionName property."@en .
 <https://github.com/w3c/vsso#PositionInVehicle> <http://www.w3.org/2000/01/rdf-schema#label> "PositionInVehicle"@en .
 # 
 # https://github.com/w3c/vsso#StaticVehicleProperty
