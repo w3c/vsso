@@ -1,0 +1,18 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<..\index-en.html> a prov:Entity;
+	 dc:title "VSSo Core: Vehicle Signal Specification Core Ontology";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
+	 prov:wasAttributedTo :agent2;
+	 prov:wasAttributedTo :agent3;
+	 prov:wasAttributedTo :agent4;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+.
+:agent0 a prov:Agent; foaf:name "Benjamin Klotz".
+:agent1 a prov:Agent; foaf:name "Daniel Wilms".
+:agent2 a prov:Agent; foaf:name "Raphael Troncy".
+:agent3 a prov:Agent; foaf:name "Daniel Alvarez-Coello".
+:agent4 a prov:Agent; foaf:name "Felix Loesch".
