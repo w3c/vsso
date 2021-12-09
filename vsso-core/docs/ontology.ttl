@@ -138,7 +138,7 @@ StaticVehicleComponent."""@en ;
 :ActuatableVehicleProperty rdf:type owl:Class ;
                            rdfs:subClassOf :DynamicVehicleProperty ;
                            rdfs:comment """_ActuatableVehicleProperty_ - Follows the definition of an [actuator](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/) in
-VSS. It is a [DynamicVehicleProperty](#https://github.com/w3c/vsso#DynamicVehicleProperty), which can be changed.
+VSS. It is a [DynamicVehicleProperty](#DynamicVehicleProperty), which can be changed.
 Refers to [sosa:ActuableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAActuatableProperty)"""@en ;
                            rdfs:label "ActuatableVehicleProperty"@en ;
                            rdfs:seeAlso "https://www.w3.org/TR/vocab-ssn/#SOSAActuatableProperty" ,
@@ -148,8 +148,8 @@ Refers to [sosa:ActuableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAActuatabl
 ###  https://github.com/w3c/vsso#DynamicVehicleProperty
 :DynamicVehicleProperty rdf:type owl:Class ;
                         rdfs:subClassOf :VehicleProperty ;
-                        rdfs:comment """_DynamicVehicleProperty_ - In contrast to a [StaticVehicleProperty](#https://github.com/w3c/vsso#StaticVehicleProperty),
-this property is expected to change frequently, even within a vehicle lifecycle. Examples are the vehicle `speed`, `location`, etc."""@en ;
+                        rdfs:comment """_DynamicVehicleProperty_ - In contrast to a [StaticVehicleProperty](#StaticVehicleProperty),
+this property is expected to change frequently, even within an ignition cycle. Examples are the vehicle `speed`, `location`, etc."""@en ;
                         rdfs:label "DynamicVehicleProperty"@en .
 
 
@@ -157,7 +157,7 @@ this property is expected to change frequently, even within a vehicle lifecycle.
 :ObservableVehicleProperty rdf:type owl:Class ;
                            rdfs:subClassOf :DynamicVehicleProperty ;
                            rdfs:comment """_ObservableVehicleProperty_ - Follows the definition of an [sensor](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/) in
-VSS. It is a [DynamicVehicleProperty](#https://github.com/w3c/vsso#DynamicVehicleProperty), which can be observed but _not_ changed.
+VSS. It is a [DynamicVehicleProperty](#DynamicVehicleProperty), which can be observed but _not_ changed.
 Refers to [sosa:ObservableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty)"""@en ;
                            rdfs:label "ObservableVehicleProperty"@en ;
                            rdfs:seeAlso "https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/" ,
@@ -176,22 +176,22 @@ They can be named with the positionName property."""@en ;
 :StaticVehicleProperty rdf:type owl:Class ;
                        rdfs:subClassOf :VehicleProperty ;
                        rdfs:comment """_StaticVehicleProperty_ - Follows the definition of an [attribute](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/attributes/) in
-VSS. `StaticVehicleProperty` is meant to stay stable at least over the duration of a vehicle lifecycle.
-If you expect more frequent updates, please consider [DynamicVehicleProperty](#https://github.com/w3c/vsso#DynamicVehicleProperty)"""@en ;
+VSS. `StaticVehicleProperty` is meant to stay stable at least over the duration of an ignition cycle.
+If you expect more frequent updates, please consider [DynamicVehicleProperty](#DynamicVehicleProperty)"""@en ;
                        rdfs:label "StaticVehicleProperty"@en ;
                        rdfs:seeAlso "https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/attributes/" .
 
 
 ###  https://github.com/w3c/vsso#Vehicle
 :Vehicle rdf:type owl:Class ;
-         rdfs:comment """_Vehicle_ - Core concept of the ontology. Collects [VehicleComponents](#https://github.com/w3c/vsso#VehicleComponent)
-and [VehicleProperties](#https://github.com/w3c/vsso#VehicleProperty) belonging to a vehicle"""@en ;
+         rdfs:comment """_Vehicle_ - Core concept of the ontology. Collects [VehicleComponents](#VehicleComponent)
+and [VehicleProperties](#VehicleProperty) belonging to a vehicle"""@en ;
          rdfs:label "Vehicle"@en .
 
 
 ###  https://github.com/w3c/vsso#VehicleComponent
 :VehicleComponent rdf:type owl:Class ;
-                  rdfs:comment """_VehicleComponent_ - First of all a sorting element for [VehicleProperties](#https://github.com/w3c/vsso#VehicleProperty), following on the definition of a
+                  rdfs:comment """_VehicleComponent_ - First of all a sorting element for [VehicleProperties](#VehicleProperty), following on the definition of a
 [branch](https://covesa.github.io/vehicle_signal_specification/rule_set/branches/). It is encouraged to use the concept for actual parts modeled as
 `VehicleComponent."""@en ;
                   rdfs:label "VehicleComponent"@en ;
@@ -201,8 +201,8 @@ and [VehicleProperties](#https://github.com/w3c/vsso#VehicleProperty) belonging 
 ###  https://github.com/w3c/vsso#VehicleProperty
 :VehicleProperty rdf:type owl:Class ;
                  rdfs:comment """_VehicleProperty_ - Central concept for defining a vehicle, either through a VehicleComponent structure
-or connected directly to the vehicle. Every VehicleProperty shall be instantiated with a [vehiclePropertyValue](#https://github.com/w3c/vsso#vehiclePropertyValue).
-It is good practice to set the time when the value was updated through [valueUpdatedAt](#https://github.com/w3c/vsso#valueUpdatedAt)
+or connected directly to the vehicle. Every VehicleProperty shall be instantiated with a [vehiclePropertyValue](#vehiclePropertyValue).
+It is good practice to set the time when the value was updated through [propertyValueUpdatedAt](#propertyValueUpdatedAt)
 The VehicleProperty follows the concept of a [ssn:Property](https://www.w3.org/TR/vocab-ssn/#SSNProperty)"""@en ;
                  rdfs:label "VehicleProperty"@en ;
                  rdfs:seeAlso "https://www.w3.org/TR/vocab-ssn/#SSNProperty" .

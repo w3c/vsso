@@ -22,12 +22,12 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Daniel Wilms",
+        "value" : "Raphael Troncy",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Raphael Troncy",
+        "value" : "Daniel Wilms",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -38,12 +38,12 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Felix Loesch",
+        "value" : "Daniel Alvarez-Coello",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Daniel Alvarez-Coello",
+        "value" : "Felix Loesch",
         "type" : "label"
       } ],
       "preferredNamespacePrefix" : [ {
@@ -52,16 +52,16 @@
         "value" : "vsso-core",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://github.com/w3c/vsso#",
-        "type" : "label"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "en",
         "value" : "v2.0-develop",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://github.com/w3c/vsso#",
         "type" : "label"
       } ],
       "title" : [ {
@@ -132,7 +132,7 @@
     },
     "subClasses" : [ "4", "5" ],
     "comment" : {
-      "en" : "_DynamicVehicleProperty_ - In contrast to a [StaticVehicleProperty](#https://github.com/w3c/vsso#StaticVehicleProperty),\nthis property is expected to change frequently, even within a vehicle lifecycle. Examples are the vehicle `speed`, `location`, etc."
+      "en" : "_DynamicVehicleProperty_ - In contrast to a [StaticVehicleProperty](#StaticVehicleProperty),\nthis property is expected to change frequently, even within an ignition cycle. Examples are the vehicle `speed`, `location`, etc."
     },
     "id" : "3",
     "superClasses" : [ "1" ]
@@ -205,7 +205,7 @@
       "en" : "ActuatableVehicleProperty"
     },
     "comment" : {
-      "en" : "_ActuatableVehicleProperty_ - Follows the definition of an [actuator](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/) in\nVSS. It is a [DynamicVehicleProperty](#https://github.com/w3c/vsso#DynamicVehicleProperty), which can be changed.\nRefers to [sosa:ActuableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAActuatableProperty)"
+      "en" : "_ActuatableVehicleProperty_ - Follows the definition of an [actuator](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/) in\nVSS. It is a [DynamicVehicleProperty](#DynamicVehicleProperty), which can be changed.\nRefers to [sosa:ActuableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAActuatableProperty)"
     },
     "id" : "5",
     "superClasses" : [ "3" ]
@@ -234,7 +234,7 @@
     },
     "subClasses" : [ "3", "19" ],
     "comment" : {
-      "en" : "_VehicleProperty_ - Central concept for defining a vehicle, either through a VehicleComponent structure\nor connected directly to the vehicle. Every VehicleProperty shall be instantiated with a [vehiclePropertyValue](#https://github.com/w3c/vsso#vehiclePropertyValue).\nIt is good practice to set the time when the value was updated through [valueUpdatedAt](#https://github.com/w3c/vsso#valueUpdatedAt)\nThe VehicleProperty follows the concept of a [ssn:Property](https://www.w3.org/TR/vocab-ssn/#SSNProperty)"
+      "en" : "_VehicleProperty_ - Central concept for defining a vehicle, either through a VehicleComponent structure\nor connected directly to the vehicle. Every VehicleProperty shall be instantiated with a [vehiclePropertyValue](#vehiclePropertyValue).\nIt is good practice to set the time when the value was updated through [propertyValueUpdatedAt](#propertyValueUpdatedAt)\nThe VehicleProperty follows the concept of a [ssn:Property](https://www.w3.org/TR/vocab-ssn/#SSNProperty)"
     },
     "id" : "1"
   }, {
@@ -254,7 +254,7 @@
       "en" : "VehicleComponent"
     },
     "comment" : {
-      "en" : "_VehicleComponent_ - First of all a sorting element for [VehicleProperties](#https://github.com/w3c/vsso#VehicleProperty), following on the definition of a\n[branch](https://covesa.github.io/vehicle_signal_specification/rule_set/branches/). It is encouraged to use the concept for actual parts modeled as\n`VehicleComponent."
+      "en" : "_VehicleComponent_ - First of all a sorting element for [VehicleProperties](#VehicleProperty), following on the definition of a\n[branch](https://covesa.github.io/vehicle_signal_specification/rule_set/branches/). It is encouraged to use the concept for actual parts modeled as\n`VehicleComponent."
     },
     "id" : "2"
   }, {
@@ -266,7 +266,7 @@
       "en" : "Vehicle"
     },
     "comment" : {
-      "en" : "_Vehicle_ - Core concept of the ontology. Collects [VehicleComponents](#https://github.com/w3c/vsso#VehicleComponent)\nand [VehicleProperties](#https://github.com/w3c/vsso#VehicleProperty) belonging to a vehicle"
+      "en" : "_Vehicle_ - Core concept of the ontology. Collects [VehicleComponents](#VehicleComponent)\nand [VehicleProperties](#VehicleProperty) belonging to a vehicle"
     },
     "id" : "23"
   }, {
@@ -286,7 +286,7 @@
       "en" : "StaticVehicleProperty"
     },
     "comment" : {
-      "en" : "_StaticVehicleProperty_ - Follows the definition of an [attribute](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/attributes/) in\nVSS. `StaticVehicleProperty` is meant to stay stable at least over the duration of a vehicle lifecycle.\nIf you expect more frequent updates, please consider [DynamicVehicleProperty](#https://github.com/w3c/vsso#DynamicVehicleProperty)"
+      "en" : "_StaticVehicleProperty_ - Follows the definition of an [attribute](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/attributes/) in\nVSS. `StaticVehicleProperty` is meant to stay stable at least over the duration of an ignition cycle.\nIf you expect more frequent updates, please consider [DynamicVehicleProperty](#DynamicVehicleProperty)"
     },
     "id" : "19",
     "superClasses" : [ "1" ]
@@ -312,7 +312,7 @@
       "en" : "ObservableVehicleProperty"
     },
     "comment" : {
-      "en" : "_ObservableVehicleProperty_ - Follows the definition of an [sensor](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/) in\nVSS. It is a [DynamicVehicleProperty](#https://github.com/w3c/vsso#DynamicVehicleProperty), which can be observed but _not_ changed.\nRefers to [sosa:ObservableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty)"
+      "en" : "_ObservableVehicleProperty_ - Follows the definition of an [sensor](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/) in\nVSS. It is a [DynamicVehicleProperty](#DynamicVehicleProperty), which can be observed but _not_ changed.\nRefers to [sosa:ObservableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty)"
     },
     "id" : "4",
     "superClasses" : [ "3" ]
@@ -462,20 +462,6 @@
     "attributes" : [ "object" ],
     "id" : "22"
   }, {
-    "iri" : "https://github.com/w3c/vsso#hasDynamicVehicleProperty",
-    "baseIri" : "https://github.com/w3c/vsso",
-    "range" : "3",
-    "label" : {
-      "IRI-based" : "hasDynamicVehicleProperty",
-      "en" : "hasDynamicVehicleProperty"
-    },
-    "domain" : "10",
-    "comment" : {
-      "en" : "_hasDynamicVehicleProperty_ - This property connects an instance of a Vehicle or VehicleComponent to a \nDynamicVehicleComponent."
-    },
-    "attributes" : [ "object" ],
-    "id" : "24"
-  }, {
     "iri" : "https://github.com/w3c/vsso#partOfVehicle",
     "baseIri" : "https://github.com/w3c/vsso",
     "range" : "23",
@@ -486,6 +472,20 @@
     "domain" : "2",
     "comment" : {
       "en" : "_partOfVehicle_ - This properties conncects VehicleComponents instances with an instance of a Vehicle."
+    },
+    "attributes" : [ "object" ],
+    "id" : "24"
+  }, {
+    "iri" : "https://github.com/w3c/vsso#hasDynamicVehicleProperty",
+    "baseIri" : "https://github.com/w3c/vsso",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "hasDynamicVehicleProperty",
+      "en" : "hasDynamicVehicleProperty"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "_hasDynamicVehicleProperty_ - This property connects an instance of a Vehicle or VehicleComponent to a \nDynamicVehicleComponent."
     },
     "attributes" : [ "object" ],
     "id" : "25"
