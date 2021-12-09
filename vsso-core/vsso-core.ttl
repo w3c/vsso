@@ -63,10 +63,10 @@ Refers to [sosa:ActuableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAActuatabl
 vsso-core:ObservableVehicleProperty a owl:Class ;
     rdfs:label "ObservableVehicleProperty"@en ;
     rdfs:subClassOf vsso-core:DynamicVehicleProperty ;
-    rdfs:comment "_ObservableVehicleProperty_ - Follows the definition of an [actuator](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/) in
+    rdfs:comment "_ObservableVehicleProperty_ - Follows the definition of an [sensor](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/) in
 VSS. It is a [DynamicVehicleProperty](#https://github.com/w3c/vsso#DynamicVehicleProperty), which can be observed but _not_ changed.
 Refers to [sosa:ObservableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty)"@en ;
-    rdfs:seeAlso "ttps://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/" ;
+    rdfs:seeAlso "https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/" ;
     rdfs:seeAlso "https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty" .
 
 vsso-core:DynamicVehicleProperty a owl:Class ;

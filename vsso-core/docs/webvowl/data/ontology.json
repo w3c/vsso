@@ -27,12 +27,12 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Benjamin Klotz",
+        "value" : "Raphael Troncy",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Raphael Troncy",
+        "value" : "Benjamin Klotz",
         "type" : "label"
       } ],
       "contributor" : [ {
@@ -298,7 +298,7 @@
       "seeAlso" : [ {
         "identifier" : "seeAlso",
         "language" : "undefined",
-        "value" : "ttps://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/",
+        "value" : "https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/",
         "type" : "label"
       }, {
         "identifier" : "seeAlso",
@@ -312,7 +312,7 @@
       "en" : "ObservableVehicleProperty"
     },
     "comment" : {
-      "en" : "_ObservableVehicleProperty_ - Follows the definition of an [actuator](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/) in\nVSS. It is a [DynamicVehicleProperty](#https://github.com/w3c/vsso#DynamicVehicleProperty), which can be observed but _not_ changed.\nRefers to [sosa:ObservableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty)"
+      "en" : "_ObservableVehicleProperty_ - Follows the definition of an [sensor](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/) in\nVSS. It is a [DynamicVehicleProperty](#https://github.com/w3c/vsso#DynamicVehicleProperty), which can be observed but _not_ changed.\nRefers to [sosa:ObservableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty)"
     },
     "id" : "4",
     "superClasses" : [ "3" ]
@@ -402,17 +402,17 @@
   }, {
     "range" : "3",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "13"
   }, {
     "range" : "3",
     "domain" : "5",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "14"
   }, {
     "range" : "1",
     "domain" : "3",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "15"
   }, {
     "iri" : "https://github.com/w3c/vsso#positionName",
@@ -431,7 +431,7 @@
   }, {
     "range" : "1",
     "domain" : "19",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "18"
   }, {
     "iri" : "https://github.com/w3c/vsso#postionedAt",

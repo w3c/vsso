@@ -144,10 +144,10 @@
 # https://github.com/w3c/vsso#ObservableVehicleProperty
 <https://github.com/w3c/vsso#ObservableVehicleProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://github.com/w3c/vsso#ObservableVehicleProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://github.com/w3c/vsso#DynamicVehicleProperty> .
-<https://github.com/w3c/vsso#ObservableVehicleProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "_ObservableVehicleProperty_ - Follows the definition of an [actuator](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/) in\nVSS. It is a [DynamicVehicleProperty](#https://github.com/w3c/vsso#DynamicVehicleProperty), which can be observed but _not_ changed.\nRefers to [sosa:ObservableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty)"@en .
+<https://github.com/w3c/vsso#ObservableVehicleProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "_ObservableVehicleProperty_ - Follows the definition of an [sensor](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/) in\nVSS. It is a [DynamicVehicleProperty](#https://github.com/w3c/vsso#DynamicVehicleProperty), which can be observed but _not_ changed.\nRefers to [sosa:ObservableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty)"@en .
 <https://github.com/w3c/vsso#ObservableVehicleProperty> <http://www.w3.org/2000/01/rdf-schema#label> "ObservableVehicleProperty"@en .
+<https://github.com/w3c/vsso#ObservableVehicleProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/" .
 <https://github.com/w3c/vsso#ObservableVehicleProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty" .
-<https://github.com/w3c/vsso#ObservableVehicleProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ttps://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/" .
 # 
 # https://github.com/w3c/vsso#PositionInVehicle
 <https://github.com/w3c/vsso#PositionInVehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
