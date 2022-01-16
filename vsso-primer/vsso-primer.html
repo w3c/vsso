@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <script src='https://www.w3.org/Tools/respec/respec-w3c' async class='remove'></script>
+    <script class='remove'>
+      // All config options at https://respec.org/docs/
+      var respecConfig = {
+        // Working Groups ids at https://respec.org/w3c/groups/
+        group: "autowebplatform", 
+        specStatus: "unofficial",
+        editors: [{
+          name: "Daniel Wilms",
+          url: "https://www.linkedin.com/in/danielwilms/",
+        }],
+        github: {
+          branch: "main",
+          repoURL: "w3c/vsso", 
+        },
+        // See https://respec.org/docs/#xref for usage.
+        // xref: "auto",
+      };
+    </script>
+  </head>
+  <body> 
+    <h1 id="title">VSSo: Vehicle Signal Specification Ontology Primer</h1>
+    <section id='abstract'>
+      <p align="justify">
+        The challenges around the existing variance of describing and working with 
+        vehicle data has motivated contributors from the automotive industry to 
+        develop and maintain the so-called Vehicle Signal Specification. 
+        As the semantics of the specification are limited to a tree-like hierarchy and data types, 
+        it has been considered for the foundation of a more expressive model resulting into the
+        Vehicle Signal Specification Ontology (VSSo). This document shall give an overview
+        of the use cases and structure of the ontology. 
+      </p>
+    </section>
+    <section id='sotd'>
+      
+    </section>
+    <section data-dfn-for="intro">
+      <h2>Introduction</h2>
+        <p align="justify">
+          The goal of this ontology is to provide a reusable model for describing and interacting 
+          with vehicle data. It relies on the existing Vehicle Signal Specification (VSS), lifting 
+          it to more expressive semantics. As depicted below, the ontology serves as a domain ontology
+          for observations, streams or service interactions.
+        </p>
+        <section>
+          <h3>Vehicle Signal Specification (VSS)</h3>
+          <p align="justify">
+            VSS started in 2016 as a project of the GENIVI Alliance aiming at standardizing 
+            vehicle signals and attributes. The specification consists of a data model defined in YAML.
+            As shown in the figure below, it resembles a tree structure - not in a sense of a taxonomy,
+            but rather categorization with a part of relationship from the vehicle as a root node to the
+            signals in the leaves. The structure and content is actively worked on and evolves over time. 
+            VSS also includes tools that offer serializations in multiple formats (e.g. CSV or JSON).
+          </p>
+
+          <figure id="figure-vss">
+            <img src="static/vss_basic_tree.png" alt="VSS tree" />
+            <figcaption>Basic tree structure of VSS</figcaption>
+          </figure>
+
+          <p align="justify">
+            As VSS comes with a proprietary rule set for the concept definition, VSS falls short, when it
+            comes to connecting signals with other domains. 
+          </p>
+        </section>
+    </section>
+    <section>
+      <h2>Use Cases</h2>
+      <p align="justify">
+        Goal of VSSo is to be easily accessible and applicable in three different use cases that 
+        are clustered into Analytics and Services. The former enables queries about the vehicle's 
+        current data or data streams, whereas the latter enables the interaction between other 
+        Things and vehicle data.
+      </p>
+        <figure id="figure-vsso-uc">
+          <img src="static/vsso_use_cases.png" alt="VSS use cases" />
+          <figcaption>Envisioned Use Cases for VSSo</figcaption>
+        </figure>  
+        <section>
+          <h3>Current Vehicle Data</h3>
+          <p align="justify">
+            The core of the ontology is the description of vehicle attributes and signals. 
+            From the modeling perspective, we refer to an attribute as a StaticVehicleProperty,
+            that has information about a particular characteristic of the vehicle (e.g. fuel type, brand, etc.).
+            In contrast, we refer to a signal as a DynamicVehicleProperty that is continuously changing 
+            over time (e.g. speed, the status of a switch, etc.). Querying such properties' values from a vehicle 
+            or finding similarities over a vehicle's fleet is a prominent use case.
+            Let us consider the situation in which the customer wants to remotely see the current status of the 
+            vehicle (e.g. door lock, window status, battery status, etc.). If the customer has more than one vehicle 
+            in his account, all should be shown. Alternatively, an alarm should be triggered if the doors are locked 
+            but the window is open. In all of those cases, a specific value is queried for one or a group of vehicles.
+          </p>
+        </section>
+        <section>
+          <h3>Dynamic Vehicle Data over Time</h3>
+          <p align="justify">
+            Another use case is the analysis of dynamic properties over time. Working with the data's streaming-nature 
+            is important in situations where dynamic properties' behavior is essential for further analysis 
+            (e.g. traffic prediction). Expressing the meaning of data streams requires concepts in the model 
+            that refers to sequences and not only isolated observations. It is not realized with the core of 
+            the ontology, but instead, it should contribute the domain knowledge to other ontologies (e.g. SOSA, IoTStream). 
+            Aggregating dynamic data with high-level concepts help to perform data integration at the edge 
+            and facilitates cross-applications interactions.
+          </p>
+        </section>
+        <section>
+          <h3>Interaction with Vehicle Data</h3>
+          <p align="justify">
+            The Web of Things Working Group in the W3C develops various protocol and security schemes to 
+            describe a device's accessible capabilities and data access. In this sense a vehicle can be 
+            seen as a semantic web thing. In this case, the proposed ontology would add the domain knowledge 
+            to a well-defined standard.
+          </p>
+        </section>
+        
+    </section>
+    <section>
+      <h2>Structure</h2>
+      <p align="justify">
+        The structure of the ontology reflects the rules and standard catalogue used and defined in VSS.
+        The rules define the supported kind of nodes (e.g. attributes, signals) and the format of their metadata 
+        (e.g. units, datatypes). The standard catalogue uses those rules to define the semantics of the
+        vehicle signals and attributes. A set of tools is then used to serialize the standard catalogue
+        into the desired format (e.g. json, csv, proto, etc.).
+      </p>
+
+      <figure id="figure-vsso-uc">
+        <img src="static/vsso_structure.png" alt="VSSo Structure" />
+        <figcaption>Structure and components of VSSo</figcaption>
+      </figure> 
+      
+      <p align="justify">
+        As the nature of the rule set and overall component structure in terms of update frequency and reusability
+        is quite different from the standard catalogue, the ontology is split into:
+          <ul>
+            <li>
+              <b>VSSo Core</b> - defining the structural building blocks of VSS.
+            </li>
+            <li>
+              <b>VSSo</b> - generated concepts based on VSSo Core and the standard catalogue.
+            </li>
+            <li>
+              <b>Extensions</b> - define how VSSo works together with other widely adopted standards (e.g. SSN/SOSA, IoTStream).
+            </li> 
+          </ul>
+      </p>
+
+
+      <section>
+        <h3>VSSo Core</h3>
+        <p align="justify">
+          The core ontology introduces concepts for the structural elements of VSS defined through the rule set in the specifications.
+          Figure 1 gives an overview of those. The root node is the Vehicle itself. From there the structure is given through so-called
+          Branches. They serve as sorting element for the leaf nodes and are not specified in the specification itself in greater details.
+          The leaf nodes contain the semantic information of signals, which expext to describe and hold information, which changes in
+          greater frequency and of attributes, which are more static.
+          
+          The core of the ontology defines this structure in an OWL ontology and serves as a basis for the defined signals of the standard
+          catalogue and potential further development of the branches as more than structural information.
+        </p>
+      </section>
+
+      <section>
+        <h3>VSSo</h3>
+        <p align="justify">
+          As the core ontology defined the structure, VSSo holds the vocabulary as defined by the standard catalogue.
+          The main objective is, that VSSo doesn't diverege from the standard catalogue, so this is done automatically
+          through tooling provided in the corresponding repository. The tooling takes the standard catalogue and maps it to
+          concepts defined in the core ontology. The result is an OWL complient ontology, following the standard catalogue of VSS.
+        </p>
+      </section>
+
+      <section>
+        <h3>Extensions</h3>
+        <p align="justify">
+          VSSo Core and VSSo shall serve mainly as domain ontologies for data exchange and analysis. During the development of the
+          ontologies one objective was to stay conceptionally close to SSN/SOSA.
+        </p>
+      </section>
+      <!--<section>
+        <h2><dfn>bar</dfn> attribute</h2>
+        <p>When getting, the {{Foo/bar}} attribute returns you a 🍹.</p>
+      </section>
+      <section>
+        <h2><dfn>doTheFoo()</dfn> method</h2>
+        <p>When called, {{Foo/doTheFoo()}} MUST behave as follows:</p>
+        <ol class="algorithm">
+          <li>If <var>thing</var>....</li>
+          <li>Let <var>someProp</var>... of the [[DOM]] spec.</li>
+        </ol>
+      </section>
+    </section>
+    <section id='conformance'>-->
+      <!-- This section is filled automatically by ReSpec. -->
+    </section>
+  </body>
+</html>
