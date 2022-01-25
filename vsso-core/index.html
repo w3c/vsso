@@ -1,0 +1,679 @@
+<!DOCTYPE html><html lang="en" dir="ltr"><head>
+<meta charset="utf-8">
+<meta name="generator" content="ReSpec 28.2.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font:small Helvetica Neue,sans-serif,Droid Sans Fallback;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;margin-top:.25em}
+.dfn-panel ul a[href]{color:#333}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+    
+    
+    
+  
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
+dfn{font-weight:700}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:normal}
+code{color:#c63501}
+th code{color:inherit}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+.toc a,.tof a{text-decoration:none}
+a .figno,a .secno{color:#000}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
+.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+.simple th a{color:#fff;padding:3px 5px;text-align:left}
+.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+.simple td{padding:3px 10px;border-top:1px solid #ddd}
+.simple tr:nth-child(even){background:#f0f6ff}
+.section dd>p:first-child{margin-top:0}
+.section dd>p:last-child{margin-bottom:0}
+.section dd{margin-bottom:1em}
+.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+h2,h3,h4,h5,h6{position:relative}
+aside.example .marker>a.self-link{color:inherit}
+:is(h2,h3,h4,h5,h6)>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
+:is(h2,h3,h4,h5,h6)>a.self-link::before{content:"§";display:block}
+@media (max-width:767px){
+dd{margin-left:0}
+:is(h2,h3,h4,h5,h6)>a.self-link{left:auto;top:auto}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+<title>VSSo Core: Vehicle Signal Specification Core Ontology</title>
+<meta name="description" content="The core ontology introduces concepts for the structural elements of VSS defined through the rule set 
+    in the specifications. Figure 1 gives an overview of those. The root node is the Vehicle itself. 
+    From there the structure is given through so-called Branches. They serve as sorting element for the leaf
+    nodes and are not specified in the specification itself in greater details. The leaf nodes contain the 
+    semantic information of signals, which expext to describe and hold information, which changes in greater 
+    frequency and of attributes, which are more static. The core of the ontology defines this structure in an 
+    OWL ontology and serves as a basis for the defined signals of the standard catalogue and potential further 
+    development of the branches as more than structural information.">
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "group": "autowebplatform",
+  "specStatus": "unofficial",
+  "editors": [
+    {
+      "name": "Benjamin Klotz"
+    },
+    {
+      "name": "Raphael Troncy"
+    },
+    {
+      "name": "Daniel Wilms"
+    }
+  ],
+  "otherLinks": [
+    {
+      "key": "Contributors",
+      "data": [
+        {
+          "value": "Daniel Alvarez-Coello"
+        },
+        {
+          "value": "Felix Loesch"
+        }
+      ]
+    }
+  ],
+  "github": {
+    "branch": "main",
+    "repoURL": "w3c/vsso"
+  },
+  "publishISODate": "2022-01-18T00:00:00.000Z",
+  "generatedSubtitle": "Unofficial Draft 18 January 2022"
+}</script>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-UD"></head>
+<body class="h-entry informative"><div class="head">
+     <h1 id="title" class="title">VSSo Core: Vehicle Signal Specification Core Ontology</h1>
+    
+    <p id="w3c-state">Unofficial Draft <time class="dt-published" datetime="2022-01-18">18 January 2022</time></p>
+    <details open="">
+      <summary>More details about this document</summary>
+      <dl>
+        
+        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/vsso/">https://w3c.github.io/vsso/</a></dd>
+        <dt>History:</dt><dd>
+        <a href="https://github.com/w3c/vsso/commits/main">Commit history</a>
+      </dd>
+        
+        
+        
+        
+        
+        <dt>Editors:</dt>
+        <dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Benjamin Klotz</span>
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Raphael Troncy</span>
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Daniel Wilms</span>
+  </dd>
+        
+        
+        <dt>Feedback:</dt><dd>
+        <a href="https://github.com/w3c/vsso/">GitHub w3c/vsso</a>
+        (<a href="https://github.com/w3c/vsso/pulls/">pull requests</a>,
+        <a href="https://github.com/w3c/vsso/issues/new/choose">new issue</a>,
+        <a href="https://github.com/w3c/vsso/issues/">open issues</a>)
+      </dd>
+        
+        <dt>Contributors</dt><dd>
+    Daniel Alvarez-Coello
+  </dd><dd>
+    Felix Loesch
+  </dd>
+      </dl>
+    </details>
+    
+    
+    <p class="copyright">
+      Copyright ©
+      2022
+      the document editors/authors.
+      Text is available under the
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International Public License</a>; additional terms may apply.
+    </p>
+    <hr title="Separator for header">
+  </div>
+
+ 
+    
+    <section id="abstract" class="introductory"><h2 id="abstract-0">Abstract<a class="self-link" href="#abstract" aria-label="Permalink for Section"></a></h2>
+      <p align="justify">
+        
+    The core ontology introduces concepts for the structural elements of VSS defined through the rule set 
+    in the specifications. Figure 1 gives an overview of those. The root node is the Vehicle itself. 
+    From there the structure is given through so-called Branches. They serve as sorting element for the leaf
+    nodes and are not specified in the specification itself in greater details. The leaf nodes contain the 
+    semantic information of signals, which expext to describe and hold information, which changes in greater 
+    frequency and of attributes, which are more static. The core of the ontology defines this structure in an 
+    OWL ontology and serves as a basis for the defined signals of the standard catalogue and potential further 
+    development of the branches as more than structural information.
+  
+      </p>
+    </section>
+    <section id="sotd" class="introductory"><h2 id="status-of-this-document">Status of This Document<a class="self-link" href="#sotd" aria-label="Permalink for Section"></a></h2><p>
+      This document is a draft of a potential specification. It has no official
+      standing of any kind and does not represent the support or consensus of
+      any standards organization.
+    </p>
+      
+    </section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#namespaces"><bdi class="secno">1. </bdi>Namespaces</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-namespaces"><bdi class="secno">1.1 </bdi>Normative namespaces</a></li></ol></li><li class="tocline"><a class="tocxref" href="#vocabulary-specification"><bdi class="secno">2. </bdi>Vocabulary specification</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#vocabulary-specification"><bdi class="secno">2.1 </bdi>OWL Classes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#VehicleProperty"><bdi class="secno">2.1.1 </bdi>VehicleProperty</a></li><li class="tocline"><a class="tocxref" href="#StaticVehicleProperty"><bdi class="secno">2.1.2 </bdi>StaticVehicleProperty</a></li><li class="tocline"><a class="tocxref" href="#Vehicle"><bdi class="secno">2.1.3 </bdi>Vehicle</a></li><li class="tocline"><a class="tocxref" href="#VehicleComponent"><bdi class="secno">2.1.4 </bdi>VehicleComponent</a></li><li class="tocline"><a class="tocxref" href="#ActuatableVehicleProperty"><bdi class="secno">2.1.5 </bdi>ActuatableVehicleProperty</a></li><li class="tocline"><a class="tocxref" href="#ObservableVehicleProperty"><bdi class="secno">2.1.6 </bdi>ObservableVehicleProperty</a></li><li class="tocline"><a class="tocxref" href="#DynamicVehicleProperty"><bdi class="secno">2.1.7 </bdi>DynamicVehicleProperty</a></li><li class="tocline"><a class="tocxref" href="#PositionInVehicle"><bdi class="secno">2.1.8 </bdi>PositionInVehicle</a></li></ol></li><li class="tocline"><a class="tocxref" href="#vocabulary-specification"><bdi class="secno">2.2 </bdi>OWL Properties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#belongsToVehicleComponent"><bdi class="secno">2.2.1 </bdi>belongsToVehicleComponent</a></li><li class="tocline"><a class="tocxref" href="#hasDynamicVehicleProperty"><bdi class="secno">2.2.2 </bdi>hasDynamicVehicleProperty</a></li><li class="tocline"><a class="tocxref" href="#hasStaticVehicleProperty"><bdi class="secno">2.2.3 </bdi>hasStaticVehicleProperty</a></li><li class="tocline"><a class="tocxref" href="#partOf"><bdi class="secno">2.2.4 </bdi>partOf</a></li><li class="tocline"><a class="tocxref" href="#partOfVehicle"><bdi class="secno">2.2.5 </bdi>partOfVehicle</a></li><li class="tocline"><a class="tocxref" href="#postionedAt"><bdi class="secno">2.2.6 </bdi>postionedAt</a></li><li class="tocline"><a class="tocxref" href="#positionName"><bdi class="secno">2.2.7 </bdi>positionName</a></li><li class="tocline"><a class="tocxref" href="#vehiclePropertyValue"><bdi class="secno">2.2.8 </bdi>vehiclePropertyValue</a></li><li class="tocline"><a class="tocxref" href="#propertyValueUpdatedAt"><bdi class="secno">2.2.9 </bdi>propertyValueUpdatedAt</a></li></ol></li></ol></li></ol></nav>
+    
+
+<section id="namespaces">
+
+    <h2 id="x1-namespaces"><bdi class="secno">1. </bdi>Namespaces<a class="self-link" href="#namespaces" aria-label="Permalink for Section 1."></a></h2>
+
+    <p>The namespace for VSSo Core is <code>https://github.com/w3c/vsso-core#</code>.
+        VSSo Core serves as a domain ontology and relies on the following other ontologies: 
+        </p><section id="normative-namespaces">
+          <h3 id="x1-1-normative-namespaces"><bdi class="secno">1.1 </bdi>Normative namespaces<a class="self-link" href="#normative-namespaces" aria-label="Permalink for Section 1.1"></a></h3>
+          <p>Namespaces and prefixes used in normative parts of this recommendation are shown in the following table.</p>
+
+          <table id="table-namespaces" class="simple">
+            <thead><tr><th>Prefix</th><th>Namespace IRI</th><th>Source</th></tr></thead>
+            <tbody>
+            <tr><td>xml</td><td>http://www.w3.org/XML/1998/namespace</td><td></td></tr>
+<tr><td>rdf</td><td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td><td></td></tr>
+<tr><td>rdfs</td><td>http://www.w3.org/2000/01/rdf-schema#</td><td></td></tr>
+<tr><td>xsd</td><td>http://www.w3.org/2001/XMLSchema#</td><td></td></tr>
+<tr><td>owl</td><td>http://www.w3.org/2002/07/owl#</td><td></td></tr>
+<tr><td>dcterms</td><td>http://purl.org/dc/terms/</td><td></td></tr>
+<tr><td>vann</td><td>http://purl.org/vocab/vann/</td><td></td></tr>
+<tr><td>vsso-core</td><td>https://github.com/w3c/vsso#</td><td></td></tr>
+
+            </tbody>
+           </table>
+        </section>
+    <p></p>
+</section>
+
+<section id="vocabulary-specification">
+    
+    <h2 id="x2-vocabulary-specification"><bdi class="secno">2. </bdi>Vocabulary specification<a class="self-link" href="#vocabulary-specification" aria-label="Permalink for Section 2."></a></h2>
+    <figure id="figure-vsso-uc">
+        <img src="static/vsso-core.ttl.svg" alt="VSSo Core Structure" height="2009" width="2995">
+        <figcaption>Figure <bdi class="figno">1</bdi> <span class="fig-title">Structure and components of VSSo Core</span></figcaption>
+      </figure> 
+    <section id="vocabulary-specification">
+        <h3 id="x2-1-owl-classes"><bdi class="secno">2.1 </bdi>OWL Classes<a class="self-link" href="#vocabulary-specification" aria-label="Permalink for Section 2.1"></a></h3>        
+        
+    <section id="VehicleProperty">
+        <h4 id="x2-1-1-vehicleproperty"><bdi class="secno">2.1.1 </bdi>VehicleProperty<a class="self-link" href="#VehicleProperty" aria-label="Permalink for Section 2.1.1"></a></h4>
+        <table class="def">
+            <tbody><tr><th>Owl Class:</th><td><a href="https://github.com/w3c/vsso#VehicleProperty"><code>vsso:VehicleProperty</code></a></td></tr>
+            <tr><th class="prop">Definition:</th><td><p><em>VehicleProperty</em> - Central concept for defining a vehicle, either through a VehicleComponent structure
+or connected directly to the vehicle. Every VehicleProperty shall be instantiated with a <a href="#vehiclePropertyValue">vehiclePropertyValue</a>.
+It is good practice to set the time when the value was updated through <a href="#propertyValueUpdatedAt">propertyValueUpdatedAt</a>
+The VehicleProperty follows the concept of a <a href="https://www.w3.org/TR/vocab-ssn/#SSNProperty">ssn:Property</a></p></td></tr>
+            
+            <tr><th class="prop">See also:</th><td><a href="https://www.w3.org/TR/vocab-ssn/#SSNProperty">https://www.w3.org/TR/vocab-ssn/#SSNProperty</a></td></tr>
+        </tbody></table>
+    </section>
+    
+    <section id="StaticVehicleProperty">
+        <h4 id="x2-1-2-staticvehicleproperty"><bdi class="secno">2.1.2 </bdi>StaticVehicleProperty<a class="self-link" href="#StaticVehicleProperty" aria-label="Permalink for Section 2.1.2"></a></h4>
+        <table class="def">
+            <tbody><tr><th>Owl Class:</th><td><a href="https://github.com/w3c/vsso#StaticVehicleProperty"><code>vsso:StaticVehicleProperty</code></a></td></tr>
+            <tr><th class="prop">Definition:</th><td><p><em>StaticVehicleProperty</em> - Follows the definition of an <a href="https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/attributes/">attribute</a> in
+VSS. <code>StaticVehicleProperty</code> is meant to stay stable at least over the duration of an ignition cycle.
+If you expect more frequent updates, please consider <a href="#DynamicVehicleProperty">DynamicVehicleProperty</a></p></td></tr>
+            <tr><th class="prop">Sub-class of:</th><td><a href="#VehicleProperty">VehicleProperty</a></td></tr>
+            <tr><th class="prop">See also:</th><td><a href="https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/attributes/">https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/attributes/</a></td></tr>
+        </tbody></table>
+    </section>
+    
+    <section id="Vehicle">
+        <h4 id="x2-1-3-vehicle"><bdi class="secno">2.1.3 </bdi>Vehicle<a class="self-link" href="#Vehicle" aria-label="Permalink for Section 2.1.3"></a></h4>
+        <table class="def">
+            <tbody><tr><th>Owl Class:</th><td><a href="https://github.com/w3c/vsso#Vehicle"><code>vsso:Vehicle</code></a></td></tr>
+            <tr><th class="prop">Definition:</th><td><p><em>Vehicle</em> - Core concept of the ontology. Collects <a href="#VehicleComponent">VehicleComponents</a>
+and <a href="#VehicleProperty">VehicleProperties</a> belonging to a vehicle</p></td></tr>
+            
+            
+        </tbody></table>
+    </section>
+    
+    <section id="VehicleComponent">
+        <h4 id="x2-1-4-vehiclecomponent"><bdi class="secno">2.1.4 </bdi>VehicleComponent<a class="self-link" href="#VehicleComponent" aria-label="Permalink for Section 2.1.4"></a></h4>
+        <table class="def">
+            <tbody><tr><th>Owl Class:</th><td><a href="https://github.com/w3c/vsso#VehicleComponent"><code>vsso:VehicleComponent</code></a></td></tr>
+            <tr><th class="prop">Definition:</th><td><p><em>VehicleComponent</em> - First of all a sorting element for <a href="#VehicleProperty">VehicleProperties</a>, following on the definition of a
+<a href="https://covesa.github.io/vehicle_signal_specification/rule_set/branches/">branch</a>. It is encouraged to use the concept for actual parts modeled as
+`VehicleComponent.</p></td></tr>
+            
+            <tr><th class="prop">See also:</th><td><a href="https://covesa.github.io/vehicle_signal_specification/rule_set/branches/">https://covesa.github.io/vehicle_signal_specification/rule_set/branches/</a></td></tr>
+        </tbody></table>
+    </section>
+    
+    <section id="ActuatableVehicleProperty">
+        <h4 id="x2-1-5-actuatablevehicleproperty"><bdi class="secno">2.1.5 </bdi>ActuatableVehicleProperty<a class="self-link" href="#ActuatableVehicleProperty" aria-label="Permalink for Section 2.1.5"></a></h4>
+        <table class="def">
+            <tbody><tr><th>Owl Class:</th><td><a href="https://github.com/w3c/vsso#ActuatableVehicleProperty"><code>vsso:ActuatableVehicleProperty</code></a></td></tr>
+            <tr><th class="prop">Definition:</th><td><p><em>ActuatableVehicleProperty</em> - Follows the definition of an <a href="https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/">actuator</a> in
+VSS. It is a <a href="#DynamicVehicleProperty">DynamicVehicleProperty</a>, which can be changed.
+Refers to <a href="https://www.w3.org/TR/vocab-ssn/#SOSAActuatableProperty">sosa:ActuableProperty</a></p></td></tr>
+            <tr><th class="prop">Sub-class of:</th><td><a href="#DynamicVehicleProperty">DynamicVehicleProperty</a></td></tr>
+            <tr><th class="prop">See also:</th><td><a href="ttps://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/">ttps://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/</a></td></tr><tr><th class="prop">See also:</th><td><a href="https://www.w3.org/TR/vocab-ssn/#SOSAActuatableProperty">https://www.w3.org/TR/vocab-ssn/#SOSAActuatableProperty</a></td></tr>
+        </tbody></table>
+    </section>
+    
+    <section id="ObservableVehicleProperty">
+        <h4 id="x2-1-6-observablevehicleproperty"><bdi class="secno">2.1.6 </bdi>ObservableVehicleProperty<a class="self-link" href="#ObservableVehicleProperty" aria-label="Permalink for Section 2.1.6"></a></h4>
+        <table class="def">
+            <tbody><tr><th>Owl Class:</th><td><a href="https://github.com/w3c/vsso#ObservableVehicleProperty"><code>vsso:ObservableVehicleProperty</code></a></td></tr>
+            <tr><th class="prop">Definition:</th><td><p><em>ObservableVehicleProperty</em> - Follows the definition of an <a href="https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/">sensor</a> in
+VSS. It is a <a href="#DynamicVehicleProperty">DynamicVehicleProperty</a>, which can be observed but <em>not</em> changed.
+Refers to <a href="https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty">sosa:ObservableProperty</a></p></td></tr>
+            <tr><th class="prop">Sub-class of:</th><td><a href="#DynamicVehicleProperty">DynamicVehicleProperty</a></td></tr>
+            <tr><th class="prop">See also:</th><td><a href="https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/">https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/</a></td></tr><tr><th class="prop">See also:</th><td><a href="https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty">https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty</a></td></tr>
+        </tbody></table>
+    </section>
+    
+    <section id="DynamicVehicleProperty">
+        <h4 id="x2-1-7-dynamicvehicleproperty"><bdi class="secno">2.1.7 </bdi>DynamicVehicleProperty<a class="self-link" href="#DynamicVehicleProperty" aria-label="Permalink for Section 2.1.7"></a></h4>
+        <table class="def">
+            <tbody><tr><th>Owl Class:</th><td><a href="https://github.com/w3c/vsso#DynamicVehicleProperty"><code>vsso:DynamicVehicleProperty</code></a></td></tr>
+            <tr><th class="prop">Definition:</th><td><p><em>DynamicVehicleProperty</em> - In contrast to a <a href="#StaticVehicleProperty">StaticVehicleProperty</a>,
+this property is expected to change frequently, even within an ignition cycle. Examples are the vehicle <code>speed</code>, <code>location</code>, etc.</p></td></tr>
+            <tr><th class="prop">Sub-class of:</th><td><a href="#VehicleProperty">VehicleProperty</a></td></tr>
+            
+        </tbody></table>
+    </section>
+    
+    <section id="PositionInVehicle">
+        <h4 id="x2-1-8-positioninvehicle"><bdi class="secno">2.1.8 </bdi>PositionInVehicle<a class="self-link" href="#PositionInVehicle" aria-label="Permalink for Section 2.1.8"></a></h4>
+        <table class="def">
+            <tbody><tr><th>Owl Class:</th><td><a href="https://github.com/w3c/vsso#PositionInVehicle"><code>vsso:PositionInVehicle</code></a></td></tr>
+            <tr><th class="prop">Definition:</th><td><p><em>PositionInVehicle</em> - Frequently VehicleProperties and VehicleComponents will appear in several different
+positions in the vehicle. Typicle examples are windows, seats, etc. This concepts shall be used to define the different position of the vehicle.
+They can be named with the positionName property.</p></td></tr>
+            
+            
+        </tbody></table>
+    </section>
+    
+    </section>
+    <section id="vocabulary-specification">
+        <h3 id="x2-2-owl-properties"><bdi class="secno">2.2 </bdi>OWL Properties<a class="self-link" href="#vocabulary-specification" aria-label="Permalink for Section 2.2"></a></h3>        
+        
+    <section id="belongsToVehicleComponent">
+        <h4 id="x2-2-1-belongstovehiclecomponent"><bdi class="secno">2.2.1 </bdi>belongsToVehicleComponent<a class="self-link" href="#belongsToVehicleComponent" aria-label="Permalink for Section 2.2.1"></a></h4>
+        <table class="def">
+            <tbody><tr><th>OWL Object Property:</th><td><a href="https://github.com/w3c/vsso#belongsToVehicleComponent"><code>vsso:belongsToVehicleComponent</code></a></td></tr>
+            <tr><th class="prop">Definition:</th><td><p><em>belongsToVehicleComponent</em> - The property defines for VehicleProperties to which VehicleComponent they belong.</p></td></tr>
+            <tr><th class="prop">Domain:</th><td><a href="https://github.com/w3c/vsso#VehicleProperty">https://github.com/w3c/vsso#VehicleProperty</a></td></tr>
+            <tr><th class="prop">Range:</th><td><a href="https://github.com/w3c/vsso#VehicleComponent">https://github.com/w3c/vsso#VehicleComponent</a></td></tr>
+            
+        </tbody></table>
+    </section>
+    
+    <section id="hasDynamicVehicleProperty">
+        <h4 id="x2-2-2-hasdynamicvehicleproperty"><bdi class="secno">2.2.2 </bdi>hasDynamicVehicleProperty<a class="self-link" href="#hasDynamicVehicleProperty" aria-label="Permalink for Section 2.2.2"></a></h4>
+        <table class="def">
+            <tbody><tr><th>OWL Object Property:</th><td><a href="https://github.com/w3c/vsso#hasDynamicVehicleProperty"><code>vsso:hasDynamicVehicleProperty</code></a></td></tr>
+            <tr><th class="prop">Definition:</th><td><p><em>hasDynamicVehicleProperty</em> - This property connects an instance of a Vehicle or VehicleComponent to a DynamicVehicleComponent.</p></td></tr>
+            
+            <tr><th class="prop">Range:</th><td><a href="https://github.com/w3c/vsso#DynamicVehicleProperty">https://github.com/w3c/vsso#DynamicVehicleProperty</a></td></tr>
+            
+        </tbody></table>
+    </section>
+    
+    <section id="hasStaticVehicleProperty">
+        <h4 id="x2-2-3-hasstaticvehicleproperty"><bdi class="secno">2.2.3 </bdi>hasStaticVehicleProperty<a class="self-link" href="#hasStaticVehicleProperty" aria-label="Permalink for Section 2.2.3"></a></h4>
+        <table class="def">
+            <tbody><tr><th>OWL Object Property:</th><td><a href="https://github.com/w3c/vsso#hasStaticVehicleProperty"><code>vsso:hasStaticVehicleProperty</code></a></td></tr>
+            <tr><th class="prop">Definition:</th><td><p><em>hasStaticVehicleProperty</em> - This property connects an instance of a Vehicle or VehicleComponent to a StaticVehicleComponent.</p></td></tr>
+            
+            <tr><th class="prop">Range:</th><td><a href="https://github.com/w3c/vsso#StaticVehicleProperty">https://github.com/w3c/vsso#StaticVehicleProperty</a></td></tr>
+            
+        </tbody></table>
+    </section>
+    
+    <section id="partOf">
+        <h4 id="x2-2-4-partof"><bdi class="secno">2.2.4 </bdi>partOf<a class="self-link" href="#partOf" aria-label="Permalink for Section 2.2.4"></a></h4>
+        <table class="def">
+            <tbody><tr><th>OWL Object Property:</th><td><a href="https://github.com/w3c/vsso#partOf"><code>vsso:partOf</code></a></td></tr>
+            <tr><th class="prop">Definition:</th><td><p><em>partOfVehicleComponent</em> - This property is used to built a partOf hierarchy of VehicleComponents instances.</p></td></tr>
+            <tr><th class="prop">Domain:</th><td><a href="https://github.com/w3c/vsso#VehicleComponent">https://github.com/w3c/vsso#VehicleComponent</a></td></tr>
+            <tr><th class="prop">Range:</th><td><a href="https://github.com/w3c/vsso#VehicleComponent">https://github.com/w3c/vsso#VehicleComponent</a></td></tr>
+            
+        </tbody></table>
+    </section>
+    
+    <section id="partOfVehicle">
+        <h4 id="x2-2-5-partofvehicle"><bdi class="secno">2.2.5 </bdi>partOfVehicle<a class="self-link" href="#partOfVehicle" aria-label="Permalink for Section 2.2.5"></a></h4>
+        <table class="def">
+            <tbody><tr><th>OWL Object Property:</th><td><a href="https://github.com/w3c/vsso#partOfVehicle"><code>vsso:partOfVehicle</code></a></td></tr>
+            <tr><th class="prop">Definition:</th><td><p><em>partOfVehicle</em> - This properties conncects VehicleComponents instances with an instance of a Vehicle.</p></td></tr>
+            <tr><th class="prop">Domain:</th><td><a href="https://github.com/w3c/vsso#VehicleComponent">https://github.com/w3c/vsso#VehicleComponent</a></td></tr>
+            <tr><th class="prop">Range:</th><td><a href="https://github.com/w3c/vsso#Vehicle">https://github.com/w3c/vsso#Vehicle</a></td></tr>
+            
+        </tbody></table>
+    </section>
+    
+    <section id="postionedAt">
+        <h4 id="x2-2-6-postionedat"><bdi class="secno">2.2.6 </bdi>postionedAt<a class="self-link" href="#postionedAt" aria-label="Permalink for Section 2.2.6"></a></h4>
+        <table class="def">
+            <tbody><tr><th>OWL Object Property:</th><td><a href="https://github.com/w3c/vsso#postionedAt"><code>vsso:postionedAt</code></a></td></tr>
+            <tr><th class="prop">Definition:</th><td><p><em>postionedAt</em> - This property connects a VehicleProperty or VehicleComponent in the PositionInVehicle it appears in.</p></td></tr>
+            
+            <tr><th class="prop">Range:</th><td><a href="https://github.com/w3c/vsso#PositionInVehicle">https://github.com/w3c/vsso#PositionInVehicle</a></td></tr>
+            
+        </tbody></table>
+    </section>
+    
+    <section id="positionName">
+        <h4 id="x2-2-7-positionname"><bdi class="secno">2.2.7 </bdi>positionName<a class="self-link" href="#positionName" aria-label="Permalink for Section 2.2.7"></a></h4>
+        <table class="def">
+            <tbody><tr><th>OWL Datatype Property:</th><td><a href="https://github.com/w3c/vsso#positionName"><code>vsso:positionName</code></a></td></tr>
+            <tr><th class="prop">Definition:</th><td><p><em>positionName</em> - DataProperty in order to name the PositionInVehicle.</p></td></tr>
+            <tr><th class="prop">Domain:</th><td><a href="https://github.com/w3c/vsso#PositionInVehicle">https://github.com/w3c/vsso#PositionInVehicle</a></td></tr>
+            <tr><th class="prop">Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></td></tr>
+            
+        </tbody></table>
+    </section>
+    
+    <section id="vehiclePropertyValue">
+        <h4 id="x2-2-8-vehiclepropertyvalue"><bdi class="secno">2.2.8 </bdi>vehiclePropertyValue<a class="self-link" href="#vehiclePropertyValue" aria-label="Permalink for Section 2.2.8"></a></h4>
+        <table class="def">
+            <tbody><tr><th>OWL Datatype Property:</th><td><a href="https://github.com/w3c/vsso#vehiclePropertyValue"><code>vsso:vehiclePropertyValue</code></a></td></tr>
+            <tr><th class="prop">Definition:</th><td><p><em>vehiclePropertyValue</em> - Assigns a value to a VehicleProperty.</p></td></tr>
+            <tr><th class="prop">Domain:</th><td><a href="https://github.com/w3c/vsso#VehicleProperty">https://github.com/w3c/vsso#VehicleProperty</a></td></tr>
+            
+            
+        </tbody></table>
+    </section>
+    
+    <section id="propertyValueUpdatedAt">
+        <h4 id="x2-2-9-propertyvalueupdatedat"><bdi class="secno">2.2.9 </bdi>propertyValueUpdatedAt<a class="self-link" href="#propertyValueUpdatedAt" aria-label="Permalink for Section 2.2.9"></a></h4>
+        <table class="def">
+            <tbody><tr><th>OWL Datatype Property:</th><td><a href="https://github.com/w3c/vsso#propertyValueUpdatedAt"><code>vsso:propertyValueUpdatedAt</code></a></td></tr>
+            <tr><th class="prop">Definition:</th><td><p><em>propertyValueUpdatedAt</em> - A timestamp representing the time of the last update of a vehiclePropertyValue</p></td></tr>
+            <tr><th class="prop">Domain:</th><td><a href="https://github.com/w3c/vsso#VehicleProperty">https://github.com/w3c/vsso#VehicleProperty</a></td></tr>
+            <tr><th class="prop">Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#dateTime">http://www.w3.org/2001/XMLSchema#dateTime</a></td></tr>
+            
+        </tbody></table>
+    </section>
+    
+    </section>
+</section>
+ 
+<p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(setupPanel);
+} else {
+  setupPanel();
+}
+
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
+  /** @type {HTMLElement} */
+  let panel = null;
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
+    switch (action) {
+      case "show": {
+        hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = target.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        panel = null;
+        break;
+      }
+    }
+  };
+}
+
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
+  }
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
+    if (hitALink) {
+      return target.classList.contains("self-link") ? "hide" : "dock";
+    }
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return "none";
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  if (!panel) return;
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
