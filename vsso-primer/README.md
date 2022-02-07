@@ -1,1 +1,0 @@
-This folder shall contain the VSSo Primer to describe use cases and description.

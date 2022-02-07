@@ -104,7 +104,7 @@ vsso:AmbientAirTemperature a owl:Class ;
     rdfs:label "AmbientAirTemperature"@en ;
     rdfs:comment "Ambient air temperature outside the vehicle."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:ObservableVehicleProperty ;
     skos:altLabel "Vehicle.AmbientAirTemperature"@en .
@@ -140,7 +140,7 @@ vsso:AverageSpeed a owl:Class ;
     rdfs:label "AverageSpeed"@en ;
     rdfs:comment "Average speed for the current trip"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:ObservableVehicleProperty ;
     skos:altLabel "Vehicle.AverageSpeed"@en .
@@ -812,7 +812,7 @@ vsso:CurbWeight a owl:Class ;
     rdfs:label "CurbWeight"@en ;
     rdfs:comment "Vehicle curb weight, including all liquids and full tank of fuel, but no cargo or passengers."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:StaticVehicleProperty ;
     skos:altLabel "Vehicle.CurbWeight"@en .
@@ -875,7 +875,7 @@ vsso:CurrentOverallWeight a owl:Class ;
     rdfs:label "CurrentOverallWeight"@en ;
     rdfs:comment "Current overall Vehicle weight. Including passengers, cargo and other load inside the car."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:ObservableVehicleProperty ;
     skos:altLabel "Vehicle.CurrentOverallWeight"@en .
@@ -1067,7 +1067,7 @@ vsso:DriveTime a owl:Class ;
     rdfs:label "DriveTime"@en ;
     rdfs:comment "Accumulated drive time in seconds."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:ObservableVehicleProperty ;
     skos:altLabel "Vehicle.DriveTime"@en .
@@ -1383,7 +1383,7 @@ vsso:GrossWeight a owl:Class ;
     rdfs:label "GrossWeight"@en ;
     rdfs:comment "Curb weight of vehicle, including all liquids and full tank of fuel and full load of cargo and passengers."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:StaticVehicleProperty ;
     skos:altLabel "Vehicle.GrossWeight"@en .
@@ -1560,7 +1560,7 @@ vsso:Height a owl:Class ;
     rdfs:label "Height"@en ;
     rdfs:comment "Overall vehicle height."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:StaticVehicleProperty ;
     skos:altLabel "Vehicle.Height"@en .
@@ -1607,7 +1607,7 @@ vsso:IdleTime a owl:Class ;
     rdfs:label "IdleTime"@en ;
     rdfs:comment "Accumulated idle time in seconds."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:ObservableVehicleProperty ;
     skos:altLabel "Vehicle.IdleTime"@en .
@@ -1616,7 +1616,7 @@ vsso:IgnitionOffTime a owl:Class ;
     rdfs:label "IgnitionOffTime"@en ;
     rdfs:comment "Accumulated ignition off time in seconds."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:ObservableVehicleProperty ;
     skos:altLabel "Vehicle.IgnitionOffTime"@en .
@@ -1625,7 +1625,7 @@ vsso:IgnitionOn a owl:Class ;
     rdfs:label "IgnitionOn"@en ;
     rdfs:comment "Indicates whether the vehicle ignition is on or off."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:ObservableVehicleProperty ;
     skos:altLabel "Vehicle.IgnitionOn"@en .
@@ -1634,7 +1634,7 @@ vsso:IgnitionOnTime a owl:Class ;
     rdfs:label "IgnitionOnTime"@en ;
     rdfs:comment "Accumulated ignition on time in seconds."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:ObservableVehicleProperty ;
     skos:altLabel "Vehicle.IgnitionOnTime"@en .
@@ -1643,7 +1643,7 @@ vsso:IsMoving a owl:Class ;
     rdfs:label "IsMoving"@en ;
     rdfs:comment "Indicates whether the vehicle is stationary or moving"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:ObservableVehicleProperty ;
     skos:altLabel "Vehicle.IsMoving"@en .
@@ -1680,7 +1680,7 @@ vsso:Length a owl:Class ;
     rdfs:label "Length"@en ;
     rdfs:comment "Overall vehicle length."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:StaticVehicleProperty ;
     skos:altLabel "Vehicle.Length"@en .
@@ -1847,7 +1847,7 @@ vsso:LowVoltageSystemState a owl:Class ;
     rdfs:label "LowVoltageSystemState"@en ;
     rdfs:comment "State of the supply voltage of the control units (usually 12V)."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:ObservableVehicleProperty ;
     skos:altLabel "Vehicle.LowVoltageSystemState"@en .
@@ -1936,7 +1936,7 @@ vsso:MaxTowBallWeight a owl:Class ;
     rdfs:label "MaxTowBallWeight"@en ;
     rdfs:comment "Maximum vertical weight on the tow ball of a trailer."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:StaticVehicleProperty ;
     skos:altLabel "Vehicle.MaxTowBallWeight"@en .
@@ -1945,7 +1945,7 @@ vsso:MaxTowWeight a owl:Class ;
     rdfs:label "MaxTowWeight"@en ;
     rdfs:comment "Maximum weight of trailer."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:StaticVehicleProperty ;
     skos:altLabel "Vehicle.MaxTowWeight"@en .
@@ -2872,7 +2872,7 @@ vsso:Private a owl:Class ;
     rdfs:label "Private"@en ;
     rdfs:comment "Uncontrolled branch where non-public signals can be defined."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:partOf ],
         vsso-core:VehicleComponent ;
     skos:altLabel "Vehicle.Private"@en .
@@ -2940,7 +2940,7 @@ vsso:RoofLoad a owl:Class ;
     rdfs:label "RoofLoad"@en ;
     rdfs:comment "The permitted total weight of cargo and installations (e.g. a roof rack) on top of the vehicle."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:StaticVehicleProperty ;
     skos:altLabel "Vehicle.RoofLoad"@en .
@@ -3094,7 +3094,7 @@ vsso:Speed a owl:Class ;
     rdfs:label "Speed"@en ;
     rdfs:comment "Vehicle speed"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:ObservableVehicleProperty ;
     skos:altLabel "Vehicle.Speed"@en .
@@ -3530,7 +3530,7 @@ vsso:TravelledDistance a owl:Class ;
     rdfs:label "TravelledDistance"@en ;
     rdfs:comment "Odometer reading, total distance travelled during the lifetime of the vehicle."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:ObservableVehicleProperty ;
     skos:altLabel "Vehicle.TravelledDistance"@en .
@@ -3539,7 +3539,7 @@ vsso:TripMeterReading a owl:Class ;
     rdfs:label "TripMeterReading"@en ;
     rdfs:comment "Current trip meter reading"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:ObservableVehicleProperty ;
     skos:altLabel "Vehicle.TripMeterReading"@en .
@@ -3563,6 +3563,10 @@ vsso:TrunkIsOpen a owl:Class ;
         vsso-core:ActuatableVehicleProperty,
         vsso-core:ObservableVehicleProperty ;
     skos:altLabel "Vehicle.Body.Trunk.IsOpen"@en .
+
+vsso:Vehicle rdfs:label "Vehicle"@en ;
+    rdfs:comment "High-level vehicle data."@en ;
+    skos:altLabel "Vehicle"@en .
 
 vsso:VehicleIdentificationACRISSCode a owl:Class ;
     rdfs:label "VehicleIdentificationACRISSCode"@en ;
@@ -3784,7 +3788,7 @@ vsso:Width a owl:Class ;
     rdfs:label "Width"@en ;
     rdfs:comment "Overall vehicle width."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:StaticVehicleProperty ;
     skos:altLabel "Vehicle.Width"@en .
@@ -3840,7 +3844,7 @@ vsso:accelerationTime a owl:Class ;
     rdfs:label "accelerationTime"@en ;
     rdfs:comment "The time needed to accelerate the vehicle from a given start velocity to a given target velocity."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:StaticVehicleProperty ;
     skos:altLabel "Vehicle.accelerationTime"@en .
@@ -3849,7 +3853,7 @@ vsso:cargoVolume a owl:Class ;
     rdfs:label "cargoVolume"@en ;
     rdfs:comment "The available volume for cargo or luggage. For automobiles, this is usually the trunk volume."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:StaticVehicleProperty ;
     skos:altLabel "Vehicle.cargoVolume"@en .
@@ -3858,7 +3862,7 @@ vsso:emissionsCO2 a owl:Class ;
     rdfs:label "emissionsCO2"@en ;
     rdfs:comment "The CO2 emissions."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:belongsToVehicleComponent ],
         vsso-core:StaticVehicleProperty ;
     skos:altLabel "Vehicle.emissionsCO2"@en .
@@ -4002,7 +4006,7 @@ vsso:Trailer a owl:Class ;
     rdfs:label "Trailer"@en ;
     rdfs:comment "Trailer signals"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:partOf ],
         vsso-core:VehicleComponent ;
     skos:altLabel "Vehicle.Trailer"@en .
@@ -4272,7 +4276,7 @@ vsso:Acceleration a owl:Class ;
     rdfs:label "Acceleration"@en ;
     rdfs:comment "Spatial acceleration"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:partOf ],
         vsso-core:VehicleComponent ;
     skos:altLabel "Vehicle.Acceleration"@en .
@@ -4281,7 +4285,7 @@ vsso:AngularVelocity a owl:Class ;
     rdfs:label "AngularVelocity"@en ;
     rdfs:comment "Spatial rotation"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:partOf ],
         vsso-core:VehicleComponent ;
     skos:altLabel "Vehicle.AngularVelocity"@en .
@@ -4389,7 +4393,7 @@ vsso:Service a owl:Class ;
     rdfs:label "Service"@en ;
     rdfs:comment "Service data."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:partOf ],
         vsso-core:VehicleComponent ;
     skos:altLabel "Vehicle.Service"@en .
@@ -4443,7 +4447,7 @@ vsso:VersionVSS a owl:Class ;
     rdfs:label "VersionVSS"@en ;
     rdfs:comment "Supported Version of VSS"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:partOf ],
         vsso-core:VehicleComponent ;
     skos:altLabel "Vehicle.VersionVSS"@en .
@@ -4470,7 +4474,7 @@ vsso:CurrentLocation a owl:Class ;
     rdfs:label "CurrentLocation"@en ;
     rdfs:comment "The current latitude and longitude of the vehicle."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:partOf ],
         vsso-core:VehicleComponent ;
     skos:altLabel "Vehicle.CurrentLocation"@en .
@@ -4515,7 +4519,7 @@ vsso:ADAS a owl:Class ;
     rdfs:label "ADAS"@en ;
     rdfs:comment "All Advanced Driver Assist Systems data."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:partOf ],
         vsso-core:VehicleComponent ;
     skos:altLabel "Vehicle.ADAS"@en .
@@ -4542,7 +4546,7 @@ vsso:Driver a owl:Class ;
     rdfs:label "Driver"@en ;
     rdfs:comment "Driver data."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:partOf ],
         vsso-core:VehicleComponent ;
     skos:altLabel "Vehicle.Driver"@en .
@@ -4569,7 +4573,7 @@ vsso:Powertrain a owl:Class ;
     rdfs:label "Powertrain"@en ;
     rdfs:comment "Powertrain data for battery management, etc."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:partOf ],
         vsso-core:VehicleComponent ;
     skos:altLabel "Vehicle.Powertrain"@en .
@@ -4596,7 +4600,7 @@ vsso:Body a owl:Class ;
     rdfs:label "Body"@en ;
     rdfs:comment "All body components."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:partOf ],
         vsso-core:VehicleComponent ;
     skos:altLabel "Vehicle.Body"@en .
@@ -4659,7 +4663,7 @@ vsso:Cabin a owl:Class ;
     rdfs:label "Cabin"@en ;
     rdfs:comment "All in-cabin components, including doors."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:partOf ],
         vsso-core:VehicleComponent ;
     skos:altLabel "Vehicle.Cabin"@en .
@@ -4677,7 +4681,7 @@ vsso:Chassis a owl:Class ;
     rdfs:label "Chassis"@en ;
     rdfs:comment "All data concerning steering, suspension, wheels, and brakes."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:partOf ],
         vsso-core:VehicleComponent ;
     skos:altLabel "Vehicle.Chassis"@en .
@@ -4695,20 +4699,16 @@ vsso:VehicleIdentification a owl:Class ;
     rdfs:label "VehicleIdentification"@en ;
     rdfs:comment "Attributes that identify a vehicle"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:partOf ],
         vsso-core:VehicleComponent ;
     skos:altLabel "Vehicle.VehicleIdentification"@en .
-
-vsso:Vehicle rdfs:label "Vehicle"@en ;
-    rdfs:comment "High-level vehicle data."@en ;
-    skos:altLabel "Vehicle"@en .
 
 vsso:OBD a owl:Class ;
     rdfs:label "OBD"@en ;
     rdfs:comment "OBD data."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom vsso:Vehicle ;
+            owl:allValuesFrom vsso-core:Vehicle ;
             owl:onProperty vsso-core:partOf ],
         vsso-core:VehicleComponent ;
     skos:altLabel "Vehicle.OBD"@en .
