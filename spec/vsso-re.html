@@ -9,15 +9,28 @@
       // All config options at https://respec.org/docs/
       var respecConfig = {
         // Working Groups ids at https://respec.org/w3c/groups/
-        group: "autowebplatform",
+        group: "auto",
         specStatus: "ED",
-        editors: [{'name': 'Benjamin Klotz'}, {'name': 'Daniel Wilms'}, {'name': 'Raphael Troncy'}],
+        editors: [{
+	  name: 'Benjamin Klotz'
+	  w3cid: 91177,
+	},
+	{
+	  name: 'Raphaël Troncy',
+	  company: 'Institut Mines-Télécom',
+	  w3cid: 38257,
+	},
+	{
+	  name: 'Daniel Wilms'
+	  company: 'BMW'
+	  w3cid: 114129,
+	}],
         otherLinks: [{
           key: "Contributors",
-          data: [{'value': 'Daniel Alvarez-Coello'}, {'value': 'Felix Loesch'}]
+          data: [{'value': 'Daniel Alvarez-Coello'}, {'value': 'Felix Lösch'}]
         }],
         github: {
-          branch: "main",
+          branch: "gh-pages",
           repoURL: "w3c/vsso", 
         },
         // See https://respec.org/docs/#xref for usage.
@@ -30,7 +43,7 @@
 <body> 
     <h1 id="title">VSSo: Vehicle Signal Specification Ontology</h1>
     <section id='abstract'>
-      <p align="justify">
+      <p>
         
             As the core ontology defined the structure, VSSo holds the vocabulary as defined by the standard catalogue.
             The main objective is, that VSSo doesn't diverege from the standard catalogue, so this is done automatically
@@ -78,7 +91,7 @@
     
     <h2>Vocabulary specification</h2>
     
-    <section id="vocabulary-specification">
+    <section id="vocabulary-specification-classes">
         <h3>OWL Classes</h3>        
         
     <section id="ABSError">

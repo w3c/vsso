@@ -9,15 +9,28 @@
       // All config options at https://respec.org/docs/
       var respecConfig = {
         // Working Groups ids at https://respec.org/w3c/groups/
-        group: "autowebplatform",
+        group: "auto",
         specStatus: "ED",
-        editors: [{'name': 'Benjamin Klotz'}, {'name': 'Raphael Troncy'}, {'name': 'Daniel Wilms'}],
+        editors: [{
+	  name: 'Benjamin Klotz'
+	  w3cid: 91177,
+	},
+	{
+	  name: 'Raphaël Troncy',
+	  company: 'Institut Mines-Télécom',
+	  w3cid: 38257,
+	},
+	{
+	  name: 'Daniel Wilms'
+	  company: 'BMW'
+	  w3cid: 114129,
+	}],
         otherLinks: [{
           key: "Contributors",
-          data: [{'value': 'Daniel Alvarez-Coello'}, {'value': 'Felix Loesch'}]
+          data: [{'value': 'Daniel Alvarez-Coello'}, {'value': 'Felix Lösch'}]
         }],
         github: {
-          branch: "main",
+          branch: "gh-pages",
           repoURL: "w3c/vsso", 
         },
         // See https://respec.org/docs/#xref for usage.
@@ -30,7 +43,7 @@
 <body> 
     <h1 id="title">VSSo Core: Vehicle Signal Specification Core Ontology</h1>
     <section id='abstract'>
-      <p align="justify">
+      <p>
         
     The core ontology introduces concepts for the structural elements of VSS defined through the rule set 
     in the specifications. Figure 1 gives an overview of those. The root node is the Vehicle itself. 
@@ -85,7 +98,7 @@
             <figcaption>Structure and components of VSSo Core</figcaption>
         </figure> 
     
-    <section id="vocabulary-specification">
+    <section id="vocabulary-specification-classes">
         <h3>OWL Classes</h3>        
         
     <section id="VehicleProperty">
