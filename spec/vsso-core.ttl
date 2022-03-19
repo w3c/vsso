@@ -88,7 +88,9 @@ vsso-core:hasVehicleProperty rdf:type owl:ObjectProperty ;
                                           owl:unionOf ( vsso-core:DynamicVehicleProperty
                                                         vsso-core:StaticVehicleProperty
                                                       )
-                                        ] .
+                                        ] ;
+                             rdfs:comment "_hasVehicleProperty_ - Expresses that an individual of the class Vehicle has a particular VehicleProperty. The disctintion between Static and Dynamic Vehicle properties is handled directly in the class hierarchy." ;
+                             rdfs:label "hasVehicleProperty" .
 
 
 ###  http://www.w3.org/ns/vsso-core#partOf
@@ -100,7 +102,7 @@ vsso-core:partOf rdf:type owl:ObjectProperty ,
                                             vsso-core:VehicleComponent
                                           )
                             ] ;
-                 rdfs:comment "_partOfVehicleComponent_ - This property is used to built a partOf hierarchy of VehicleComponents instances."@en ;
+                 rdfs:comment "_partOf_ - This property is used to built a partOf hierarchy of VehicleComponents instances. Also, a VehicleComponent can be related to an instance of a Vehicle via this property."@en ;
                  rdfs:label "partOfVehicleComponent"@en .
 
 
