@@ -92,7 +92,8 @@ vsso-core:hasVehicleProperty rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.w3.org/ns/vsso-core#partOf
-vsso-core:partOf rdf:type owl:ObjectProperty ;
+vsso-core:partOf rdf:type owl:ObjectProperty ,
+                          owl:TransitiveProperty ;
                  rdfs:domain vsso-core:VehicleComponent ;
                  rdfs:range vsso-core:VehicleComponent ;
                  rdfs:comment "_partOfVehicleComponent_ - This property is used to built a partOf hierarchy of VehicleComponents instances."@en ;
