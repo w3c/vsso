@@ -81,18 +81,14 @@ vsso-core:belongsToVehicleComponent rdf:type owl:ObjectProperty ;
                                     rdfs:label "belongsToVehicleComponent"@en .
 
 
-###  http://www.w3.org/ns/vsso-core#hasDynamicVehicleProperty
-vsso-core:hasDynamicVehicleProperty rdf:type owl:ObjectProperty ;
-                                    rdfs:range vsso-core:DynamicVehicleProperty ;
-                                    rdfs:comment "_hasDynamicVehicleProperty_ - This property connects an instance of a Vehicle or VehicleComponent to a DynamicVehicleComponent."@en ;
-                                    rdfs:label "hasDynamicVehicleProperty"@en .
-
-
-###  http://www.w3.org/ns/vsso-core#hasStaticVehicleProperty
-vsso-core:hasStaticVehicleProperty rdf:type owl:ObjectProperty ;
-                                   rdfs:range vsso-core:StaticVehicleProperty ;
-                                   rdfs:comment "_hasStaticVehicleProperty_ - This property connects an instance of a Vehicle or VehicleComponent to a StaticVehicleComponent."@en ;
-                                   rdfs:label "hasStaticVehicleProperty"@en .
+###  http://www.w3.org/ns/vsso-core#hasVehicleProperty
+vsso-core:hasVehicleProperty rdf:type owl:ObjectProperty ;
+                             rdfs:domain vsso-core:Vehicle ;
+                             rdfs:range [ rdf:type owl:Class ;
+                                          owl:unionOf ( vsso-core:DynamicVehicleProperty
+                                                        vsso-core:StaticVehicleProperty
+                                                      )
+                                        ] .
 
 
 ###  http://www.w3.org/ns/vsso-core#partOf
