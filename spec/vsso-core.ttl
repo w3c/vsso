@@ -163,6 +163,7 @@ Refers to [sosa:ActuableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAActuatabl
 ###  http://www.w3.org/ns/vsso-core#DynamicVehicleProperty
 vsso-core:DynamicVehicleProperty rdf:type owl:Class ;
                                  rdfs:subClassOf vsso-core:VehicleProperty ;
+                                 owl:disjointWith vsso-core:StaticVehicleProperty ;
                                  rdfs:comment """_DynamicVehicleProperty_ - In contrast to a [StaticVehicleProperty](#StaticVehicleProperty),
 this property is expected to change frequently, even within an ignition cycle. Examples are the vehicle `speed`, `location`, etc."""@en ;
                                  rdfs:label "DynamicVehicleProperty"@en .
