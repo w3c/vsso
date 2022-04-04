@@ -14,13 +14,12 @@ This core ontology is then used as reference, so that the definitions of VSS can
 
 We therefore propose three artifacts as part of VSSo, which are reflected in the structure of the repository:
 
-* **[VSSo Primer](vsso-primer):** The primer includes the motivation, intended use cases and indications where to find further 
-  information. [HTML view]{https://w3c.github.io/vsso/vsso-primer/}
-* **[VSSo Core](vsso-core):** Core ontology of VSSo. Meant as a reference for automatic mapping from VSS into an ontology. [HTML view]{https://w3c.github.io/vsso/vsso-core/vsso-core-re.html}
-* **[VSSo](vsso):** Structure for the documentation of the generated concepts from VSS. [HTML view]{https://w3c.github.io/vsso/vsso/vsso-re.html}
+* **[VSSo Primer](spec/vsso-primer.html):** The primer includes the motivation, intended use cases and indications where to find further 
+  information. [HTML view](https://w3c.github.io/vsso/spec/vsso-primer.html)
+* **[VSSo Core](spec/vsso-core-re.html):** Core ontology of VSSo. Meant as a reference for automatic mapping from VSS into an ontology. [HTML view](https://w3c.github.io/vsso/spec/vsso-core-re.html)
+* **[VSSo](spec/vsso-re.html):** Structure for the documentation of the generated concepts from VSS. [HTML view](https://w3c.github.io/vsso/spec/vsso-re.html)
 
 
-All documentation is generated using [WIDOCO](https://github.com/dgarijo/Widoco).
 
 ## Cite
 If you use VSSo in a scientific publication, we would appreciate citations to the following paper:
