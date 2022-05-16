@@ -11,7 +11,7 @@
         // Working Groups ids at https://respec.org/w3c/groups/
         group: "auto",
         specStatus: "ED",
-        editors: [{
+        editors:  [{
 	  name: 'Benjamin Klotz',
 	  w3cid: 91177,
 	},
@@ -24,10 +24,10 @@
 	  name: 'Daniel Wilms',
 	  company: 'BMW',
 	  w3cid: 114129,
-	}],
+	}],,
         otherLinks: [{
           key: "Contributors",
-          data: [{'value': 'Daniel Alvarez-Coello'}, {'value': 'Felix Lösch'}]
+          data: [{'value': 'Daniel Alvarez-Coello'}, {'value': 'Felix Loesch'}]
         }],
         github: {
           branch: "gh-pages",
@@ -43,7 +43,7 @@
 <body> 
     <h1 id="title">VSSo Core: Vehicle Signal Specification Core Ontology</h1>
     <section id='abstract'>
-      <p>
+      <p align="justify">
         
     The core ontology introduces concepts for the structural elements of VSS defined through the rule set 
     in the specifications. Figure 1 gives an overview of those. The root node is the Vehicle itself. 
@@ -74,13 +74,33 @@
           <table id="table-namespaces" class="simple">
             <thead><tr><th>Prefix</th><th>Namespace IRI</th><th>Source</th></tr></thead>
             <tbody>
-            <tr><td>xml</td><td>http://www.w3.org/XML/1998/namespace</td><td></td></tr>
+            <tr><td>brick</td><td>https://brickschema.org/schema/Brick#</td><td></td></tr>
+<tr><td>csvw</td><td>http://www.w3.org/ns/csvw#</td><td></td></tr>
+<tr><td>dc</td><td>http://purl.org/dc/elements/1.1/</td><td></td></tr>
+<tr><td>dcat</td><td>http://www.w3.org/ns/dcat#</td><td></td></tr>
+<tr><td>dcmitype</td><td>http://purl.org/dc/dcmitype/</td><td></td></tr>
+<tr><td>dcterms</td><td>http://purl.org/dc/terms/</td><td></td></tr>
+<tr><td>dcam</td><td>http://purl.org/dc/dcam/</td><td></td></tr>
+<tr><td>doap</td><td>http://usefulinc.com/ns/doap#</td><td></td></tr>
+<tr><td>foaf</td><td>http://xmlns.com/foaf/0.1/</td><td></td></tr>
+<tr><td>odrl</td><td>http://www.w3.org/ns/odrl/2/</td><td></td></tr>
+<tr><td>org</td><td>http://www.w3.org/ns/org#</td><td></td></tr>
+<tr><td>owl</td><td>http://www.w3.org/2002/07/owl#</td><td></td></tr>
+<tr><td>prof</td><td>http://www.w3.org/ns/dx/prof/</td><td></td></tr>
+<tr><td>prov</td><td>http://www.w3.org/ns/prov#</td><td></td></tr>
+<tr><td>qb</td><td>http://purl.org/linked-data/cube#</td><td></td></tr>
 <tr><td>rdf</td><td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td><td></td></tr>
 <tr><td>rdfs</td><td>http://www.w3.org/2000/01/rdf-schema#</td><td></td></tr>
-<tr><td>xsd</td><td>http://www.w3.org/2001/XMLSchema#</td><td></td></tr>
-<tr><td>owl</td><td>http://www.w3.org/2002/07/owl#</td><td></td></tr>
-<tr><td>dcterms</td><td>http://purl.org/dc/terms/</td><td></td></tr>
+<tr><td>schema</td><td>https://schema.org/</td><td></td></tr>
+<tr><td>sh</td><td>http://www.w3.org/ns/shacl#</td><td></td></tr>
+<tr><td>skos</td><td>http://www.w3.org/2004/02/skos/core#</td><td></td></tr>
+<tr><td>sosa</td><td>http://www.w3.org/ns/sosa/</td><td></td></tr>
+<tr><td>ssn</td><td>http://www.w3.org/ns/ssn/</td><td></td></tr>
+<tr><td>time</td><td>http://www.w3.org/2006/time#</td><td></td></tr>
 <tr><td>vann</td><td>http://purl.org/vocab/vann/</td><td></td></tr>
+<tr><td>void</td><td>http://rdfs.org/ns/void#</td><td></td></tr>
+<tr><td>xsd</td><td>http://www.w3.org/2001/XMLSchema#</td><td></td></tr>
+<tr><td>xml</td><td>http://www.w3.org/XML/1998/namespace</td><td></td></tr>
 <tr><td>vsso-core</td><td>https://github.com/w3c/vsso-core#</td><td></td></tr>
 
             </tbody>
@@ -168,7 +188,7 @@ Refers to <a href="https://www.w3.org/TR/vocab-ssn/#SOSAActuatableProperty">sosa
             <tr><th class="prop">Sub-class of:</th><td><a href="#DynamicVehicleProperty">DynamicVehicleProperty</a></td></tr>
             
             
-            <tr><th class="prop">See also:</th><td><a href="https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/">ttps://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/</a></td></tr><tr><th class="prop">See also:</th><td><a href="https://www.w3.org/TR/vocab-ssn/#SOSAActuatableProperty">https://www.w3.org/TR/vocab-ssn/#SOSAActuatableProperty</a></td></tr>
+            <tr><th class="prop">See also:</th><td><a href="ttps://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/">ttps://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/</a></td></tr><tr><th class="prop">See also:</th><td><a href="https://www.w3.org/TR/vocab-ssn/#SOSAActuatableProperty">https://www.w3.org/TR/vocab-ssn/#SOSAActuatableProperty</a></td></tr>
             
         </table>
     </section>
@@ -218,13 +238,13 @@ They can be named with the positionName property.</p></td></tr>
     
     </section>
         
-        <section id="vocabulary-specification">
+        <section id="vocabulary-specification-properties">
             <h3>OWL Properties</h3>
         <section id="belongsToVehicleComponent">
             <h4>belongsToVehicleComponent</h4>
             <table class="def">
                 <tr><th>OWL Object Property:</th><td><a href="#belongsToVehicleComponent"><code>vsso:belongsToVehicleComponent</code></a></td></tr>
-                <tr><th class="prop">Comment:</th><td><p><em>belongsToVehicleComponent</em> - The property defines for VehicleProperties to which VehicleComponent they belong.</p></td></tr>
+                <tr><th class="prop">Definition:</th><td><p><em>belongsToVehicleComponent</em> - The property defines for VehicleProperties to which VehicleComponent they belong.</p></td></tr>
                 <tr><th class="prop">Domain:</th><td><a href="#VehicleProperty">VehicleProperty</td></tr>
                 <tr><th class="prop">Range:</th><td><a href="#VehicleComponent">VehicleComponent</td></tr>
                 
@@ -235,7 +255,7 @@ They can be named with the positionName property.</p></td></tr>
             <h4>hasDynamicVehicleProperty</h4>
             <table class="def">
                 <tr><th>OWL Object Property:</th><td><a href="#hasDynamicVehicleProperty"><code>vsso:hasDynamicVehicleProperty</code></a></td></tr>
-                <tr><th class="prop">Comment:</th><td><p><em>hasDynamicVehicleProperty</em> - This property connects an instance of a Vehicle or VehicleComponent to a DynamicVehicleComponent.</p></td></tr>
+                <tr><th class="prop">Definition:</th><td><p><em>hasDynamicVehicleProperty</em> - This property connects an instance of a Vehicle or VehicleComponent to a DynamicVehicleComponent.</p></td></tr>
                 
                 <tr><th class="prop">Range:</th><td><a href="#DynamicVehicleProperty">DynamicVehicleProperty</td></tr>
                 
@@ -246,7 +266,7 @@ They can be named with the positionName property.</p></td></tr>
             <h4>hasStaticVehicleProperty</h4>
             <table class="def">
                 <tr><th>OWL Object Property:</th><td><a href="#hasStaticVehicleProperty"><code>vsso:hasStaticVehicleProperty</code></a></td></tr>
-                <tr><th class="prop">Comment:</th><td><p><em>hasStaticVehicleProperty</em> - This property connects an instance of a Vehicle or VehicleComponent to a StaticVehicleComponent.</p></td></tr>
+                <tr><th class="prop">Definition:</th><td><p><em>hasStaticVehicleProperty</em> - This property connects an instance of a Vehicle or VehicleComponent to a StaticVehicleComponent.</p></td></tr>
                 
                 <tr><th class="prop">Range:</th><td><a href="#StaticVehicleProperty">StaticVehicleProperty</td></tr>
                 
@@ -257,7 +277,7 @@ They can be named with the positionName property.</p></td></tr>
             <h4>partOf</h4>
             <table class="def">
                 <tr><th>OWL Object Property:</th><td><a href="#partOf"><code>vsso:partOf</code></a></td></tr>
-                <tr><th class="prop">Comment:</th><td><p><em>partOfVehicleComponent</em> - This property is used to built a partOf hierarchy of VehicleComponents instances.</p></td></tr>
+                <tr><th class="prop">Definition:</th><td><p><em>partOfVehicleComponent</em> - This property is used to built a partOf hierarchy of VehicleComponents instances.</p></td></tr>
                 <tr><th class="prop">Domain:</th><td><a href="#VehicleComponent">VehicleComponent</td></tr>
                 <tr><th class="prop">Range:</th><td><a href="#VehicleComponent">VehicleComponent</td></tr>
                 
@@ -268,7 +288,7 @@ They can be named with the positionName property.</p></td></tr>
             <h4>partOfVehicle</h4>
             <table class="def">
                 <tr><th>OWL Object Property:</th><td><a href="#partOfVehicle"><code>vsso:partOfVehicle</code></a></td></tr>
-                <tr><th class="prop">Comment:</th><td><p><em>partOfVehicle</em> - This properties conncects VehicleComponents instances with an instance of a Vehicle.</p></td></tr>
+                <tr><th class="prop">Definition:</th><td><p><em>partOfVehicle</em> - This properties conncects VehicleComponents instances with an instance of a Vehicle.</p></td></tr>
                 <tr><th class="prop">Domain:</th><td><a href="#VehicleComponent">VehicleComponent</td></tr>
                 <tr><th class="prop">Range:</th><td><a href="#Vehicle">Vehicle</td></tr>
                 
@@ -279,7 +299,7 @@ They can be named with the positionName property.</p></td></tr>
             <h4>postionedAt</h4>
             <table class="def">
                 <tr><th>OWL Object Property:</th><td><a href="#postionedAt"><code>vsso:postionedAt</code></a></td></tr>
-                <tr><th class="prop">Comment:</th><td><p><em>postionedAt</em> - This property connects a VehicleProperty or VehicleComponent in the PositionInVehicle it appears in.</p></td></tr>
+                <tr><th class="prop">Definition:</th><td><p><em>postionedAt</em> - This property connects a VehicleProperty or VehicleComponent in the PositionInVehicle it appears in.</p></td></tr>
                 
                 <tr><th class="prop">Range:</th><td><a href="#PositionInVehicle">PositionInVehicle</td></tr>
                 
@@ -290,7 +310,7 @@ They can be named with the positionName property.</p></td></tr>
             <h4>positionName</h4>
             <table class="def">
                 <tr><th>OWL Datatype Property:</th><td><a href="#positionName"><code>vsso:positionName</code></a></td></tr>
-                <tr><th class="prop">Comment:</th><td><p><em>positionName</em> - DataProperty in order to name the PositionInVehicle.</p></td></tr>
+                <tr><th class="prop">Definition:</th><td><p><em>positionName</em> - DataProperty in order to name the PositionInVehicle.</p></td></tr>
                 <tr><th class="prop">Domain:</th><td><a href="#PositionInVehicle">PositionInVehicle</td></tr>
                 <tr><th class="prop">Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</td></tr>
                 
@@ -301,7 +321,7 @@ They can be named with the positionName property.</p></td></tr>
             <h4>vehiclePropertyValue</h4>
             <table class="def">
                 <tr><th>OWL Datatype Property:</th><td><a href="#vehiclePropertyValue"><code>vsso:vehiclePropertyValue</code></a></td></tr>
-                <tr><th class="prop">Comment:</th><td><p><em>vehiclePropertyValue</em> - Assigns a value to a VehicleProperty.</p></td></tr>
+                <tr><th class="prop">Definition:</th><td><p><em>vehiclePropertyValue</em> - Assigns a value to a VehicleProperty.</p></td></tr>
                 <tr><th class="prop">Domain:</th><td><a href="#VehicleProperty">VehicleProperty</td></tr>
                 
                 
@@ -312,9 +332,20 @@ They can be named with the positionName property.</p></td></tr>
             <h4>propertyValueUpdatedAt</h4>
             <table class="def">
                 <tr><th>OWL Datatype Property:</th><td><a href="#propertyValueUpdatedAt"><code>vsso:propertyValueUpdatedAt</code></a></td></tr>
-                <tr><th class="prop">Comment:</th><td><p><em>propertyValueUpdatedAt</em> - A timestamp representing the time of the last update of a vehiclePropertyValue</p></td></tr>
+                <tr><th class="prop">Definition:</th><td><p><em>propertyValueUpdatedAt</em> - A timestamp representing the time of the last update of a vehiclePropertyValue</p></td></tr>
                 <tr><th class="prop">Domain:</th><td><a href="#VehicleProperty">VehicleProperty</td></tr>
                 <tr><th class="prop">Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#dateTime">http://www.w3.org/2001/XMLSchema#dateTime</td></tr>
+                
+            </table>
+        </section>
+        
+        <section id="vssFacetedClassification">
+            <h4>vssFacetedClassification</h4>
+            <table class="def">
+                <tr><th>OWL Annotation Property:</th><td><a href="#vssFacetedClassification"><code>vsso:vssFacetedClassification</code></a></td></tr>
+                <tr><th class="prop">Definition:</th><td><p><em>vssFacetedClassification</em> - VSS path in dot notation of the equivelant concept.</p></td></tr>
+                
+                
                 
             </table>
         </section>
