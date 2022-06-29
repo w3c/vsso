@@ -1,29 +1,17 @@
+@prefix : <https://github.com/w3c/vsso-core#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-
-
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix vsso-core: <https://github.com/w3c/vsso-core#> .
+@base <https://github.com/w3c/vsso-core#> .
 
-
-vsso-core: rdf:type owl:Ontology ;
-  dcterms:title "VSSo Core: Vehicle Signal Specification Core Ontology";
-  vann:preferredNamespaceUri "https://github.com/w3c/vsso#" ;
-  dcterms:description "This ontology describes the car's attributes, branches and signals defined in the Vehicle Signal Specification." ;
-  dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
-  dcterms:creator "Benjamin Klotz"^^xsd:string ;
-  dcterms:creator "Raphael Troncy"^^xsd:string ;
-  dcterms:creator "Daniel Wilms";
-  dcterms:contributor "Daniel Alvarez-Coello"^^xsd:string ;
-  dcterms:contributor "Felix Loesch"^^xsd:string ;
-  owl:versionInfo """v2.0-develop"""@en ;
-  rdfs:seeAlso "https://github.com/COVESA/vehicle_signal_specification";
-  vann:preferredNamespacePrefix "vsso-core";
-  dcterms:abstract """
+<https://github.com/w3c/vsso-core#> rdf:type owl:Ontology ;
+                                     dcterms:abstract """
     The core ontology introduces concepts for the structural elements of VSS defined through the rule set 
     in the specifications. Figure 1 gives an overview of those. The root node is the Vehicle itself. 
     From there the structure is given through so-called Branches. They serve as sorting element for the leaf
@@ -32,118 +20,233 @@ vsso-core: rdf:type owl:Ontology ;
     frequency and of attributes, which are more static. The core of the ontology defines this structure in an 
     OWL ontology and serves as a basis for the defined signals of the standard catalogue and potential further 
     development of the branches as more than structural information.
-  """@en .
+  """@en ;
+                                     dcterms:contributor "Daniel Alvarez-Coello"^^xsd:string ,
+                                                         "Felix Loesch"^^xsd:string ;
+                                     dcterms:creator "Benjamin Klotz"^^xsd:string ,
+                                                     "Daniel Wilms" ,
+                                                     "Raphael Troncy"^^xsd:string ;
+                                     dcterms:description "This ontology describes the car's attributes, branches and signals defined in the Vehicle Signal Specification." ;
+                                     dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
+                                     dcterms:title "VSSo Core: Vehicle Signal Specification Core Ontology" ;
+                                     vann:preferredNamespacePrefix "vsso-core" ;
+                                     vann:preferredNamespaceUri "https://github.com/w3c/vsso#" ;
+                                     rdfs:seeAlso "https://github.com/COVESA/vehicle_signal_specification" ;
+                                     owl:versionInfo "v2.0-develop"@en .
 
-vsso-core:VehicleProperty a owl:Class ;
-    rdfs:label "VehicleProperty"@en ;
-    skos:definition """_VehicleProperty_ - Central concept for defining a vehicle, either through a VehicleComponent structure
-or connected directly to the vehicle. Every VehicleProperty shall be instantiated with a [vehiclePropertyValue](#vehiclePropertyValue).
-It is good practice to set the time when the value was updated through [propertyValueUpdatedAt](#propertyValueUpdatedAt)
-The VehicleProperty follows the concept of a [ssn:Property](https://www.w3.org/TR/vocab-ssn/#SSNProperty)"""@en ;
-    rdfs:seeAlso "https://www.w3.org/TR/vocab-ssn/#SSNProperty" .
+#################################################################
+#    Annotation properties
+#################################################################
 
-vsso-core:StaticVehicleProperty a owl:Class ;
-    rdfs:subClassOf vsso-core:VehicleProperty ;
-    rdfs:label "StaticVehicleProperty"@en ;
-    skos:definition """_StaticVehicleProperty_ - Follows the definition of an [attribute](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/attributes/) in
-VSS. `StaticVehicleProperty` is meant to stay stable at least over the duration of an ignition cycle.
-If you expect more frequent updates, please consider [DynamicVehicleProperty](#DynamicVehicleProperty)"""@en ;
-    rdfs:seeAlso "https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/attributes/".
+###  http://purl.org/dc/terms/abstract
+dcterms:abstract rdf:type owl:AnnotationProperty .
 
-vsso-core:Vehicle a owl:Class ;
-    rdfs:label "Vehicle"@en ;
-    skos:definition """_Vehicle_ - Core concept of the ontology. Collects [VehicleComponents](#VehicleComponent)
-and [VehicleProperties](#VehicleProperty) belonging to a vehicle"""@en .
 
-vsso-core:VehicleComponent a owl:Class ;
-    rdfs:label "VehicleComponent"@en ;
-    skos:definition """_VehicleComponent_ - First of all a sorting element for [VehicleProperties](#VehicleProperty), following on the definition of a
-[branch](https://covesa.github.io/vehicle_signal_specification/rule_set/branches/). It is encouraged to use the concept for actual parts modeled as
-`VehicleComponent."""@en ;
-    rdfs:seeAlso "https://covesa.github.io/vehicle_signal_specification/rule_set/branches/".
+###  http://purl.org/dc/terms/contributor
+dcterms:contributor rdf:type owl:AnnotationProperty .
 
-vsso-core:ActuatableVehicleProperty a owl:Class ;
-    rdfs:label "ActuatableVehicleProperty"@en ;
-    rdfs:subClassOf vsso-core:DynamicVehicleProperty ;
-    skos:definition """_ActuatableVehicleProperty_ - Follows the definition of an [actuator](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/) in
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  https://github.com/w3c/vsso-core#vssFacetedClassification
+vsso-core:vssFacetedClassification rdf:type owl:AnnotationProperty ;
+                                   rdfs:label "VSS Faceted Classification"@en ;
+                                   skos:definition "_vssFacetedClassification_ - VSS path in dot notation of the equivelant concept."@en .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://github.com/w3c/vsso-core#belongsToVehicleComponent
+vsso-core:belongsToVehicleComponent rdf:type owl:ObjectProperty ;
+                                    rdfs:domain vsso-core:VehicleProperty ;
+                                    rdfs:range vsso-core:VehicleComponent ;
+                                    rdfs:label "belongsToVehicleComponent"@en ;
+                                    skos:definition "_belongsToVehicleComponent_ - The property defines for VehicleProperties to which VehicleComponent they belong."@en .
+
+
+###  https://github.com/w3c/vsso-core#hasDynamicVehicleProperty
+vsso-core:hasDynamicVehicleProperty rdf:type owl:ObjectProperty ;
+                                    rdfs:range vsso-core:DynamicVehicleProperty ;
+                                    rdfs:label "hasDynamicVehicleProperty"@en ;
+                                    skos:definition "_hasDynamicVehicleProperty_ - This property connects an instance of a Vehicle or VehicleComponent to a DynamicVehicleComponent."@en .
+
+
+###  https://github.com/w3c/vsso-core#hasStaticVehicleProperty
+vsso-core:hasStaticVehicleProperty rdf:type owl:ObjectProperty ;
+                                   rdfs:range vsso-core:StaticVehicleProperty ;
+                                   rdfs:label "hasStaticVehicleProperty"@en ;
+                                   skos:definition "_hasStaticVehicleProperty_ - This property connects an instance of a Vehicle or VehicleComponent to a StaticVehicleComponent."@en .
+
+
+###  https://github.com/w3c/vsso-core#hasVehiclePropertyState
+vsso-core:hasVehiclePropertyState rdf:type owl:ObjectProperty ;
+                                  rdfs:domain vsso-core:Vehicle ;
+                                  rdfs:range vsso-core:VehiclePropertyState ;
+                                  rdfs:label "hasVehiclePropertyState" ;
+                                  skos:definition "_hasVehiclePropertyState_ - Relates a specific [Vehicle](#Vehicle) to a [VehiclePropertyState](#VehiclePropertyState)." .
+
+
+###  https://github.com/w3c/vsso-core#partOf
+vsso-core:partOf rdf:type owl:ObjectProperty ;
+                 rdfs:domain vsso-core:VehicleComponent ;
+                 rdfs:range vsso-core:VehicleComponent ;
+                 rdfs:label "partOfVehicleComponent"@en ;
+                 skos:definition "_partOfVehicleComponent_ - This property is used to built a partOf hierarchy of VehicleComponents instances."@en .
+
+
+###  https://github.com/w3c/vsso-core#partOfVehicle
+vsso-core:partOfVehicle rdf:type owl:ObjectProperty ;
+                        rdfs:domain vsso-core:VehicleComponent ;
+                        rdfs:range vsso-core:Vehicle ;
+                        rdfs:label "partOfVehicle"@en ;
+                        skos:definition "_partOfVehicle_ - This properties conncects VehicleComponents instances with an instance of a Vehicle."@en .
+
+
+###  https://github.com/w3c/vsso-core#postionedAt
+vsso-core:postionedAt rdf:type owl:ObjectProperty ;
+                      rdfs:range vsso-core:PositionInVehicle ;
+                      rdfs:label "postionedAt"@en ;
+                      skos:definition "_postionedAt_ - This property connects a VehicleProperty or VehicleComponent in the PositionInVehicle it appears in."@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://github.com/w3c/vsso-core#positionName
+vsso-core:positionName rdf:type owl:DatatypeProperty ;
+                       rdfs:domain vsso-core:PositionInVehicle ;
+                       rdfs:range xsd:string ;
+                       rdfs:label "positionName"@en ;
+                       skos:definition "_positionName_ - DataProperty in order to name the PositionInVehicle."@en .
+
+
+###  https://github.com/w3c/vsso-core#propertyValueUpdatedAt
+vsso-core:propertyValueUpdatedAt rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain vsso-core:VehiclePropertyState ;
+                                 rdfs:range xsd:dateTime ;
+                                 rdfs:label "propertyValueUpdatedAt"@en ;
+                                 skos:definition "_propertyValueUpdatedAt_ - A timestamp representing the time of the last update of a vehiclePropertyValue"@en .
+
+
+###  https://github.com/w3c/vsso-core#vehiclePropertyValue
+vsso-core:vehiclePropertyValue rdf:type owl:DatatypeProperty ;
+                               rdfs:domain vsso-core:VehiclePropertyState ;
+                               rdfs:range rdfs:Literal ;
+                               rdfs:label "vehiclePropertyValue"@en ;
+                               skos:definition "_vehiclePropertyValue_ - Assigns a value to a VehicleProperty."@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://github.com/w3c/vsso-core#ActuatableVehicleProperty
+vsso-core:ActuatableVehicleProperty rdf:type owl:Class ;
+                                    rdfs:subClassOf vsso-core:DynamicVehicleProperty ;
+                                    rdfs:label "ActuatableVehicleProperty"@en ;
+                                    rdfs:seeAlso "https://www.w3.org/TR/vocab-ssn/#SOSAActuatableProperty" ,
+                                                 "ttps://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/" ;
+                                    skos:definition """_ActuatableVehicleProperty_ - Follows the definition of an [actuator](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/) in
 VSS. It is a [DynamicVehicleProperty](#DynamicVehicleProperty), which can be changed.
-Refers to [sosa:ActuableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAActuatableProperty)"""@en ;
-    rdfs:seeAlso "ttps://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/" ;
-    rdfs:seeAlso "https://www.w3.org/TR/vocab-ssn/#SOSAActuatableProperty" .
+Refers to [sosa:ActuableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAActuatableProperty)"""@en .
 
-vsso-core:ObservableVehicleProperty a owl:Class ;
-    rdfs:label "ObservableVehicleProperty"@en ;
-    rdfs:subClassOf vsso-core:DynamicVehicleProperty ;
-    skos:definition """_ObservableVehicleProperty_ - Follows the definition of an [sensor](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/) in
-VSS. It is a [DynamicVehicleProperty](#DynamicVehicleProperty), which can be observed but _not_ changed.
-Refers to [sosa:ObservableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty)"""@en ;
-    rdfs:seeAlso "https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/" ;
-    rdfs:seeAlso "https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty" .
 
-vsso-core:DynamicVehicleProperty a owl:Class ;
-    rdfs:subClassOf vsso-core:VehicleProperty ;
-    rdfs:label "DynamicVehicleProperty"@en ;
-    skos:definition """_DynamicVehicleProperty_ - In contrast to a [StaticVehicleProperty](#StaticVehicleProperty),
+###  https://github.com/w3c/vsso-core#DynamicVehicleProperty
+vsso-core:DynamicVehicleProperty rdf:type owl:Class ;
+                                 rdfs:subClassOf vsso-core:VehicleProperty ;
+                                 rdfs:label "DynamicVehicleProperty"@en ;
+                                 skos:definition """_DynamicVehicleProperty_ - In contrast to a [StaticVehicleProperty](#StaticVehicleProperty),
 this property is expected to change frequently, even within an ignition cycle. Examples are the vehicle `speed`, `location`, etc."""@en .
 
-vsso-core:PositionInVehicle a owl:Class;
-    rdfs:label "PositionInVehicle"@en ;
-    skos:definition """_PositionInVehicle_ - Frequently VehicleProperties and VehicleComponents will appear in several different
+
+###  https://github.com/w3c/vsso-core#ObservableVehicleProperty
+vsso-core:ObservableVehicleProperty rdf:type owl:Class ;
+                                    rdfs:subClassOf vsso-core:DynamicVehicleProperty ;
+                                    rdfs:label "ObservableVehicleProperty"@en ;
+                                    rdfs:seeAlso "https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/" ,
+                                                 "https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty" ;
+                                    skos:definition """_ObservableVehicleProperty_ - Follows the definition of an [sensor](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/) in
+VSS. It is a [DynamicVehicleProperty](#DynamicVehicleProperty), which can be observed but _not_ changed.
+Refers to [sosa:ObservableProperty](https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty)"""@en .
+
+
+###  https://github.com/w3c/vsso-core#PositionInVehicle
+vsso-core:PositionInVehicle rdf:type owl:Class ;
+                            rdfs:label "PositionInVehicle"@en ;
+                            skos:definition """_PositionInVehicle_ - Frequently VehicleProperties and VehicleComponents will appear in several different
 positions in the vehicle. Typicle examples are windows, seats, etc. This concepts shall be used to define the different position of the vehicle.
 They can be named with the positionName property."""@en .
 
 
-vsso-core:belongsToVehicleComponent a owl:ObjectProperty ;
-    rdfs:label "belongsToVehicleComponent"@en ;
-    rdfs:domain vsso-core:VehicleProperty ;
-    rdfs:range vsso-core:VehicleComponent ;
-    skos:definition "_belongsToVehicleComponent_ - The property defines for VehicleProperties to which VehicleComponent they belong."@en .
+###  https://github.com/w3c/vsso-core#StaticVehicleProperty
+vsso-core:StaticVehicleProperty rdf:type owl:Class ;
+                                rdfs:subClassOf vsso-core:VehicleProperty ;
+                                rdfs:label "StaticVehicleProperty"@en ;
+                                rdfs:seeAlso "https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/attributes/" ;
+                                skos:definition """_StaticVehicleProperty_ - Follows the definition of an [attribute](https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/attributes/) in
+VSS. `StaticVehicleProperty` is meant to stay stable at least over the duration of an ignition cycle.
+If you expect more frequent updates, please consider [DynamicVehicleProperty](#DynamicVehicleProperty)"""@en .
 
-vsso-core:hasDynamicVehicleProperty a owl:ObjectProperty ;
-    rdfs:label "hasDynamicVehicleProperty"@en ;
-    rdfs:range vsso-core:DynamicVehicleProperty ;
-    skos:definition "_hasDynamicVehicleProperty_ - This property connects an instance of a Vehicle or VehicleComponent to a DynamicVehicleComponent."@en .
 
-vsso-core:hasStaticVehicleProperty a owl:ObjectProperty ;
-    rdfs:label "hasStaticVehicleProperty"@en ;
-    rdfs:range vsso-core:StaticVehicleProperty ;
-    skos:definition "_hasStaticVehicleProperty_ - This property connects an instance of a Vehicle or VehicleComponent to a StaticVehicleComponent."@en .
+###  https://github.com/w3c/vsso-core#Vehicle
+vsso-core:Vehicle rdf:type owl:Class ;
+                  rdfs:label "Vehicle"@en ;
+                  skos:definition """_Vehicle_ - Core concept of the ontology. Collects [VehicleComponents](#VehicleComponent)
+and [VehicleProperties](#VehicleProperty) belonging to a vehicle"""@en .
 
-vsso-core:partOf a owl:ObjectProperty ;
-    rdfs:label "partOfVehicleComponent"@en ;
-    rdfs:domain vsso-core:VehicleComponent ;
-    rdfs:range vsso-core:VehicleComponent ;
-    skos:definition "_partOfVehicleComponent_ - This property is used to built a partOf hierarchy of VehicleComponents instances."@en .
 
-vsso-core:partOfVehicle a owl:ObjectProperty ;
-    rdfs:label "partOfVehicle"@en ;
-    rdfs:domain vsso-core:VehicleComponent ;
-    rdfs:range vsso-core:Vehicle ;
-    skos:definition "_partOfVehicle_ - This properties conncects VehicleComponents instances with an instance of a Vehicle."@en .
+###  https://github.com/w3c/vsso-core#VehicleComponent
+vsso-core:VehicleComponent rdf:type owl:Class ;
+                           rdfs:label "VehicleComponent"@en ;
+                           rdfs:seeAlso "https://covesa.github.io/vehicle_signal_specification/rule_set/branches/" ;
+                           skos:definition """_VehicleComponent_ - First of all a sorting element for [VehicleProperties](#VehicleProperty), following on the definition of a
+[branch](https://covesa.github.io/vehicle_signal_specification/rule_set/branches/). It is encouraged to use the concept for actual parts modeled as
+`VehicleComponent."""@en .
 
-vsso-core:postionedAt a owl:ObjectProperty ;
-    rdfs:label "postionedAt"@en ;
-    rdfs:range vsso-core:PositionInVehicle ;
-    skos:definition "_postionedAt_ - This property connects a VehicleProperty or VehicleComponent in the PositionInVehicle it appears in."@en .
 
-vsso-core:positionName a owl:DatatypeProperty ;
-    rdfs:label "positionName"@en ;
-    rdfs:domain vsso-core:PositionInVehicle ;
-    rdfs:range xsd:string ;
-    skos:definition "_positionName_ - DataProperty in order to name the PositionInVehicle."@en .
+###  https://github.com/w3c/vsso-core#VehicleProperty
+vsso-core:VehicleProperty rdf:type owl:Class ;
+                          rdfs:label "VehicleProperty"@en ;
+                          rdfs:seeAlso "https://www.w3.org/TR/vocab-ssn/#SSNProperty" ;
+                          skos:definition """_VehicleProperty_ - Central concept for defining a vehicle, either through a VehicleComponent structure
+or connected directly to the vehicle. Every VehicleProperty shall be instantiated with a [vehiclePropertyValue](#vehiclePropertyValue).
+It is good practice to set the time when the value was updated through [propertyValueUpdatedAt](#propertyValueUpdatedAt)
+The VehicleProperty follows the concept of a [ssn:Property](https://www.w3.org/TR/vocab-ssn/#SSNProperty)"""@en .
 
-vsso-core:vehiclePropertyValue a owl:DatatypeProperty ;
-    rdfs:label "vehiclePropertyValue"@en ;
-    rdfs:domain vsso-core:VehicleProperty ;
-    skos:definition "_vehiclePropertyValue_ - Assigns a value to a VehicleProperty."@en .
 
-vsso-core:propertyValueUpdatedAt a owl:DatatypeProperty ;
-    rdfs:label "propertyValueUpdatedAt"@en ;
-    rdfs:domain vsso-core:VehicleProperty ;
-    rdfs:range xsd:dateTime ;
-    skos:definition "_propertyValueUpdatedAt_ - A timestamp representing the time of the last update of a vehiclePropertyValue"@en .
+###  https://github.com/w3c/vsso-core#VehiclePropertyState
+vsso-core:VehiclePropertyState rdf:type owl:Class ;
+                               rdfs:label "VehiclePropertyValue" ;
+                               skos:definition "_VehiclePropertyState_ - Class that contains the actual [vehiclePropertyValue](#vehiclePropertyValue) of a [VehicleProperty](#VehicleProperty) and its corresponding metadata (e.g., the datetime when the observation of the property occurred)." .
 
-vsso-core:vssFacetedClassification a owl:AnnotationProperty ;
-    rdfs:label "VSS Faceted Classification"@en ;
-    skos:definition "_vssFacetedClassification_ - VSS path in dot notation of the equivelant concept."@en .
 
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
