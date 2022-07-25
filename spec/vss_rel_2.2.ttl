@@ -3179,7 +3179,8 @@ vsso:CabinSeat a vsso-core:VehicleComponent ;
     vsso-core:partOf vsso:Cabin ;
     vsso-core:vssFacetedClassification "Vehicle.Cabin.Seat"@en .
 
-vsso:Vehicle rdfs:label "Vehicle"@en ;
+vsso:Vehicle a vsso-core:VehicleComponent ;
+    rdfs:label "Vehicle"@en ;
     skos:definition "High-level vehicle data."@en ;
     vsso-core:vssFacetedClassification "Vehicle"@en .
 
