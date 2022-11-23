@@ -86,12 +86,23 @@ vsso-core:DynamicVehicleProperty a owl:Class ;
     skos:definition """_DynamicVehicleProperty_ - In contrast to a [StaticVehicleProperty](#StaticVehicleProperty),
 this property is expected to change frequently, even within an ignition cycle. Examples are the vehicle `speed`, `location`, etc."""@en .
 
+vsso-core:VehiclePropertyState a owl:Class ;
+    rdfs:label "VehiclePropertyState"@en ;
+    skos:definition """_VehiclePropertyState_ - Class that contains the actual [vehiclePropertyValue](#vehiclePropertyValue) of a 
+[VehicleProperty](#VehicleProperty) and its corresponding metadata (e.g., the datetime when the observation of the property occurred)."""@en .
+
 vsso-core:PositionInVehicle a owl:Class;
     rdfs:label "PositionInVehicle"@en ;
     skos:definition """_PositionInVehicle_ - Frequently VehicleProperties and VehicleComponents will appear in several different
 positions in the vehicle. Typicle examples are windows, seats, etc. This concepts shall be used to define the different position of the vehicle.
 They can be named with the positionName property."""@en .
 
+vsso-core:hasVehiclePropertyState a owl:ObjectProperty ;
+    rdfs:label "hasVehiclePropertyState"@en ;
+    rdfs:domain vsso-core:Vehicle ;
+    rdfs:range vsso-core:VehiclePropertyState ;
+    skos:definition """_hasVehiclePropertyState_ - Relates a specific [Vehicle](#Vehicle) to a [VehiclePropertyState](#VehiclePropertyState).
+It is used to explicitly identify the membership of the states(i.e., to which [Vehicle](#Vehicle) a particular [VehiclePropertyState](#VehiclePropertyState) belongs)."""@en .
 
 vsso-core:belongsToVehicleComponent a owl:ObjectProperty ;
     rdfs:label "belongsToVehicleComponent"@en ;
@@ -134,12 +145,13 @@ vsso-core:positionName a owl:DatatypeProperty ;
 
 vsso-core:vehiclePropertyValue a owl:DatatypeProperty ;
     rdfs:label "vehiclePropertyValue"@en ;
-    rdfs:domain vsso-core:VehicleProperty ;
+    rdfs:domain vsso-core:VehiclePropertyState ;
+    rdfs:range rdfs:Literal ;
     skos:definition "_vehiclePropertyValue_ - Assigns a value to a VehicleProperty."@en .
 
 vsso-core:propertyValueUpdatedAt a owl:DatatypeProperty ;
     rdfs:label "propertyValueUpdatedAt"@en ;
-    rdfs:domain vsso-core:VehicleProperty ;
+    rdfs:domain vsso-core:VehiclePropertyState ;
     rdfs:range xsd:dateTime ;
     skos:definition "_propertyValueUpdatedAt_ - A timestamp representing the time of the last update of a vehiclePropertyValue"@en .
 
